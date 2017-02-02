@@ -1,0 +1,2 @@
+https://github.com/Telerik-Verified-Plugins/NFC
+http://plugins.telerik.com/cordova/plugin/nfc
