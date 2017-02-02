@@ -1,0 +1,4 @@
+#Thu Feb 02 20:59:04 GMT 2017
+base.0=F\:\\Development\\projects\\Final Year Project\\trunk\\tests\\mobile_app_test_1\\test\\platforms\\android\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=F\:\\Development\\projects\\Final Year Project\\trunk\\tests\\mobile_app_test_1\\test\\platforms\\android\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
