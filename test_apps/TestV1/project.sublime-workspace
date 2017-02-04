@@ -1,0 +1,176 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "angular.module('starter.controllers', [])\n\n.controller('AppCtrl', function($scope, $ionicModal, $timeout) {\n\n  // With the new view caching in Ionic, Controllers are only called\n  // when they are recreated or on app start, instead of every page change.\n  // To listen for when this page is active (for example, to refresh data),\n  // listen for the $ionicView.enter event:\n  //$scope.$on('$ionicView.enter', function(e) {\n  //});\n\n  // Form data for the login modal\n  $scope.loginData = {};\n\n  // Create the login modal that we will use later\n  $ionicModal.fromTemplateUrl('templates/login.html', {\n    scope: $scope\n  }).then(function(modal) {\n    $scope.modal = modal;\n  });\n\n  // Triggered in the login modal to close it\n  $scope.closeLogin = function() {\n    $scope.modal.hide();\n  };\n\n  // Open the login modal\n  $scope.login = function() {\n    $scope.modal.show();\n  };\n\n  // Perform the login action when the user submits the login form\n  $scope.doLogin = function() {\n    console.log('Doing login', $scope.loginData);\n\n    // Simulate a login delay. Remove this and replace with your login\n    // code if using a login system\n    $timeout(function() {\n      $scope.closeLogin();\n    }, 1000);\n  };\n})\n\n.controller('PlaylistsCtrl', function($scope) {\n  $scope.playlists = [\n    { title: 'Reggae', id: 1 },\n    { title: 'Dubstep', id: 3 },\n    { title: 'Indie', id: 4 },\n    { title: 'Rap', id: 5 },\n    { title: 'Cowbell', id: 6 },\n    { title: 'asdiuf', id: 7 }\n  ];\n})\n\n.controller('PlaylistCtrl', function($scope, $stateParams) {\n});\n",
+			"file": "www/js/controllers.js",
+			"file_size": 1545,
+			"file_write_time": 131306407221816573,
+			"settings":
+			{
+				"buffer_size": 1545,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/LukeTest/project/trunk/test_apps/TestV1/build-apk.sublime-build",
+		"/C/LukeTest/project/trunk/test_apps/TestV1/config.xml",
+		"/C/LukeTest/project/trunk/test_apps/TestV1/www/js/controllers.js",
+		"/C/LukeTest/project/trunk/test_apps/TestV1/www/js/app.js"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "www/js/controllers.js",
+					"settings":
+					{
+						"buffer_size": 1545,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								816,
+								816
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 105.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
