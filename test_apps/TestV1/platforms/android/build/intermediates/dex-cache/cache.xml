@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Luke\Development\Projects\final year project\trunk\test_apps\TestV1\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="afe8eb4906b94df000e2b3714c864ec42d4e4ea6">
+        <dex dex="C:\Users\Luke\Development\Projects\final year project\trunk\test_apps\TestV1\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-unspecified-debug_2bc945d5a925d15ecbc06c97cc4902f91ef7e344.jar" />
+    </item>
+
+</items>
