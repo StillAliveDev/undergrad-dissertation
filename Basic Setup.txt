@@ -3,6 +3,7 @@ Requires Git
 Requires JDK+JRE
 Requires ADK with android api 23 installed (VM image not required)
 
+-- CLientside:
 ionic start <Name> <Template>
 cordova platform add android
 cordova plugin add https://github.com/Telerik-Verified-Plugins/NFC
@@ -19,3 +20,15 @@ edit bower.json to have:
 "moment": "2.9.0"
 
 Project should be setup to start (mostly) Now to start developing!!!
+
+Serverside:
+
+npm init --  follow instructions to fill in details
+open package.json and add:
+"socket.io": "^1.3.7"
+
+Now run npm install
+
+whenever wanting to host server:
+node <entry file name>
+
