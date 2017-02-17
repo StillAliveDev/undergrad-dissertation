@@ -1,0 +1,21 @@
+Requires NodeJs
+Requires Git
+Requires JDK+JRE
+Requires ADK with android api 23 installed (VM image not required)
+
+ionic start <Name> <Template>
+cordova platform add android
+cordova plugin add https://github.com/Telerik-Verified-Plugins/NFC
+
+edit bower.json to have:
+"angular-local-storage": "~0.2.3",
+
+"angular-socket-io": "~0.7.0",
+
+"sio-client": "~1.3.6",
+
+"angular-moment": "~0.9.2",
+    
+"moment": "2.9.0"
+
+Project should be setup to start (mostly) Now to start developing!!!
