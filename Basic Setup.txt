@@ -19,6 +19,8 @@ edit bower.json to have:
     
 "moment": "2.9.0"
 
+bower install
+
 Project should be setup to start (mostly) Now to start developing!!!
 
 Serverside:
