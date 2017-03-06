@@ -2,7 +2,9 @@
 	<header class="bar bar-header bar-positive">
 		<h1 class="title">Vehicles</h1>
 	</header>
+
 	<ion-header-bar class="bar bar-subheader">
+	
 	<div class="list-top">
 			<div class="row">
 				<div class="col col-75">
@@ -20,7 +22,10 @@
 		</div>
 	</ion-header-bar>
 	<ion-content class="has-subheader">
-		
+		<ion-refresher
+		pulling-text="Pull To Refresh"
+		onRefresh="">
+		</ion-refresher>	
 		<div class="list-bottom">
 			<ion-scroll direction="y">
 					<ion-item>
