@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+.nfc-icon{
+	width: 100%;
+}
+
+.bar-subheader{
+	height:114px !important;
+	border:none;
+}
+.has-subheader{
+	top:160px !important;
+	
+}

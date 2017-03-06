@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="F:\Development\projects\Final Year Project\trunk\mobile_app\Fitment Companion\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="afe8eb4906b94df000e2b3714c864ec42d4e4ea6">
+        <dex dex="F:\Development\projects\Final Year Project\trunk\mobile_app\Fitment Companion\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-unspecified-debug_868e29e4cc40472935345c4300ddf626612be68e.jar" />
+    </item>
+
+</items>
