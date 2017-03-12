@@ -16,7 +16,7 @@
 					</div>
 				</div>
 				<div class="col col-25">
-					<img class="nfc-icon" src="img/nfc-icon.png">
+					<img class="nfc-icon" src="img/nfc-icon.png" ng-click="openVehicleScan()">
 				</div>
 			</div>
 		</div>
@@ -28,10 +28,10 @@
 		</ion-refresher>	
 		<div class="list-bottom">
 			<ion-scroll direction="y">
-					<ion-item>
+					<ion-item ng-click="openVIN(vin)">
 						SJN12345678912345
 					</ion-item>
-					<ion-item>
+					<ion-item ng-click="randomPrint()">
 						SJN12345678912345
 					</ion-item>
 					<ion-item>

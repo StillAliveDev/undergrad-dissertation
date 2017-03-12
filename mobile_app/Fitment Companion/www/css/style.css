@@ -1,6 +1,11 @@
-/* Empty. Add your own CSS if you like */
 .nfc-icon{
 	width: 100%;
+}
+.nfc-icon-modal{
+	width:50%;
+	display:block;
+	margin-left:auto !important;
+	margin-right:auto !important;
 }
 
 .bar-subheader{
@@ -10,4 +15,13 @@
 .has-subheader{
 	top:160px !important;
 	
+}
+.small-detail-font{
+	font-size:0.97em;
+}
+.small-heading-font{
+	font-size: 0.99em;
+}
+.item.wrap, .item.content-wrap{
+	white-space:normal !important;
 }
