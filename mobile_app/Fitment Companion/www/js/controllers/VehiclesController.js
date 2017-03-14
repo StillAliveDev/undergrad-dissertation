@@ -34,7 +34,7 @@
 		
 		$scope.openPartScan = function(){
 			console.log('Opening Part Scan Popup');
-			var partPopup = $ionicPopup.confirm({
+			var partScanPopup = $ionicPopup.confirm({
 				title: 'Scan Tag',
 				templateUrl: 'templates/partScanModal.html',
 				scope: $scope
@@ -43,7 +43,7 @@
 		
 		$scope.openVehicleScan = function(){
 			console.log('Opening Vehicle Scan Popup');
-			var partPopup = $ionicPopup.confirm({
+			var vehicleScanPopup = $ionicPopup.confirm({
 				title: 'Scan Tag',
 				templateUrl: 'templates/vehicleScanModal.html',
 				scope: $scope

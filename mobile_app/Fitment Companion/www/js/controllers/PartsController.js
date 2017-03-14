@@ -16,7 +16,7 @@
 		
 		$scope.openPartScan = function(){
 			console.log('Opening Part Scan Popup');
-			var partPopup = $ionicPopup.confirm({
+			var partScanPopup = $ionicPopup.confirm({
 				title: 'Scan Tag',
 				templateUrl: 'templates/partScanModal.html',
 				scope: $scope
