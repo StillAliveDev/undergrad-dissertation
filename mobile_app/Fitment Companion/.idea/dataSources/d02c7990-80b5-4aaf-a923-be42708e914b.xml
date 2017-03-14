@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="fitment_app@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="fitment_app">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="node"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sakila"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="world"/>
+    <table id="10" parent="2" name="fitment_groups"/>
+    <table id="11" parent="2" name="fitment_operations"/>
+    <table id="12" parent="2" name="parts"/>
+    <table id="13" parent="2" name="users"/>
+    <table id="14" parent="2" name="vehicles"/>
+    <column id="15" parent="10" name="FIT_GROUP_ID">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="16" parent="10" name="DESCRIPTION">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="10" name="VEH_VIN">
+      <Position>3</Position>
+      <DataType>varchar(17)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="10" name="USER_ID">
+      <Position>4</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="10" name="CREATED_TIMESTAMP">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="20" parent="10" name="EST_COMP_TIMESTAMP">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="21" parent="10" name="ACT_COMP_TIMESTAMP">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="22" parent="10" name="IN_PROGRESS">
+      <Position>8</Position>
+      <DataType>enum(&apos;TRUE&apos;, &apos;FALSE&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="10" name="INCOMPLETE">
+      <Position>9</Position>
+      <DataType>enum(&apos;TRUE&apos;, &apos;FALSE&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="10" name="GROUP_INCOMPLETE_NOTES">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="25" parent="10" name="USER_ID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <index id="26" parent="10" name="VEH_VIN">
+      <ColNames>VEH_VIN</ColNames>
+    </index>
+    <key id="27" parent="10" name="PRIMARY">
+      <ColNames>FIT_GROUP_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="10" name="fitment_groups_ibfk_1">
+      <ColNames>VEH_VIN</ColNames>
+      <RefSchemaName>fitment_app</RefSchemaName>
+      <RefTableName>vehicles</RefTableName>
+      <RefColNames>VIN</RefColNames>
+    </foreign-key>
+    <foreign-key id="29" parent="10" name="fitment_groups_ibfk_2">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>fitment_app</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <column id="30" parent="11" name="FIT_OP_ID">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="11" name="DESCRIPTION">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="11" name="PART_ID">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="11" name="GROUP_ID">
+      <Position>4</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="11" name="CREATED_TIMESTAMP">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="35" parent="11" name="COMPLETED_TIMESTAMP">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <index id="36" parent="11" name="GROUP_ID">
+      <ColNames>GROUP_ID</ColNames>
+    </index>
+    <index id="37" parent="11" name="PART_ID">
+      <ColNames>PART_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="11" name="PRIMARY">
+      <ColNames>FIT_OP_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="39" parent="11" name="PART_ID">
+      <ColNames>PART_ID</ColNames>
+      <UnderlyingIndexName>PART_ID</UnderlyingIndexName>
+    </key>
+    <foreign-key id="40" parent="11" name="fitment_operations_ibfk_1">
+      <ColNames>PART_ID</ColNames>
+      <RefSchemaName>fitment_app</RefSchemaName>
+      <RefTableName>parts</RefTableName>
+      <RefColNames>PART_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="41" parent="11" name="fitment_operations_ibfk_2">
+      <ColNames>GROUP_ID</ColNames>
+      <RefSchemaName>fitment_app</RefSchemaName>
+      <RefTableName>fitment_groups</RefTableName>
+      <RefColNames>FIT_GROUP_ID</RefColNames>
+    </foreign-key>
+    <column id="42" parent="12" name="PART_ID">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="12" name="NAME">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="12" name="MANUFACTURER">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="12" name="WIDTH_M">
+      <Position>4</Position>
+      <DataType>double(10,3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="12" name="LENGTH_M">
+      <Position>5</Position>
+      <DataType>double(10,3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="12" name="WEIGHT">
+      <Position>6</Position>
+      <DataType>double(10,3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="12" name="IN_INVENTORY">
+      <Position>7</Position>
+      <DataType>enum(&apos;TRUE&apos;, &apos;FALSE&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="12" name="ADDED_TIMESTAMP">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="50" parent="12" name="PART_REMOVED_TIMESTAMP">
+      <Position>9</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <key id="51" parent="12" name="PRIMARY">
+      <ColNames>PART_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="13" name="USER_ID">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="53" parent="13" name="USER_NAME">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="13" name="USER_PASSWORD">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="13" name="USER_FIRST_NAME">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="13" name="USER_LAST_NAME">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="13" name="USER_CREATED_TIMESTAMP">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="58" parent="13" name="USER_SIGNED_IN">
+      <Position>7</Position>
+      <DataType>enum(&apos;TRUE&apos;, &apos;FALSE&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="59" parent="13" name="PRIMARY">
+      <ColNames>USER_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="14" name="VIN">
+      <Position>1</Position>
+      <DataType>varchar(17)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="14" name="MAKE">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="14" name="MODEL">
+      <Position>3</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="14" name="COLOUR">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="14" name="ADDED_TIMESTAMP">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="65" parent="14" name="PRIMARY">
+      <ColNames>VIN</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
