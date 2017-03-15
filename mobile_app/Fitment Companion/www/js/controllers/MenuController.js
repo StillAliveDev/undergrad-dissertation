@@ -15,6 +15,12 @@
 		};
 		$scope.doLogout = function(){
 			//Server logout gubbins here
+
+            //TODO -- Find a way to detect the correct user
+            data = {
+              username: 'A User'
+            };
+            SocketService.emit('user:logout', data);
 			$state.go('login');
 		}
 		$scope.showFitmentModal = function(){
