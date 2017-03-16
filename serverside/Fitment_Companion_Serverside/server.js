@@ -1,38 +1,25 @@
 var io = require('socket.io')(6100);
-var mysql = require('mysql');
 
-var db = mysql.createConnection({
-    host        : 'localhost',
-    user        : 'root',
-    password    : 'password',
-    database    : 'fitment_app'
-});
-console.log('Connection Setup, waiting for messages');
+var loginFunc = require('./js/login.js');
 
 io.on('connection', function(socket){
     socket.on('user:login', function (data){
 
-        var username = data.username;
-        var password = data.pass;
-
-        console.log('User login attempt from application ' + username + ' ' + password);
-
-        socket.emit('login:success');
+        loginFunc.doLogin(data, function(err,content){
+           if(err){
+               console.log(err);
+               socket.emit('login:fail', err);
+           }
+           else{
+               console.log(content);
+               socket.emit('login:success', content);
+           }
+        });
     });
 
     socket.on('user:logout', function(data){
-        var username = data.username;
+        loginFunc.doLogout(data, function(err,content){
 
-        console.log('User Logout detected. User: ' + username);
+        });
     });
 });
-
-
-/*
-connection.query('SHOW TABLES', function(err,rows,fields) {
-    if(!err)
-        console.log('the solution is: ', rows);
-    else
-        console.log('error while perfoming query.');
-});
-*/
