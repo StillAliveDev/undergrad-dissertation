@@ -1,12 +1,10 @@
 (function(){
 	angular.module('starter')
-	.controller('LoginController',['$scope','$state','localStorageService','SocketService', LoginController]);
+	.controller('LoginController',['$scope','$rootScope','$state','localStorageService','SocketService', LoginController]);
 	
-	function LoginController($scope,$state,localStorageService,SocketService){
+	function LoginController($scope,$rootScope,$state,localStorageService,SocketService){
 		$scope.login = function(username, password){
 			//Server Login Gubbins goes here
-			
-			console.log('Username: ' + username + ' Password: ' + password);
 
 			//Send data to server
 			var loginData = {
@@ -14,14 +12,23 @@
 				'pass' : password
 			};
 			SocketService.emit('user:login', loginData);
-
-			SocketService.on('login:success', function(){
-				$state.go('app.home');
-			});
-			
-			//Load the main screen state
-			//$state.go('app.home');
 		};
+        SocketService.on('login:success', function(data){
+        	// Print the data
+			$scope.loginFailed = false;
+        	console.log(data);
+        	var json = angular.fromJson(data)
+
+			//Put user details into $rootScope
+        	$rootScope.user_id = json[0].user_id;
+        	$rootScope.user_name = json[0].user_name;
+
+            $state.go('app.home');
+        });
+        SocketService.on('login:fail', function(data){
+        	console.log(data);
+        	$scope.loginFailed = true;
+		})
 	}
 	
 })();

@@ -1,8 +1,8 @@
 (function(){
 	angular.module('starter')
-	.controller('MenuController',['$scope','$state','$ionicPopup','localStorageService','SocketService', MenuController]);
+	.controller('MenuController',['$scope','$rootScope','$state','$ionicPopup','localStorageService','SocketService', MenuController]);
 	
-	function MenuController($scope,$state, $ionicPopup,localStorageService,SocketService){
+	function MenuController($scope,$rootScope, $state, $ionicPopup,localStorageService,SocketService){
 		
 		$scope.goToHomeState = function(){
 			$state.go('app.home');
@@ -18,9 +18,11 @@
 
             //TODO -- Find a way to detect the correct user
             data = {
-              username: 'A User'
+                userid : $rootScope.user_id,
+                username : $rootScope.user_name
             };
-            SocketService.emit('user:logout', data);
+
+            SocketService.emit('user:logout', angular.toJson(data));
 			$state.go('login');
 		}
 		$scope.showFitmentModal = function(){

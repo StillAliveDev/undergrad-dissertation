@@ -15,6 +15,11 @@
 			<div class="padding">
 				<button class="button button-positive button-block" ng-click="login(home_ctrl.username, home_ctrl.password)">Login</button>
 			</div>
+			<div class="card" ng-if="loginFailed">
+				<div class="item item-text-wrap item-assertive">
+					Your login details are incorrect
+				</div>
+			</div>
 		</div>
 	</ion-content>
 </ion-view>
