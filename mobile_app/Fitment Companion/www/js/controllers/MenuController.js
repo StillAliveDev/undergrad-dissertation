@@ -14,9 +14,6 @@
 			$state.go('app.parts');
 		};
 		$scope.doLogout = function(){
-			//Server logout gubbins here
-
-            //TODO -- Find a way to detect the correct user
             data = {
                 userid : $rootScope.user_id,
                 username : $rootScope.user_name

@@ -3,9 +3,8 @@
 	.controller('LoginController',['$scope','$rootScope','$state','localStorageService','SocketService', LoginController]);
 	
 	function LoginController($scope,$rootScope,$state,localStorageService,SocketService){
-		$scope.login = function(username, password){
-			//Server Login Gubbins goes here
 
+		$scope.login = function(username, password){
 			//Send data to server
 			var loginData = {
 				'username' : username,

@@ -1,4 +1,4 @@
-<ion-view title="Login" ng-controller="HomeController as home_ctrl">
+<ion-view title="Login" ng-controller="LoginController as login_ctrl">
 	<header class="bar bar-header">
 		<h1 class="title">Login</h1>
 	</header>
@@ -6,14 +6,14 @@
 	<ion-content class="has-header padding">
 		<div class="list">
 			<label class="item item-input">
-				<input type="text" ng-model="home_ctrl.username" placeholder="User Name">
+				<input type="text" ng-model="login_ctrl.username" placeholder="User Name">
 			</label>
 			<label class="item item-input">
-				<input type="password" ng-model="home_ctrl.password" placeholder="Password">
+				<input type="password" ng-model="login_ctrl.password" placeholder="Password">
 			</label>
 			
 			<div class="padding">
-				<button class="button button-positive button-block" ng-click="login(home_ctrl.username, home_ctrl.password)">Login</button>
+				<button class="button button-positive button-block" ng-click="login(login_ctrl.username,login_ctrl.password)">Login</button>
 			</div>
 			<div class="card" ng-if="loginFailed">
 				<div class="item item-text-wrap item-assertive">
