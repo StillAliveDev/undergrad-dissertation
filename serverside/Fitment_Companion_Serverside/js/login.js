@@ -9,6 +9,7 @@ module.exports = {
           "USER_NAME = '" + username + "' " +
           "AND " +
           "USER_PASSWORD = '" + password + "';";
+
       connection.db.query(query, function(err,rows,fields) {
           if(!err) {
               if(rows.length > 0) {

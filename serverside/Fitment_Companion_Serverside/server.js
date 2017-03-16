@@ -3,6 +3,7 @@ var io = require('socket.io')(6100);
 var loginFunc = require('./js/login.js');
 
 io.on('connection', function(socket){
+    //Handles Login Nroadcasts
     socket.on('user:login', function (data){
 
         loginFunc.doLogin(data, function(err,content){
@@ -17,6 +18,7 @@ io.on('connection', function(socket){
         });
     });
 
+    //Handles logout broadcasts
     socket.on('user:logout', function(data){
         loginFunc.doLogout(data, function(err,content){
 
