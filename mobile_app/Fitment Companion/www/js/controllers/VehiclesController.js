@@ -1,11 +1,28 @@
 (function(){
 	angular.module('starter')
-	.controller('VehiclesController',['$scope','$state','$ionicPopup','localStorageService','SocketService', VehiclesController]);
+	.controller('VehiclesController',['$scope','$state','$rootScope','$ionicPopup','localStorageService','SocketService', VehiclesController]);
 	
-	function VehiclesController($scope,$state,$ionicPopup,localStorageService,SocketService){
-		var me = this;
-		$scope.openVIN = function(vin){
+	function VehiclesController($scope,$state,$rootScope,$ionicPopup,localStorageService,SocketService){
+		$scope.vehicleList = [];
+
+		$scope.loadList = function(){
+		    SocketService.emit('vehicles:loadList');
+            SocketService.on('vehicles:loadComplete', function(data){
+		        console.log('loading complete ' + data);
+		        $scope.vehicleList = angular.fromJson(data);
+            });
+            SocketService.on('vehicles:loadError', function(data){
+                console.log(data);
+            });
+            $rootScope.$broadcast('scroll.refreshComplete');
+        };
+
+		$scope.openVIN = function(data){
 			console.log('Opening Vehicle Detail Popup');
+			//Run Load Vehicle Info Here -- Db Query emit, on
+			$scope.data = [{
+			    'vin' : data
+            }];
 			var vehiclePopup = $ionicPopup.confirm({
 				title: 'Selected Vehicle',
 				templateUrl: 'templates/vehicleDetailModal.html',
@@ -31,7 +48,7 @@
 				scope: $scope
 			});
 		};
-		
+
 		$scope.openPartScan = function(){
 			console.log('Opening Part Scan Popup');
 			var partScanPopup = $ionicPopup.confirm({
@@ -53,6 +70,9 @@
 		$scope.randomPrint = function(){
 			console.log('hello world');
 		};
+
+
+
 		
 	}
 	

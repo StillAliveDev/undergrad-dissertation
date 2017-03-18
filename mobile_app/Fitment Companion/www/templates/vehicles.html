@@ -9,10 +9,10 @@
 			<div class="row">
 				<div class="col col-75">
 					<div class="row">
-						<h4>Total Vehicles: 000</h4>
+						<h4>Total Vehicles: {{vehicleList[1].vin_count}}</h4>
 					</div>
 					<div class="row">
-						<h4>In Progress: 000</h4>
+						<h4>In Progress: {{vehicleList[2].total_fitment_vins}}</h4>
 					</div>
 				</div>
 				<div class="col col-25">
@@ -24,57 +24,16 @@
 	<ion-content class="has-subheader">
 		<ion-refresher
 		pulling-text="Pull To Refresh"
-		onRefresh="">
-		</ion-refresher>	
+		on-refresh="loadList()">
+		</ion-refresher>
 		<div class="list-bottom">
-			<ion-scroll direction="y">
-					<ion-item ng-click="openVIN(vin)">
-						SJN12345678912345
+					<ion-item ng-click="openVIN(vin)" ng-repeat="vin in vehicleList[0].vehicles">
+						{{vin}}
 					</ion-item>
-					<ion-item ng-click="randomPrint()">
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					
-			</ion-scroll>
+            <ion-item class="card padding item-text-wrap text-center">
+                <i class="icon ion-refresh"></i>
+                <h2>Pull down to refresh Vehicles</h2>
+            </ion-item>
 		</div>
 	</ion-content>
 	

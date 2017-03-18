@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col col-75">
 					<div class="row">
-						<h4>Total Parts: 000</h4>
+						<h4>Total Parts: {{partsList[1].parts_count}}</h4>
 					</div>
 				</div>
 				<div class="col col-25">
@@ -19,60 +19,16 @@
 	<ion-content class="has-subheader">
 			<ion-refresher
 		pulling-text="Pull To Refresh"
-		onRefresh="">
+		on-refresh="loadList()">
 		</ion-refresher>
 		<div class="list-bottom">
-			<ion-scroll direction="y">
-					<ion-item ng-click="openPart(part)">
-						00000008
+					<ion-item ng-click="openPart(data.part_id)" ng-repeat="data in partsList[0].parts">
+						{{data.part_name}}
 					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					<ion-item>
-						00000008
-					</ion-item>
-					
-			</ion-scroll>
+            <ion-item class="card padding item-text-wrap text-center">
+                <i class="icon ion-refresh"></i>
+                <h2>Pull down to refresh Parts</h2>
+            </ion-item>
 		</div>
 	</ion-content>
 	

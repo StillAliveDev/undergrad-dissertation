@@ -25,3 +25,7 @@
 .item.wrap, .item.content-wrap{
 	white-space:normal !important;
 }
+
+.text-center{
+    text-align: center !important;
+}

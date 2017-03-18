@@ -13,7 +13,6 @@
 			SocketService.emit('user:login', loginData);
 		};
         SocketService.on('login:success', function(data){
-        	// Print the data
 			$scope.loginFailed = false;
         	console.log(data);
         	var json = angular.fromJson(data)
