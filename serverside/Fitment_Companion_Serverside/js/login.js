@@ -24,7 +24,7 @@ module.exports = {
                               console.log(q2_err)
                           }
                           else{
-                              console.log('Done - no worry about asynchronous here');
+                              console.log('User marked as signed in');
                           }
                       });
 
