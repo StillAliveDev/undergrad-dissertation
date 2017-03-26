@@ -4,7 +4,7 @@
 	
 	function PartsController($scope,$rootScope,$state,$ionicPopup,localStorageService,SocketService){
 		$scope.partsList =[];
-
+		
 		$scope.loadList = function(){
 		    SocketService.emit('parts:loadList');
 		    SocketService.on('parts:loadComplete', function(data){
@@ -12,6 +12,7 @@
 
 		       $scope.partsList = angular.fromJson(data);
 		       $rootScope.$broadcast('scroll.refreshComplete');
+		       SocketService.removeListener('parts:loadComplete');
             });
 		    SocketService.on('parts:loadError',function(data){
 		        console.log(data);
@@ -38,6 +39,23 @@
 				templateUrl: 'templates/partScanModal.html',
 				scope: $scope
 			});
+			nfc.addNdefListener(
+				nfcHandler,
+				function(){
+					console.log('Listening for a tag');
+				},
+				function(error){
+					console.log('error adding listener');
+				}
+			);
+
+		};
+
+		function nfcHandler(nfcEvent){
+			var tag = nfcEvent.tag;
+			var ndefMessage = tag.ndefMessage;
+			var payload = nfc.bytesToString(ndefMessage[0].payload);
+			console.log(payload);
 		};
 	}
 	
