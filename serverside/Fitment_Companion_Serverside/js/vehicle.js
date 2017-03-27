@@ -2,7 +2,13 @@ var connection = require('./db.js');
 
 module.exports = {
     loadAllVins : function(callback){
-        var res = [];
+        var res = {
+            vehicles: [],
+            total: 0,
+            in_fitments:0,
+            error: false,
+            errorText: ""
+        };
         var vins = [];
         var vin_count = [];
         var query = "SELECT vehicles.vin FROM vehicles;";
@@ -15,15 +21,17 @@ module.exports = {
                     for(var i = 0; i < rows.length; i++){
                         vins.push(rows[i].vin);
                     }
-                    res.push({vehicles: vins})
+                    res.vehicles = vins;
                 }
                 else{
-                    res.push({error: "Couldn't Load Vehicles"});
+                    res.error = true;
+                    res.errorText = "No Vehicles Found";
                     callback(JSON.stringify(res),null);
                 }
             }
             else{
-                res.push({error: "SQL Error"});
+                res.error = true;
+                res.errorText = err;
                 callback(JSON.stringify(res),null);
             }
 
@@ -31,24 +39,122 @@ module.exports = {
         connection.db.query(query2, function(err,rows,fields){
            if(!err){
                if(rows.length > 0){
-                   res.push({vin_count : rows[0].vin_count});
+                   res.total = rows[0].vin_count;
                }
            }
            else{
-               res.push({error: "SQL Error"});
+               res.error = true;
+               res.errorText = err;
                callback(JSON.stringify(res),null);
            }
         });
         connection.db.query(query3, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
-                    res.push({total_fitment_vins : rows[0].fitment_vin_count});
+                    res.in_fitments = rows[0].fitment_vin_count;
                     callback(null, JSON.stringify(res));
+                }
+                else{
+                    res.error = true;
+                    res.errorText = "No fitments found";
+                    callback(JSON.stringify(res),null);
                 }
             }
             else{
-                res.push({error: "SQL Error"});
+                res.error = true;
+                res.errorText = err;
                 callback(JSON.stringify(res),null);
+            }
+        });
+
+    },
+    enquire : function(vin,callback){
+        var res = {
+            vehicle:{},
+            fitmentGroups:[],
+            fitmentOperations:[],
+            assignedParts: [],
+            error: false,
+            errorText: ""
+        };
+        var vehQuery = "SELECT * FROM vehicles WHERE vehicles.vin = '"+vin+"';";
+        var fitmentGroupQuery = "SELECT * from fitment_groups WHERE fitment_groups.veh_vin = '"+vin+"';";
+        var fitmentOpQuery = "SELECT * from fitment_operations " +
+                            "WHERE fitment_operations.group_id = (SELECT fitment_groups.fit_group_id " +
+                                "FROM fitment_groups " +
+                                "WHERE fitment_groups.veh_vin = '"+vin+"');";
+        var assignPartsQuery = "SELECT parts.PART_ID, parts.NAME, parts.IN_INVENTORY FROM parts " +
+        "join fitment_operations on fitment_operations.PART_ID = parts.part_id " +
+        "where fitment_operations.GROUP_ID = (" +
+        "select fitment_groups.FIT_GROUP_ID " +
+        "from fitment_groups " +
+        "where fitment_groups.veh_vin = '" + vin + "');";
+
+        connection.db.query(vehQuery, function(err,rows,fields){
+            if(!err) {
+                if(rows.length > 0) {
+                    res.vehicle = rows[0];
+                }
+                else{
+                    res.error = true;
+                    res.errorText = "No Vehicle Found";
+                }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+
+            }
+        });
+
+        connection.db.query(fitmentGroupQuery, function(err,rows,fields){
+            if(!err){
+                if(rows.length > 0) {
+                    for (var i = 0; i < rows.length; i++) {
+                        res.fitmentGroups.push(rows[i]);
+                    }
+                }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        });
+
+        connection.db.query(fitmentOpQuery, function(err,rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    for(var i = 0; i < rows.length; i++) {
+                        res.fitmentOperations.push(rows[i]);
+                    }
+                }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        });
+
+        connection.db.query(assignPartsQuery, function(err,rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    for(var i = 0; i < rows.length ; i++){
+                        res.assignedParts.push(rows[i])
+                    }
+                }
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res), null)
             }
         });
 

@@ -34,5 +34,33 @@ module.exports = {
                 callback(JSON.stringify(res),null);
             }
         });
+    },
+    enquire: function(id, callback){
+        var res = {
+            part: {},
+            error: false,
+            errorText: ""
+        };
+        var query = "SELECT * FROM parts WHERE PART_ID = '" +id+ "';";
+
+        connection.db.query(query, function(err,rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    res.part = rows[0];
+                }
+                else{
+                    res.error = true;
+                    res.errorText = "Part not Found";
+                }
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+
+        });
     }
 };
