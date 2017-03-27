@@ -17,8 +17,9 @@
 	</ion-item>	<ion-item class="small-detail-font">
 		<strong>Weight: </strong> {{partInfo.part.WEIGHT}} Kg
 	</ion-item>
-	</ion-item>	<ion-item class="small-detail-font">
-		<strong>Added: </strong> {{partInfo.part.ADDED_TIMESTAMP}}
+	</ion-item>
+	<ion-item class="small-detail-font">
+		<strong>Added: </strong> {{partInfo.part.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}
 	</ion-item>
 
 </ion-list>

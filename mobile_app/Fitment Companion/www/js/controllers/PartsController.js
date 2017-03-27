@@ -5,6 +5,11 @@
 	function PartsController($scope,$rootScope,$state,$ionicPopup,localStorageService,SocketService){
 		$scope.partsList =[];
 
+		$scope.partInfo = {
+			part: {}
+		};
+
+
 		$scope.loadList = function(){
 		    SocketService.emit('parts:loadList');
 		    SocketService.on('parts:loadComplete', function(data){
@@ -20,11 +25,15 @@
 
         };
 
-		$scope.openPart = function(part_id){
+		$scope.openPart = function(part){
 			console.log('Opening Part Popup');
-			$scope.partData = [{
-			    'part_id': part_id
-            }];
+            SocketService.emit('part:enquire',part);
+            SocketService.on('part:enquirySuccess', function(data){
+                console.log(data);
+                $scope.partInfo = angular.fromJson(data);
+                SocketService.removeListener('part:enquirySuccess');
+            });
+
 			var partPopup = $ionicPopup.confirm({
 				title: 'Part Detail',
 				templateUrl: 'templates/partDetailModal.html',

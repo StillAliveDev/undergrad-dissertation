@@ -40,7 +40,6 @@
                 SocketService.removeListener('vehicle:enquirySuccess');
 			});
 
-			//Run Load Vehicle Info Here -- Db Query emit, on
 			var vehiclePopup = $ionicPopup.confirm({
 				title: 'Selected Vehicle',
 				templateUrl: 'templates/vehicleDetailModal.html',
@@ -64,6 +63,9 @@
 			SocketService.on('part:enquirySuccess', function(data){
 				console.log(data);
 				$scope.partInfo = angular.fromJson(data);
+
+				partInfo.
+
 				SocketService.removeListener('part:enquirySuccess');
 			});
 			var partPopup = $ionicPopup.confirm({

@@ -12,7 +12,7 @@
 		<strong>Colour: </strong>{{vehicleDetails.vehicle.COLOUR}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Added: </strong>{{vehicleDetails.vehicle.ADDED_TIMESTAMP}}
+		<strong>Added: </strong>{{vehicleDetails.vehicle.ADDED_TIMESTAMP  | date: 'dd-MM-yyyy HH:MM:ss'}}
 	</ion-item>
 </ion-list>
 <ion-item ng-if="!vehicleDetails.fitmentGroups[0]">
