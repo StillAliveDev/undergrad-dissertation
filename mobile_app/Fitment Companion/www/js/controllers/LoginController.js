@@ -3,7 +3,6 @@
 	.controller('LoginController',['$scope','$rootScope','$state','$ionicPopup','localStorageService','SocketService', LoginController]);
 
 	function LoginController($scope,$rootScope,$state, $ionicPopup, localStorageService,SocketService){
-		SocketService.removeAllListeners();
 
 		document.addEventListener("deviceReady", checkNFCHardware, false);
 
@@ -19,7 +18,7 @@
 					nfc.showSettings();
 				})
 			})
-		};
+		}
 
 		$scope.login = function(username, password){
 			//Send data to server
@@ -32,11 +31,12 @@
         SocketService.on('login:success', function(data){
 			$scope.loginFailed = false;
         	console.log(data);
-        	var json = angular.fromJson(data)
+        	var json = angular.fromJson(data);
 
 			//Put user details into $rootScope
         	$rootScope.user_id = json[0].user_id;
         	$rootScope.user_name = json[0].user_name;
+            SocketService.emit('home:load');
             $state.go('app.home');
         });
         SocketService.on('login:fail', function(data){

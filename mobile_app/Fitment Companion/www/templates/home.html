@@ -1,4 +1,4 @@
-<ion-view title="Home" ng-controller="HomeController as home_ctrl">
+<ion-view title="Home">
 	<header class="bar bar-header bar-positive">
 		<h1 class="title">Home</h1>
 	</header>
@@ -9,9 +9,9 @@
 			</div>
 			<div class="item item-text-wrap">
 				Total In Database:
-				<strong>000</strong><br />
+				<strong>{{data.totalVehicles}}</strong><br />
 				Total Assigned to Fitment Groups:
-				<strong>000</strong><br />
+				<strong>{{data.totalAssignedVeh}}</strong><br />
 			</div>
 		</div>
 		<div class="card">
@@ -20,9 +20,9 @@
 			</div>
 			<div class="item item-text-wrap">
 				Total In Database:
-				<strong>000</strong><br />
+				<strong>{{data.totalParts}}</strong><br />
 				Total Assigned to Fitment Groups:
-				<strong>000</strong><br />
+				<strong>{{data.totalAssignedParts}}</strong><br />
 			</div>
 		</div>
 	</ion-content>

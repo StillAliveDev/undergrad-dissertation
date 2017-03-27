@@ -4,7 +4,7 @@
 	
 	function PartsController($scope,$rootScope,$state,$ionicPopup,localStorageService,SocketService){
 		$scope.partsList =[];
-		
+
 		$scope.loadList = function(){
 		    SocketService.emit('parts:loadList');
 		    SocketService.on('parts:loadComplete', function(data){
