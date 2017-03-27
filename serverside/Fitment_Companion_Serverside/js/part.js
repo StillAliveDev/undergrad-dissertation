@@ -2,35 +2,46 @@ var connection = require('./db.js');
 
 module.exports = {
     loadAllParts : function(callback){
-        var res = [];
-        var parts = [];
-        var query = "SELECT parts.part_id, parts.name " +
+        var res = {
+            parts: [],
+            total:0,
+            error:false,
+            errorText:""
+        };
+        var query = "SELECT parts.PART_ID, parts.NAME " +
             "FROM parts;";
-        var query2 = "select count(parts.part_id) as parts_count from parts;";
+        var query2 = "select count(parts.part_id) as PARTS_COUNT from parts;";
 
         connection.db.query(query, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
                     for(var i = 0; i < rows.length; i++){
-                        parts.push({part_id: rows[i].part_id, part_name: rows[i].name});
+                        res.parts.push(rows[i]);
                     }
-                    res.push({parts: parts});
+                }
+                else{
+                    res.error = true;
+                    res.errorText = "No Parts Found";
+                    callback(JSON.stringify(res),null);
                 }
             }
             else{
-                res.push({error: 'SQL Error'});
+                res.error = true;
+                res.errorText = err
+                console.log(err);
                 callback(JSON.stringify(res),null);
             }
         });
         connection.db.query(query2, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
-                    res.push({parts_count : rows[0].parts_count})
+                    res.total = rows[0].PARTS_COUNT;
                 }
                 callback(null, JSON.stringify(res));
             }
             else{
-                res.push({error: 'SQL Error'});
+                res.error = true;
+                res.errorText = err;
                 callback(JSON.stringify(res),null);
             }
         });
