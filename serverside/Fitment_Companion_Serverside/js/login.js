@@ -45,7 +45,6 @@ module.exports = {
   },
     doLogout : function(data, callback){
       var user = JSON.parse(data);
-      console.log(data);
       var userid = user.userid;
       var username = user.username;
       var res = [];
@@ -57,7 +56,7 @@ module.exports = {
 
       connection.db.query(query, function(err,rows,fields){
          if(!err){
-             res.push({msg: "signout success"});
+             res.push({msg: "signout success", id:userid, user:username});
              callback(null, JSON.stringify(res));
          }
          else{
