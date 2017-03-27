@@ -32,14 +32,7 @@
 
 		$scope.openVIN = function(vin){
 			console.log('Opening Vehicle Detail Popup');
-
-			SocketService.emit('vehicle:enquire', vin);
-			SocketService.on('vehicle:enquirySuccess', function(data){
-				console.log('loading complete ' + data);
-				$scope.vehicleDetails = angular.fromJson(data);
-                SocketService.removeListener('vehicle:enquirySuccess');
-			});
-
+			$scope.getVehicleDetails(vin);
 			var vehiclePopup = $ionicPopup.confirm({
 				title: 'Selected Vehicle',
 				templateUrl: 'templates/vehicleDetailModal.html',
@@ -59,15 +52,7 @@
 		
 		$scope.openPart = function(part){
 			console.log('Opening Part Popup');
-			SocketService.emit('part:enquire',part);
-			SocketService.on('part:enquirySuccess', function(data){
-				console.log(data);
-				$scope.partInfo = angular.fromJson(data);
-
-				partInfo.
-
-				SocketService.removeListener('part:enquirySuccess');
-			});
+			$scope.partEnquiry(part);
 			var partPopup = $ionicPopup.confirm({
 				title: 'Part Detail',
 				templateUrl: 'templates/partDetailModal.html',
@@ -77,27 +62,93 @@
 
 		$scope.openPartScan = function(){
 			console.log('Opening Part Scan Popup');
-			var partScanPopup = $ionicPopup.confirm({
+			$scope.partScanPopup = $ionicPopup.confirm({
 				title: 'Scan Tag',
 				templateUrl: 'templates/partScanModal.html',
 				scope: $scope
 			});
+
+            nfc.addNdefListener(
+                nfcHandler,
+                function(){
+                    console.log('Listening for a tag');
+                },
+                function(error){
+                    console.log('error adding listener');
+                }
+            );
 		};		
 		
 		$scope.openVehicleScan = function(){
 			console.log('Opening Vehicle Scan Popup');
-			var vehicleScanPopup = $ionicPopup.confirm({
+			$scope.vehicleScanPopup = $ionicPopup.confirm({
 				title: 'Scan Tag',
 				templateUrl: 'templates/vehicleScanModal.html',
 				scope: $scope
 			});
-		};
-		
-		$scope.randomPrint = function(){
-			console.log('hello world');
+
+            nfc.addNdefListener(
+                nfcHandler,
+                function(){
+                    console.log('Listening for a tag');
+                },
+                function(error){
+                    console.log('error adding listener');
+                }
+            );
 		};
 
 
+		$scope.partEnquiry = function(part){
+            SocketService.emit('part:enquire',part);
+            SocketService.on('part:enquirySuccess', function(data){
+                console.log(data);
+                $scope.partInfo = angular.fromJson(data);
+                SocketService.removeListener('part:enquirySuccess');
+            });
+		};
+
+		$scope.getVehicleDetails = function(vin){
+            SocketService.emit('vehicle:enquire', vin);
+            SocketService.on('vehicle:enquirySuccess', function(data){
+                console.log('loading complete ' + data);
+                $scope.vehicleDetails = angular.fromJson(data);
+                SocketService.removeListener('vehicle:enquirySuccess');
+            });
+		};
+
+        function nfcHandler(nfcEvent){
+
+            var tag = nfcEvent.tag;
+            var ndefMessage = tag.ndefMessage;
+            var payload = nfc.bytesToString(ndefMessage[0].payload);
+
+            json = angular.fromJson(payload.slice(3));
+            console.log(payload.slice(3));
+
+;            nfc.removeNdefListener(
+                nfcHandler, // this must be the same as the function above
+                function () {
+                    console.log("Success, the listener has been removed.");
+                },
+                function (error) {
+                    alert("Removing the listener failed");
+                }
+            );
+
+            if(json.type == 'veh'){
+                $scope.vehicleScanPopup.close();
+            	$scope.openVIN(json.id);
+			}
+			if(json.type == 'part'){
+            	$scope.partScanPopup.close();
+            	//This needs to remove it from inventory after checking if its the part we expect
+				$scope.openPart(json.id);
+			}
+
+            //$scope.vehicleScanPopup.close();
+            //$scope.openVin(vin);
+        };
 
 		
 	}
