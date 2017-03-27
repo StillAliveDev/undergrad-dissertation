@@ -1,30 +1,32 @@
 <ion-item class="item-divider small-heading-font">
-	<strong>Vehicle: </strong>{{data[0].vin}}
+	<strong>Vehicle: </strong>{{vehicleDetails.vehicle.VIN}}
 </ion-item>
 <ion-list>
 	<ion-item class="small-detail-font">
-		<strong>Make: </strong>
+		<strong>Make: </strong>{{vehicleDetails.vehicle.MAKE}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Model: </strong>
+		<strong>Model: </strong>{{vehicleDetails.vehicle.MODEL}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Colour: </strong>Blue
+		<strong>Colour: </strong>{{vehicleDetails.vehicle.COLOUR}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Added: </strong>20/03/2017 00:00:00
+		<strong>Added: </strong>{{vehicleDetails.vehicle.ADDED_TIMESTAMP}}
 	</ion-item>
 </ion-list>
-<ion-item>
+<ion-item ng-if="!vehicleDetails.fitmentGroups[0]">
+	<div  class="item item-text-wrap item-royal">
+		Vehicle does not have any fitment groups
+	</div>
+</ion-item>
+<ion-item ng-if="vehicleDetails.fitmentGroups[0]">
 	<ion-item class="item-divider">
 		Fitment Groups
 	</ion-item>
 	<ion-list>
-		<ion-item ng-click="openGroup(group)">
-			Axle Repairs
-		</ion-item>
-		<ion-item ng-click="randomPrint()">
-			Rear Screen Sticker
+		<ion-item ng-click="openGroup(group)" ng-repeat="group in vehicleDetails.fitmentGroups">
+			{{group.DESCRIPTION}}
 		</ion-item>
 	</ion-list>
 </ion-item>

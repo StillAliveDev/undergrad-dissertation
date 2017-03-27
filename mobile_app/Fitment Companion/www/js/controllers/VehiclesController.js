@@ -3,13 +3,26 @@
 	.controller('VehiclesController',['$scope','$state','$rootScope','$ionicPopup','localStorageService','SocketService', VehiclesController]);
 	
 	function VehiclesController($scope,$state,$rootScope,$ionicPopup,localStorageService,SocketService){
-		$scope.vehicleList = [];
+		$scope.data = {
+			vehicles:[],
+			total:0,
+			in_fitments:0
+		};
+
+		$scope.vehicleDetails = {
+			vehicle: {}
+		};
+
+		$scope.partInfo = {
+			part: {}
+		};
 
 		$scope.loadList = function(){
 		    SocketService.emit('vehicles:loadList');
             SocketService.on('vehicles:loadComplete', function(data){
 		        console.log('loading complete ' + data);
-		        $scope.vehicleList = angular.fromJson(data);
+		        $scope.data = angular.fromJson(data);
+		        SocketService.removeListener('vehicles:loadComplete');
             });
             SocketService.on('vehicles:loadError', function(data){
                 console.log(data);
@@ -17,12 +30,17 @@
             $rootScope.$broadcast('scroll.refreshComplete');
         };
 
-		$scope.openVIN = function(data){
+		$scope.openVIN = function(vin){
 			console.log('Opening Vehicle Detail Popup');
+
+			SocketService.emit('vehicle:enquire', vin);
+			SocketService.on('vehicle:enquirySuccess', function(data){
+				console.log('loading complete ' + data);
+				$scope.vehicleDetails = angular.fromJson(data);
+                SocketService.removeListener('vehicle:enquirySuccess');
+			});
+
 			//Run Load Vehicle Info Here -- Db Query emit, on
-			$scope.data = [{
-			    'vin' : data
-            }];
 			var vehiclePopup = $ionicPopup.confirm({
 				title: 'Selected Vehicle',
 				templateUrl: 'templates/vehicleDetailModal.html',
@@ -42,6 +60,12 @@
 		
 		$scope.openPart = function(part){
 			console.log('Opening Part Popup');
+			SocketService.emit('part:enquire',part);
+			SocketService.on('part:enquirySuccess', function(data){
+				console.log(data);
+				$scope.partInfo = angular.fromJson(data);
+				SocketService.removeListener('part:enquirySuccess');
+			});
 			var partPopup = $ionicPopup.confirm({
 				title: 'Part Detail',
 				templateUrl: 'templates/partDetailModal.html',

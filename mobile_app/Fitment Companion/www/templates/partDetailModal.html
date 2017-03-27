@@ -1,20 +1,26 @@
 <ion-item class="item-divider small-heading-font">
-	Part: 10x Pack Bolts
+	<i class="ion-archive" ng-if="partInfo.part.IN_INVENTORY == 'TRUE'"></i>
+	<i class="ion-alert" ng-if="partInfo.part.IN_INVENTORY == 'FALSE'"></i>
+	<strong>Part: </strong>{{partInfo.part.NAME}}
 </ion-item>
 <ion-list>
 	<ion-item class="small-detail-font">
-		<strong>Part ID: </strong>
+		<strong>Part ID: </strong> {{partInfo.part.PART_ID}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Manufacturer: </strong>
+		<strong>Manufacturer: </strong> {{partInfo.part.MANUFACTURER}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Width: </strong>
+		<strong>Width: </strong> {{partInfo.part.WIDTH_M}} M
 	</ion-item>	<ion-item class="small-detail-font">
-		<strong>Length: </strong>
+		<strong>Length: </strong>{{partInfo.part.LENGTH_M}} M
 	</ion-item>	<ion-item class="small-detail-font">
-		<strong>Weight: </strong>
+		<strong>Weight: </strong> {{partInfo.part.WEIGHT}} Kg
 	</ion-item>
+	</ion-item>	<ion-item class="small-detail-font">
+		<strong>Added: </strong> {{partInfo.part.ADDED_TIMESTAMP}}
+	</ion-item>
+
 </ion-list>
 <ion-item>
 <img class="nfc-icon-modal" src="img/nfc-icon.png" ng-click="openPartScan()">
