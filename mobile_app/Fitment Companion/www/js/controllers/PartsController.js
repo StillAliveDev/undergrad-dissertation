@@ -9,10 +9,11 @@
 			partDetails:{
 				part:{}
 			},
-			partsScan:{
-				toRemove: false,
-				correctPart: true
-			}
+			partsScan: {
+                toRemove: false,
+                correctPart: true
+            },
+			expectedTag:"part"
 		};
 
 		$scope.loadList = function(){
@@ -48,20 +49,12 @@
 		
 		$scope.openPartScan = function(){
 			console.log('Opening Part Scan Popup');
-			var partScanPopup = $ionicPopup.confirm({
+			$scope.partScanPopup = $ionicPopup.confirm({
 				title: 'Part Enquire',
 				templateUrl: 'templates/partScanModal.html',
 				scope: $scope
 			});
-			nfc.addNdefListener(
-				nfcHandler,
-				function(){
-					console.log('Listening for a tag');
-				},
-				function(error){
-					console.log('error adding listener');
-				}
-			);
+			$scope.listenForNFC();
 
 		};
 
@@ -74,28 +67,37 @@
             json = angular.fromJson(payload.slice(3));
             console.log(payload.slice(3));
 
-            nfc.removeNdefListener(
-                nfcHandler, // this must be the same as the function above
-                function () {
-                    console.log("Success, the listener has been removed.");
-                },
-                function (error) {
-                    alert("Removing the listener failed");
-                }
-            );
+            $scope.stopListeningForNFC();
 
-            if(json.type == 'veh'){
-                $scope.vehicleScanPopup.close();
-                $scope.openVIN(json.id);
-            }
-            if(json.type == 'part'){
+            if((json.type == 'part') && ($scope.controllerData.expectedTag == 'part')){
                 $scope.partScanPopup.close();
                 //This needs to remove it from inventory after checking if its the part we expect
                 $scope.openPart(json.id);
             }
+        };
 
-            //$scope.vehicleScanPopup.close();
-            //$scope.openVin(vin);
+        $scope.stopListeningForNFC = function(){
+            nfc.removeNdefListener(
+                nfcHandler, // this must be the same as the function above
+                function () {
+                    console.log('NFC Listener Removed');
+                },
+                function (error) {
+                    alert('Removing the listener failed: ' + error);
+                }
+            );
+        };
+
+        $scope.listenForNFC = function() {
+            nfc.addNdefListener(
+                nfcHandler,
+                function(){
+                    console.log('Listening for a tag');
+                },
+                function(error){
+                    console.log('Error adding listener: ' + error);
+                }
+            );
         };
 	}
 	

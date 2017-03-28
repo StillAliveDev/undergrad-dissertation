@@ -18,7 +18,8 @@
 			partsScan:{
 				toRemove:true,
 				correctPart:true
-			}
+			},
+			expectedTag:""
 		};
 
 
@@ -73,16 +74,8 @@
 				templateUrl: 'templates/partScanModal.html',
 				scope: $scope
 			});
-
-            nfc.addNdefListener(
-                nfcHandler,
-                function(){
-                    console.log('Listening for a tag');
-                },
-                function(error){
-                    console.log('error adding listener');
-                }
-            );
+			$scope.controllerData.expectedTag = "part";
+            $scope.listenForNFC();
 		};		
 		
 		$scope.openVehicleScan = function(){
@@ -92,16 +85,8 @@
 				templateUrl: 'templates/vehicleScanModal.html',
 				scope: $scope
 			});
-
-            nfc.addNdefListener(
-                nfcHandler,
-                function(){
-                    console.log('Listening for a tag');
-                },
-                function(error){
-                    console.log('error adding listener');
-                }
-            );
+			$scope.controllerData.expectedTag = "veh";
+            $scope.listenForNFC();
 		};
 
 		$scope.processPart = function(id){
@@ -111,7 +96,7 @@
 			}
 			else{
 				$scope.controllerData.partsScan.correctPart = false;
-				$scope.partScanPopup.close(); // Refreshes the View
+				$scope.$apply(); // Refreshes the View
 			}
 		}
 
@@ -143,7 +128,31 @@
 			}
             $scope.partEnquiry(id);
 
-		}
+		};
+
+		$scope.stopListeningForNFC = function(){
+            nfc.removeNdefListener(
+                nfcHandler, // this must be the same as the function above
+                function () {
+                    console.log('NFC Listener Removed');
+                },
+                function (error) {
+                    alert('Removing the listener failed: ' + error);
+                }
+            );
+		};
+
+		$scope.listenForNFC = function() {
+            nfc.addNdefListener(
+                nfcHandler,
+                function(){
+                    console.log('Listening for a tag');
+                },
+                function(error){
+                    console.log('Error adding listener: ' + error);
+                }
+            );
+		};
 
         function nfcHandler(nfcEvent){
 
@@ -154,27 +163,16 @@
             json = angular.fromJson(payload.slice(3));
             console.log(payload.slice(3));
 
-;            nfc.removeNdefListener(
-                nfcHandler, // this must be the same as the function above
-                function () {
-                    console.log("Success, the listener has been removed.");
-                },
-                function (error) {
-                    alert("Removing the listener failed");
-                }
-            );
+            $scope.stopListeningForNFC();
 
-            if(json.type == 'veh'){
+            if((json.type == 'veh') && ($scope.controllerData.expectedTag == 'veh')){
                 $scope.vehicleScanPopup.close();
-            	$scope.openVIN(json.id);
-			}
-			if(json.type == 'part'){
-            	//This needs to remove it from inventory after checking if its the part we expect
-				$scope.processPart(json.id);
-			}
-
-            //$scope.vehicleScanPopup.close();
-            //$scope.openVin(vin);
+                $scope.openVIN(json.id);
+            }
+            if((json.type == 'part') && ($scope.controllerData.expectedTag == 'part')){
+                //This needs to remove it from inventory after checking if its the part we expect
+                $scope.processPart(json.id);
+            }
         };
 
 		
