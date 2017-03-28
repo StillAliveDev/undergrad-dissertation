@@ -1,29 +1,29 @@
 <ion-item class="item-divider small-heading-font">
-	<i class="ion-archive" ng-if="partInfo.part.IN_INVENTORY == 'TRUE'"></i>
-	<i class="ion-alert" ng-if="partInfo.part.IN_INVENTORY == 'FALSE'"></i>
-	<strong>Part: </strong>{{partInfo.part.NAME}}
+	<i class="ion-archive" ng-if="controllerData.partDetails.part.IN_INVENTORY == 'TRUE'"></i>
+	<i class="ion-alert" ng-if="controllerData.partDetails.part.IN_INVENTORY == 'FALSE'"></i>
+	<strong>Part: </strong>{{controllerData.partDetails.part.NAME}}
 </ion-item>
 <ion-list>
 	<ion-item class="small-detail-font">
-		<strong>Part ID: </strong> {{partInfo.part.PART_ID}}
+		<strong>Part ID: </strong> {{controllerData.partDetails.part.PART_ID}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Manufacturer: </strong> {{partInfo.part.MANUFACTURER}}
+		<strong>Manufacturer: </strong> {{controllerData.partDetails.part.MANUFACTURER}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Width: </strong> {{partInfo.part.WIDTH_M}} M
+		<strong>Width: </strong> {{controllerData.partDetails.part.WIDTH_M}} M
 	</ion-item>	<ion-item class="small-detail-font">
-		<strong>Length: </strong>{{partInfo.part.LENGTH_M}} M
+		<strong>Length: </strong>{{controllerData.partDetails.part.LENGTH_M}} M
 	</ion-item>	<ion-item class="small-detail-font">
-		<strong>Weight: </strong> {{partInfo.part.WEIGHT}} Kg
+		<strong>Weight: </strong> {{controllerData.partDetails.part.WEIGHT}} Kg
 	</ion-item>
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Added: </strong> {{partInfo.part.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}
+		<strong>Added: </strong> {{controllerData.partDetails.part.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}
 	</ion-item>
 
 </ion-list>
-<ion-item>
+<ion-item ng-if="controllerData.partsScan.toRemove">
 <img class="nfc-icon-modal" src="img/nfc-icon.png" ng-click="openPartScan()">
 <!-- Image Goes Here -->
 </ion-item>

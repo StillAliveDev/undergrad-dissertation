@@ -9,14 +9,14 @@
 			<div class="row">
 				<div class="col col-75">
 					<div class="row">
-						<h4>Total Vehicles: {{data.total}}</h4>
+						<h4>Total Vehicles: {{controllerData.list.total}}</h4>
 					</div>
 					<div class="row">
-						<h4>Assigned to Groups: {{data.in_fitments}}</h4>
+						<h4>Assigned to Groups: {{controllerData.list.in_fitments}}</h4>
 					</div>
 				</div>
 				<div class="col col-25">
-					<img class="nfc-icon" src="img/nfc-icon.png" ng-click="openVehicleScan()">
+					<img class="nfc-icon" src="img/nfc-icon.png" ng-click="openVehicleScan(false)">
 				</div>
 			</div>
 		</div>
@@ -27,7 +27,7 @@
 		on-refresh="loadList()">
 		</ion-refresher>
 		<div class="list-bottom">
-					<ion-item ng-click="openVIN(vin)" ng-repeat="vin in data.vehicles">
+					<ion-item ng-click="openVIN(vin)" ng-repeat="vin in controllerData.list.vehicles">
 						{{vin}}
 					</ion-item>
             <ion-item class="card padding item-text-wrap text-center">

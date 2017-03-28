@@ -3,25 +3,29 @@
 	.controller('VehiclesController',['$scope','$state','$rootScope','$ionicPopup','localStorageService','SocketService', VehiclesController]);
 	
 	function VehiclesController($scope,$state,$rootScope,$ionicPopup,localStorageService,SocketService){
-		$scope.data = {
-			vehicles:[],
-			total:0,
-			in_fitments:0
+
+		$scope.controllerData = {
+			list : {
+				vehicles:[],
+				total:0,
+				in_fitments:0
+			},
+			vehicleDetails : {},
+			partDetails : {
+                part: {}
+            },
+
+			partsScan:{
+				toRemove:true
+			}
 		};
 
-		$scope.vehicleDetails = {
-			vehicle: {}
-		};
-
-		$scope.partInfo = {
-			part: {}
-		};
 
 		$scope.loadList = function(){
 		    SocketService.emit('vehicles:loadList');
             SocketService.on('vehicles:loadComplete', function(data){
 		        console.log('loading complete ' + data);
-		        $scope.data = angular.fromJson(data);
+		        $scope.controllerData.list = angular.fromJson(data);
 		        SocketService.removeListener('vehicles:loadComplete');
             });
             SocketService.on('vehicles:loadError', function(data){
@@ -62,8 +66,10 @@
 
 		$scope.openPartScan = function(){
 			console.log('Opening Part Scan Popup');
+
+			if(contr)
 			$scope.partScanPopup = $ionicPopup.confirm({
-				title: 'Scan Tag',
+				title: "Remove Part",
 				templateUrl: 'templates/partScanModal.html',
 				scope: $scope
 			});
@@ -82,7 +88,7 @@
 		$scope.openVehicleScan = function(){
 			console.log('Opening Vehicle Scan Popup');
 			$scope.vehicleScanPopup = $ionicPopup.confirm({
-				title: 'Scan Tag',
+				title: 'Vehicle Enquire',
 				templateUrl: 'templates/vehicleScanModal.html',
 				scope: $scope
 			});
@@ -103,7 +109,7 @@
             SocketService.emit('part:enquire',part);
             SocketService.on('part:enquirySuccess', function(data){
                 console.log(data);
-                $scope.partInfo = angular.fromJson(data);
+                $scope.controllerData.partDetails = angular.fromJson(data);
                 SocketService.removeListener('part:enquirySuccess');
             });
 		};
@@ -112,7 +118,7 @@
             SocketService.emit('vehicle:enquire', vin);
             SocketService.on('vehicle:enquirySuccess', function(data){
                 console.log('loading complete ' + data);
-                $scope.vehicleDetails = angular.fromJson(data);
+                $scope.controllerData.vehicleDetails = angular.fromJson(data);
                 SocketService.removeListener('vehicle:enquirySuccess');
             });
 		};

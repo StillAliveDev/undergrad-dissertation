@@ -1,31 +1,31 @@
 <ion-item class="item-divider small-heading-font">
-	<strong>Vehicle: </strong>{{vehicleDetails.vehicle.VIN}}
+	<strong>Vehicle: </strong>{{controllerData.vehicleDetails.vehicle.VIN}}
 </ion-item>
 <ion-list>
 	<ion-item class="small-detail-font">
-		<strong>Make: </strong>{{vehicleDetails.vehicle.MAKE}}
+		<strong>Make: </strong>{{controllerData.vehicleDetails.vehicle.MAKE}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Model: </strong>{{vehicleDetails.vehicle.MODEL}}
+		<strong>Model: </strong>{{controllerData.vehicleDetails.vehicle.MODEL}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Colour: </strong>{{vehicleDetails.vehicle.COLOUR}}
+		<strong>Colour: </strong>{{controllerData.vehicleDetails.vehicle.COLOUR}}
 	</ion-item>
 	<ion-item class="small-detail-font">
-		<strong>Added: </strong>{{vehicleDetails.vehicle.ADDED_TIMESTAMP  | date: 'dd-MM-yyyy HH:MM:ss'}}
+		<strong>Added: </strong>{{controllerData.vehicleDetails.vehicle.ADDED_TIMESTAMP  | date: 'dd-MM-yyyy HH:MM:ss'}}
 	</ion-item>
 </ion-list>
-<ion-item ng-if="!vehicleDetails.fitmentGroups[0]">
+<ion-item ng-if="!controllerData.vehicleDetails.fitmentGroups[0]">
 	<div  class="item item-text-wrap item-royal">
 		Vehicle does not have any fitment groups
 	</div>
 </ion-item>
-<ion-item ng-if="vehicleDetails.fitmentGroups[0]">
+<ion-item ng-if="controllerData.vehicleDetails.fitmentGroups[0]">
 	<ion-item class="item-divider">
 		Fitment Groups
 	</ion-item>
 	<ion-list>
-		<ion-item ng-click="openGroup(group)" ng-repeat="group in vehicleDetails.fitmentGroups">
+		<ion-item ng-click="openGroup(group)" ng-repeat="group in controllerData.vehicleDetails.fitmentGroups">
 			{{group.DESCRIPTION}}
 		</ion-item>
 	</ion-list>

@@ -1,4 +1,4 @@
-<ion-view title="Parts" ng-controller="PartsController as parts_ctrl">
+<ion-view title="Parts">
 	<header class="bar bar-header bar-positive">
 		<h1 class="title">Parts</h1>
 	</header>
@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col col-75">
 					<div class="row">
-						<h4>Total Parts: {{partsList.total}}</h4>
+						<h4>Total Parts: {{controllerData.partsList.total}}</h4>
 					</div>
 				</div>
 				<div class="col col-25">
@@ -22,7 +22,7 @@
 		on-refresh="loadList()">
 		</ion-refresher>
 		<div class="list-bottom">
-					<ion-item ng-click="openPart(part.PART_ID)" ng-repeat="part in partsList.parts">
+					<ion-item ng-click="openPart(part.PART_ID)" ng-repeat="part in controllerData.partsList.parts">
 						{{part.NAME}}
 					</ion-item>
             <ion-item class="card padding item-text-wrap text-center">
