@@ -7,6 +7,7 @@ module.exports = {
             totalAssignedVeh: 0,
             totalParts: 0,
             totalAssignedParts:0,
+            totalPartsInInventory:0,
             error: false,
             errorText: null
         };
@@ -20,6 +21,7 @@ module.exports = {
         var partsAssignedQuery = "SELECT count(parts.part_id) as a_part_count " +
             "FROM parts " +
             "WHERE parts.part_id IN (SELECT DISTINCT fitment_operations.part_id FROM fitment_operations);";
+        var partsInInventoryQuery = "SELECT count(part_id) as parts_in_inv FROM parts where IN_INVENTORY = 'TRUE';"
 
         connection.db.query(vehicleCountQuery, function(err, rows, fields){
             if(!err){
@@ -65,7 +67,6 @@ module.exports = {
                 if(rows.length >0) {
                     res.totalAssignedParts = rows[0].a_part_count;
                 }
-                callback(null, JSON.stringify(res));
            }
            else{
                 res.error = true;
@@ -73,6 +74,20 @@ module.exports = {
                 console.log(err);
                 callback(JSON.stringify(res),null);
            }
+        });
+        connection.db.query(partsInInventoryQuery, function(err, rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    res.totalPartsInInventory = rows[0].parts_in_inv;
+                }
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res), null);
+            }
         });
     }
 }

@@ -73,5 +73,57 @@ module.exports = {
             }
 
         });
+    },
+    removePart: function(data,callback){
+        var res = {
+            username:data.username,
+            part_id:data.part_id,
+            error:false,
+            errorText: ""
+        };
+
+        var query = "UPDATE parts " +
+            "SET IN_INVENTORY = 'FALSE' " +
+            "WHERE PART_ID = " + data.part_id + ";";
+
+        connection.db.query(query, function(err,rows,fields){
+            if(!err){
+                console.log('part: ' + data.part_id + ' removed from inventory');
+                res.error = false;
+                callback(null, JSON.stringify(res));
+            }
+            else {
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        });
+    },
+    returnPart : function(data, callback){
+        var res = {
+            username: data.username,
+            part_id: data.part_id,
+            error:false,
+            errorText: ""
+        };
+
+        var query = "UPDATE parts " +
+            "SET IN_INVENTORY = 'TRUE' " +
+            "WHERE PART_ID = " + data.part_id + ";";
+
+        connection.db.query(query, function(err,rows,fields){
+            if(!err){
+                console.log('part: ' + data.part_id + 'removed from inventory');
+                res.error = false;
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res), null);
+            }
+        });
     }
 };

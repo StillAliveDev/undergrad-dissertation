@@ -112,4 +112,39 @@ io.on('connection', function(socket){
             }
         });
     });
+
+    //Handles broadcasts when user removes part from inventory
+
+    socket.on('part:remove', function(data){
+       console.log('Request to remove part from inventory');
+
+       partsFunc.removePart(data,function(err,content){
+           if(err){
+               console.log(err);
+               socket.emit('part:removeFail', err);
+           }
+           else{
+               console.log(content);
+               socket.emit('part:removeSuccess');
+               io.sockets.emit('part:invNotif',content);
+           }
+       });
+    });
+
+    //Handles broadcasts when user returns part to inventory
+    socket.on('part:return', function(data){
+        console.log('Request to return part to inventory');
+
+        partsFunc.returnPart(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('part:removeFail',err);
+            }
+            else{
+                console.log(content);
+                socket.emit('part:removeSuccess', content);
+                io.sockets.emit('part:invNotif', content);
+            }
+        });
+    });
 });
