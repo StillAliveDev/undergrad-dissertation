@@ -10,7 +10,8 @@
 				part:{}
 			},
 			partsScan:{
-				toRemove: false
+				toRemove: false,
+				correctPart: true
 			}
 		};
 
@@ -73,7 +74,7 @@
             json = angular.fromJson(payload.slice(3));
             console.log(payload.slice(3));
 
-            ;            nfc.removeNdefListener(
+            nfc.removeNdefListener(
                 nfcHandler, // this must be the same as the function above
                 function () {
                     console.log("Success, the listener has been removed.");

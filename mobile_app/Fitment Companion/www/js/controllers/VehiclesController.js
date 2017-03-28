@@ -16,7 +16,8 @@
             },
 
 			partsScan:{
-				toRemove:true
+				toRemove:true,
+				correctPart:true
 			}
 		};
 
@@ -66,10 +67,9 @@
 
 		$scope.openPartScan = function(){
 			console.log('Opening Part Scan Popup');
-
-			if(contr)
+            $scope.controllerData.partsScan.correctPart = true;
 			$scope.partScanPopup = $ionicPopup.confirm({
-				title: "Remove Part",
+				title: "Remove/Replace Part",
 				templateUrl: 'templates/partScanModal.html',
 				scope: $scope
 			});
@@ -104,6 +104,17 @@
             );
 		};
 
+		$scope.processPart = function(id){
+			if(id == $scope.controllerData.partDetails.part.PART_ID){
+				$scope.partScanPopup.close();
+				$scope.returnRemovePart(id);
+			}
+			else{
+				$scope.controllerData.partsScan.correctPart = false;
+				$scope.partScanPopup.close(); // Refreshes the View
+			}
+		}
+
 
 		$scope.partEnquiry = function(part){
             SocketService.emit('part:enquire',part);
@@ -122,6 +133,17 @@
                 SocketService.removeListener('vehicle:enquirySuccess');
             });
 		};
+
+		$scope.returnRemovePart = function(id){
+			if($scope.controllerData.partDetails.part.IN_INVENTORY == "FALSE"){
+                console.log('Returning Part' + id);
+			}
+			else{
+				console.log('Removing Part' + id);
+			}
+            $scope.partEnquiry(id);
+
+		}
 
         function nfcHandler(nfcEvent){
 
@@ -147,9 +169,8 @@
             	$scope.openVIN(json.id);
 			}
 			if(json.type == 'part'){
-            	$scope.partScanPopup.close();
             	//This needs to remove it from inventory after checking if its the part we expect
-				$scope.openPart(json.id);
+				$scope.processPart(json.id);
 			}
 
             //$scope.vehicleScanPopup.close();

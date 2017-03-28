@@ -12,6 +12,30 @@ angular.module('starter', ['ionic', 'LocalStorageModule', 'btford.socket-io','an
       StatusBar.styleDefault();
     }
   });
+/*
+  $rootScope.removeNFCListener = function(){
+      nfc.removeNdefListener(
+          nfcHandler, // this must be the same as the function above
+          function () {
+              console.log("Success, the listener has been removed.");
+          },
+          function (error) {
+              alert("Removing the listener failed");
+          }
+      );
+  };
+
+  $rootScope.addNFCListener = function(){
+      nfc.addNdefListener(
+          nfcHandler,
+          function(){
+              console.log('Listening for a tag');
+          },
+          function(error){
+              console.log('error adding listener');
+          }
+      );
+  }*/
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider){
