@@ -15,16 +15,24 @@
 		//Updates numbers when ew items are added (Realtime Functionality)
 		SocketService.on('vehicle:addSuccess', function(){
 			SocketService.emit('home:load');
+			$scope.$apply();
 		});
 		SocketService.on('part:addSuccess', function(){
 			SocketService.emit('home:load');
+			$scope.$apply();
 		})
 		SocketService.on('vehicle:assignSuccess', function(){
 			SocketService.emit('home:load');
+			$scope.$apply();
 		});
 		SocketService.on('part:assignSuccess', function(){
-			SocketService.emit('home:load');
-		})
+            SocketService.emit('home:load');
+            $scope.$apply();
+        })
+        SocketService.on('part:invNotif', function(data){
+            SocketService.emit('home:load');
+            $scope.$apply();
+        })
 	}
 
 

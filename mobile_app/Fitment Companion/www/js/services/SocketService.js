@@ -4,7 +4,7 @@
 	
 	function SocketService(socketFactory){
 		return socketFactory({
-			ioSocket: io.connect('http://192.168.43.46:6100')
+			ioSocket: io.connect('http://192.168.1.2:6100')
 		});
 	}
 })();

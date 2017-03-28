@@ -120,13 +120,26 @@
 		};
 
 		$scope.returnRemovePart = function(id){
+            var data = {
+                username: $rootScope.user_name,
+                part_id : id
+            };
 			if($scope.controllerData.partDetails.part.IN_INVENTORY == "FALSE"){
                 console.log('Returning Part' + id);
+                SocketService.emit('part:return',data);
+                SocketService.on('part:returnSuccess',function(data){
+                	console.log('part returned : ' + data);
+				});
 			}
 			else{
 				console.log('Removing Part' + id);
+				SocketService.emit('part:remove', data);
+				SocketService.on('part:removeSuccess', function(data){
+					console.log('part removed : ' + data);
+				});
 			}
             $scope.partEnquiry(id);
+			$scope.getVehicleDetails($scope.controllerData.vehicleDetails.vehicle.VIN);
 
 		};
 
@@ -164,6 +177,7 @@
             console.log(payload.slice(3));
 
             $scope.stopListeningForNFC();
+            console.log('Listener should have been removed here');
 
             if((json.type == 'veh') && ($scope.controllerData.expectedTag == 'veh')){
                 $scope.vehicleScanPopup.close();
