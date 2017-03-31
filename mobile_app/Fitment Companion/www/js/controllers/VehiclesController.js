@@ -14,7 +14,10 @@
 			partDetails : {
                 part: {}
             },
-
+			fitmentConfirm:{
+				incomplete:false,
+				incompleteNotes:""
+			},
 			partsScan:{
 				toRemove:true,
 				correctPart:true
@@ -48,14 +51,88 @@
 		
 		$scope.openGroup = function(group){
 			console.log('Opening Group Detail Popup');
-			var groupPopup = $ionicPopup.confirm({
+			$scope.groupPopup = $ionicPopup.confirm({
 				title: 'Fitment Detail',
 				templateUrl: 'templates/fitmentGroupDetailModal.html',
 				scope: $scope,
-				okText: 'Start'
+				buttons: [
+					{text: 'Close'},
+					{
+						text: 'Start/Finish',
+						type: 'button-positive',
+						onTap: function(e) {
+							e.preventDefault();
+							console.log('Button Pressed');
+							$scope.startFinishGroup(group);
+						}
+					}
+				]
+
 			});
 		};
-		
+
+		$scope.startFinishGroup = function(group){
+			var data = {
+				group_id: group.FIT_GROUP_ID,
+				user_id : $rootScope.user_id,
+				user_name: $rootScope.user_name
+			};
+			console.log($rootScope.user_id)
+			if(group.IN_PROGRESS == 'FALSE'){
+				SocketService.emit('group:start', data);
+				SocketService.on('group:startSucc', function(data){
+					console.log(data);
+                    $scope.getVehicleDetails($scope.controllerData.vehicleDetails.vehicle.VIN);
+                    $scope.groupPopup.close();
+                    SocketService.removeListener('group:startSucc');
+				});
+			}
+			else if(group.IN_PROGRESS == 'TRUE'){
+				$scope.completeFitment(group);
+
+				$scope.groupPopup.close();
+			}
+		};
+
+		$scope.completeFitment = function(group){
+			$scope.completePopup  = $ionicPopup.confirm({
+                title: 'Finish Fitment',
+                templateUrl: 'templates/fitmentCompleteConfirm.html',
+                scope: $scope,
+				buttons: [
+					{text: 'Cancel'},
+					{
+						text: 'Finish',
+						type: 'button-positive',
+						onTap: function(e){
+							e.preventDefault();
+							console.log($scope.controllerData.fitmentConfirm.incompleteNotes);
+
+                            var data = {
+                                group_id: group.FIT_GROUP_ID,
+                                user_id : $rootScope.user_id,
+                                user_name: $rootScope.user_name,
+								incomplete: $scope.controllerData.fitmentConfirm.incomplete,
+								incomplete_notes: $scope.controllerData.fitmentConfirm.incompleteNotes
+                            };
+
+							SocketService.emit('group:finish', data);
+                            SocketService.on('group:finishSucc', function(data){
+                                console.log(data);
+                                $scope.getVehicleDetails($scope.controllerData.vehicleDetails.vehicle.VIN);
+                                $scope.controllerData.fitmentConfirm.incompleteNotes = "";
+                                $scope.controllerData.fitmentConfirm.incomplete = 'FALSE';
+                                SocketService.removeListener('group:finishSucc');
+                                $scope.completePopup.close();
+                            });
+
+						}
+					}
+				]
+            });
+
+		};
+
 		$scope.openPart = function(part){
 			console.log('Opening Part Popup');
 			$scope.partEnquiry(part);

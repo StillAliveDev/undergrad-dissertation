@@ -26,6 +26,8 @@
 	</ion-item>
 	<ion-list>
 		<ion-item ng-click="openGroup(group)" ng-repeat="group in controllerData.vehicleDetails.fitmentGroups">
+			<i class="ion-load-a" ng-if="group.IN_PROGRESS == 'TRUE'"></i>
+			<i class="ion-checkmark-round" ng-if="group.INCOMPLETE == 'FALSE'"></i>
 			{{group.DESCRIPTION}}
 		</ion-item>
 	</ion-list>
