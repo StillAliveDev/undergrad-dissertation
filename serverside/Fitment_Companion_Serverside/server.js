@@ -4,6 +4,7 @@ var loginFunc = require('./js/login.js');
 var vehFunc = require('./js/vehicle.js');
 var partsFunc = require('./js/part.js');
 var homeFunc = require('./js/home.js');
+var groupFunc = require('./js/group.js');
 
 io.on('connection', function(socket){
     //Handles Login broadcasts
@@ -147,4 +148,38 @@ io.on('connection', function(socket){
             }
         });
     });
+
+    //Hendles starting a fitment group
+    socket.on('group:start', function(data){
+        console.log('Request to start a fitment group');
+
+        groupFunc.start(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('group:startFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('group:startSucc', content);
+                io.sockets.emit('group:notif', content);
+            }
+        });
+    });
+
+    //Handles finishing a fitment group
+    socket.on('group:finish', function(data){
+        console.log('Request to finish a group');
+
+        groupFunc.finish(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('group:finishFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('group:finishSucc', content);
+                io.sockets.emit('group:notif', content);
+            }
+        })
+    })
 });
