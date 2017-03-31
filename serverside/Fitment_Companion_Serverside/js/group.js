@@ -11,7 +11,7 @@ module.exports = {
         };
 
         var query = "update fitment_groups "+
-        "SET USER_ID= "+data.user_id+", IN_PROGRESS ='TRUE' WHERE FIT_GROUP_ID =" + data.group_id +";";
+        "SET USER_ID= "+data.user_id+", INCOMPLETE = 'TRUE', IN_PROGRESS ='TRUE' WHERE FIT_GROUP_ID =" + data.group_id +";";
 
         connection.db.query(query, function(err,rows,fields){
             if(!err){
