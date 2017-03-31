@@ -95,6 +95,8 @@
 		};
 
 		$scope.completeFitment = function(group){
+            $scope.controllerData.fitmentConfirm.incompleteNotes = "";
+            $scope.controllerData.fitmentConfirm.incomplete = 'FALSE';
 			$scope.completePopup  = $ionicPopup.confirm({
                 title: 'Finish Fitment',
                 templateUrl: 'templates/fitmentCompleteConfirm.html',
