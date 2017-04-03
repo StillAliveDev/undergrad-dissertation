@@ -3,14 +3,14 @@
 angular.module('myApp', [
     'ui.bootstrap',
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
+  'myApp.socket',
+  'btford.socket-io',
+  'myApp.login',
+  'myApp.home',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
-
   
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/login'});
 }]);

@@ -10,12 +10,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
   <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
+    <li><a href="#!/login">login</a></li>
   </ul>
 
   <!--[if lt IE 7]>
@@ -37,11 +36,25 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
 
+  <!--Server-->
+  <!--TODO : Add Server Link-->
+  <script src="http://192.168.43.46:6100/socket.io/socket.io.js"></script> <!--change this when needed to deploy on the phone -->
+  <script src="bower_components/angular-socket-io/socket.js"></script>
+  <script src="js/services/SocketService.js"></script>
+
+
+  <!-- controllers -->
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+
+
+  <script src="js/controllers/loginController.js"></script>
+  <script src="js/controllers/homeController.js"></script>
+
+  <!-- components -->
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+
+
 </body>
 </html>
