@@ -181,5 +181,9 @@ io.on('connection', function(socket){
                 io.sockets.emit('group:notif', content);
             }
         })
-    })
+    });
+
+    setInterval(function(){
+        io.sockets.emit('test:emit');
+    }, 2000);
 });
