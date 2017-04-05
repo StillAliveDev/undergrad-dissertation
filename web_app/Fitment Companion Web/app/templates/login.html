@@ -1,1 +1,31 @@
-<h1>Login Screen</h1>
+<div class="container">
+    <div class="page-header">
+            <h1>Fitment Companion
+            <small>: User Login</small>
+            </h1>
+    </div>
+
+    <div class="">
+        <div class="panel panel-default login-panel">
+            <div class="panel-heading">
+                Login
+            </div>
+            <div class="panel-body">
+                <div class="alert alert-danger" role="alert" ng-show="loginFailed">Username or Password are incorrect</div>
+                <div class="input-group">
+                    <span class="input-group-addon">User Name</span>
+                    <input type="text" class="form-control" placeholder="Username" ng-model="loginData.username">
+                </div>
+                <br /><br />
+                <div class="input-group">
+                    <span class="input-group-addon">Password</span>
+                    <input type="password" class="form-control" placeholder="Password" ng-model="loginData.pass">
+                </div>
+                <br /><br/>
+                <button type="button" class="btn btn-primary" ng-click="doLogin()">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

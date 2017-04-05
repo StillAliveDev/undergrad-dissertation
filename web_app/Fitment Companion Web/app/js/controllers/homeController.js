@@ -10,8 +10,5 @@ angular.module('myApp.home', ['ngRoute', 'ui.bootstrap'])
 
     .controller('HomeController', function($scope, SocketService){
 
-        SocketService.on('test:emit', function(){
-            console.log('hello');
-        });
 
     });
