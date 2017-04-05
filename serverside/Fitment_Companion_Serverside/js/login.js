@@ -1,23 +1,27 @@
 var connection = require('./db.js');
+var crypto = require('crypto');
 
 module.exports = {
   doLogin : function(data, callback){
       var res = [];
       var username = data.username;
       var password = data.pass;
+
+      var sha256_pass = crypto.createHash('sha256').update(password).digest("hex");
+
       var query = "SELECT USER_ID, USER_NAME, USER_PASSWORD FROM users WHERE " +
           "USER_NAME = '" + username + "' " +
           "AND " +
-          "USER_PASSWORD = '" + password + "';";
+          "USER_PASSWORD = '" + sha256_pass + "';";
 
       connection.db.query(query, function(err,rows,fields) {
           if(!err) {
               if(rows.length > 0) {
-                  if ((username == rows[0].USER_NAME) && (password == rows[0].USER_PASSWORD)) {
+                  if ((username == rows[0].USER_NAME) && (sha256_pass == rows[0].USER_PASSWORD)) {
                       var query_2 = "UPDATE USERS" +
                           " SET USER_SIGNED_IN = 'TRUE' " +
                           "WHERE USER_NAME = '" + username + "' AND " +
-                          "USER_PASSWORD = '" + password + "';";
+                          "USER_PASSWORD = '" + sha256_pass + "';";
 
                       connection.db.query(query_2, function(q2_err, q2_rows, q2_fields){
                           if(q2_err){

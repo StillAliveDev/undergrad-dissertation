@@ -25,13 +25,12 @@
   padding-right: 0.3em;
 }
 */
+.container{
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
 
 .login-panel{
   width: 40%;
   margin-left: 30%;
-}
-
-.main-content{
-  margin: 10%;
-  width: 80%;
 }
