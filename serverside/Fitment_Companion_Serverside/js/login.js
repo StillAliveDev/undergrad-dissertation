@@ -8,6 +8,9 @@ module.exports = {
       var password = data.pass;
 
       var sha256_pass = crypto.createHash('sha256').update(password).digest("hex");
+      sha256_pass = crypto.createHash('sha256').update(sha256_pass).digest("hex");
+      sha256_pass = crypto.createHash('sha256').update(sha256_pass).digest("hex");
+      sha256_pass = crypto.createHash('sha256').update(sha256_pass).digest("hex");
 
       var query = "SELECT USER_ID, USER_NAME, USER_PASSWORD FROM users WHERE " +
           "USER_NAME = '" + username + "' " +
