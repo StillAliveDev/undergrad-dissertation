@@ -9,7 +9,7 @@ angular.module('myApp.login', ['ngRoute', 'ui.bootstrap'])
     }])
 
 
-    .controller('LoginController', function($rootScope,$scope, SocketService, $location){
+    .controller('LoginController', function($window,$rootScope,$scope, SocketService, $location){
         $scope.loginData = {
             username:"",
             pass:""
@@ -31,6 +31,9 @@ angular.module('myApp.login', ['ngRoute', 'ui.bootstrap'])
 
             $rootScope.user_id = json[0].user_id;
             $rootScope.user_name = json[0].user_name;
+
+            $window.sessionStorage.user_id = json[0].user_id;
+            $window.sessionStorage.user_name = json[0].user_name;
 
             $scope.loginFailed = false;
 

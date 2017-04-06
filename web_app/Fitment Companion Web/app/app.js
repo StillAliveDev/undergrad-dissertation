@@ -7,6 +7,10 @@ angular.module('myApp', [
   'btford.socket-io',
   'myApp.login',
   'myApp.home',
+  'myApp.vehicles',
+  'myApp.parts',
+  'myApp.users',
+  'myApp.fitments',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
