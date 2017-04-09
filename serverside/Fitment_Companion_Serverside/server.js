@@ -183,6 +183,40 @@ io.on('connection', function(socket){
         })
     });
 
+    //Handles requests to add a vehicle
+    socket.on('vehicle:add', function(data){
+        console.log('Request to add vehicle');
+
+        vehFunc.add(data, function(err,content){
+            if(err){
+                console.log(err);
+                socket.emit('vehicle:addFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('vehicle:addSuccess', content);
+                io.sockets.emit('vehicle:notif', content);
+            }
+        })
+    });
+
+    //Handles requests to add a vehicle
+    socket.on('vehicle:delete', function(data){
+        console.log('Request to delete a vehicle');
+
+        vehFunc.delete(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('vehicle:deleteFail',err);
+            }
+            else{
+                console.log(content);
+                socket.emit('vehicle:deleteSuccess',content);
+                io.sockets.emit('vehicle:notif', content);
+            }
+        })
+    });
+
     setInterval(function(){
         io.sockets.emit('test:emit');
     }, 2000);

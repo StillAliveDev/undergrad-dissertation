@@ -158,5 +158,58 @@ module.exports = {
             }
         });
 
+    },
+    add: function(data, callback){
+        var res = {
+            username: data.username,
+            vin: data.vehicle.vin,
+            notifTyoe: "A",
+            error: false,
+            errorText: ""
+        };
+
+        var query = "insert into vehicles (VIN, MAKE, MODEL, COLOUR, ADDED_TIMESTAMP) " +
+            "VALUES (" + data.vehicle.vin + "," +  data.vehicle.make + "," + data.vehicle.model + "," +
+                    data.vehicle.colour + ", now())";
+
+        connection.db.query(query, function(err,rows,fields){
+            if(!err){
+                    if(rows.length > 0){
+                        callback(null, JSON.stringify(res));
+                    }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        });
+    },
+    delete: function(data, callback){
+        var res = {
+            username: data.username,
+            vin: data.vin,
+            notifType: "D",
+            error: false,
+            errorText: ""
+        }
+
+        var query = "delete from vehicles where vin = "+data.vin+";";
+
+        connection.db.query(query, function(err,rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    callback(null, JSON.stringify(res));
+                }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res), null);
+            }
+        })
     }
+
 };
