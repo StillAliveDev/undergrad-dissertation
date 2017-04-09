@@ -174,9 +174,8 @@ module.exports = {
 
         connection.db.query(query, function(err,rows,fields){
             if(!err){
-                    if(rows.length > 0){
-                        callback(null, JSON.stringify(res));
-                    }
+                console.log("Vehicle: " + data.vehicle.vin + " Added")
+                callback(null, JSON.stringify(res));
             }
             else{
                 res.error = true;
@@ -199,9 +198,8 @@ module.exports = {
 
         connection.db.query(query, function(err,rows,fields){
             if(!err){
-                if(rows.length > 0){
-                    callback(null, JSON.stringify(res));
-                }
+                console.log("Vehicle: " + data.vin + " Deleted")
+                callback(null, JSON.stringify(res));
             }
             else{
                 res.error = true;

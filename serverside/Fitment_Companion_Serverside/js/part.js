@@ -78,6 +78,7 @@ module.exports = {
         var res = {
             username:data.username,
             part_id:data.part_id,
+            notifType:"remove",
             error:false,
             errorText: ""
         };
@@ -104,6 +105,7 @@ module.exports = {
         var res = {
             username: data.username,
             part_id: data.part_id,
+            notifType: "return",
             error:false,
             errorText: ""
         };
@@ -125,5 +127,56 @@ module.exports = {
                 callback(JSON.stringify(res), null);
             }
         });
+    },
+    addPart : function(data, callback){
+        var res = {
+            username: data.username,
+            part_id: data.part.part_id,
+            notifType: "A",
+            error:false,
+            errorText:""
+        };
+
+        var query = "insert into parts (NAME, MANUFACTURER, WIDTH_M, LENGTH_M, WEIGHT, IN_INVENTORY, ADDED_TIMESTAMP) " +
+            "VALUES ("+data.part.name+","+data.part.manufacturer+","+data.part.width+","+data.part.length+","+data.part.weight+", now());";
+
+        connection.db.query(query, function(err,rows,fields){
+            if(!err){
+                console.log("Part: " + data.part.part_name + " Added");
+                res.error = false;
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(Err);
+                callback(JSON.stringify(res),null);
+            }
+        })
+    },
+    deletePart : function(data, callback){
+        var res = {
+            username: data.username,
+            part_id: data.part_id,
+            notifType: "D",
+            error: false,
+            errorText : ""
+        };
+
+        var query = "DELETE from parts WHERE PART_ID = "+data.part_id+";";
+
+        connection.db.query(query, function(err, rows, fields){
+            if(!err){
+                console.log("Part: " + data.part_id + " Deleted");
+                res.error = false;
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(Err);
+                callback(JSON.stringify(res), null);
+            }
+        })
     }
 };

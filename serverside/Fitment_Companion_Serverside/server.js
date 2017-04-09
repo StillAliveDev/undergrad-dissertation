@@ -217,6 +217,40 @@ io.on('connection', function(socket){
         })
     });
 
+    //Handles Requets to add a part
+    socket.on('part:add', function(data){
+        console.log('Request to add a part');
+
+        partsFunc.addPart(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('part:addFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('part:addSuccess', content);
+                io.sockets.emit('part:notif', content);
+            }
+        })
+    });
+
+    //Handles requests to delete a part
+    socket.on('part:delete', function(data){
+        console.log("Request to delete a part");
+
+        partsFunc.addPart(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('part:deleteFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('part:deleteSuccess', content);
+                io.sockets.emit('part:notif', content);
+            }
+        })
+    });
+
     setInterval(function(){
         io.sockets.emit('test:emit');
     }, 2000);
