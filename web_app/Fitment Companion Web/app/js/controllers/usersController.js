@@ -16,7 +16,32 @@ angular.module('myApp.users', ['ngRoute', 'ui.bootstrap'])
             id: $window.sessionStorage.user_id,
             user_name:$window.sessionStorage.user_name
         };
+
+        $scope.controllerData ={
+            users:[],
+            total:0,
+            totalAssigned:0,
+            totalSignedIn:0,
+            error:false,
+            currentError:""
+        };
         /*Page Functions*/
+
+        $scope.loadAllUsers = function(){
+            SocketService.emit('users:loadFull');
+            SocketService.on('users:loadFullSuccess', function(data){
+                $scope.controllerData.error = false;
+                $scope.controllerData.currentError = "";
+                console.log(data);
+                var res = angular.fromJson(data);
+                $scope.controllerData.users = res.users;
+                $scope.controllerData.total = res.total;
+                $scope.controllerData.totalAssigned = res.totalAssigned;
+                $scope.controllerData.totalSignedIn = res.totalSignedIn;
+
+                SocketService.removeListener('users:loadFullSuccess');
+            })
+        };
 
 
         /*Navbar Functions*/

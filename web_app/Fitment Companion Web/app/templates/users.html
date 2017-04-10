@@ -36,7 +36,42 @@
         </div>
     </div>
 
-    <p>This is the users page</p>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Total users : <strong>{{controllerData.total}}</strong><br />
+            Total users assigned to a Fitment Group : <strong>{{controllerData.totalAssigned}}</strong><br />
+            Total users currently signed in : <strong>{{controllerData.totalSignedIn}}</strong><br /><br />
+            <button type="button" ng-click="loadAllUsers()" class="btn btn-primary">Refresh</button>
+            <button type="button" class="btn btn-primary">Add User</button>
+        </div>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date Added</th>
+            <th>Signed in</th>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in controllerData.users">
+            <td>{{user.USER_ID}}</td>
+            <td>{{user.USER_NAME}}</td>
+            <td>{{user.USER_FIRST_NAME}}</td>
+            <td>{{user.USER_LAST_NAME}}</td>
+            <td>{{user.USER_CREATED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
+            <td>{{user.USER_SIGNED_IN}}</td>
+            <td>
+                <i ng-click="deleteUser(user.USER_ID)" class="glyphicon glyphicon-remove"></i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
 
 </div>

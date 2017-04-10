@@ -38,12 +38,13 @@ angular.module('myApp.vehicles', ['ngRoute', 'ui.bootstrap'])
         };
 
         $scope.deleteVehicle = function(vin){
-            var r = window.confirm("Delete Vehicle: " + vin + "?");
             var data = {
                 username: $scope.currentUser.user_name,
                 vin: vin
             };
-            SocketService.emit('vehicle:delete', data);
+            if(window.confirm("Delete Vehicle: " + vin + "?")){
+                SocketService.emit('vehicle:delete', data);
+            }
             SocketService.on('vehicle:deleteSuccess', function(data){
                 $scope.controllerData.error = false;
                 console.log(data);
