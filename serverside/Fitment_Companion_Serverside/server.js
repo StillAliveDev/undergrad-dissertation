@@ -53,6 +53,20 @@ io.on('connection', function(socket){
         });
     });
 
+    socket.on('vehicles:loadFull', function(){
+        console.log('Request to reload Full Vehicles List Received');
+        vehFunc.loadAll(function(err,content){
+            if(err){
+                console.log(err);
+                socket.emit('vehicles:loadFullFail',err);
+            }
+            else{
+                console.log(content);
+                socket.emit('vehicles:loadFullSuccess',content);
+            }
+        });
+    });
+
     //Handles vehicle enquiry broadcasts
     socket.on('vehicle:enquire',function(vin){
         console.log('Vehicle Enquiry Request');

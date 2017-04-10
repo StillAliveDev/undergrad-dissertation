@@ -159,6 +159,65 @@ module.exports = {
         });
 
     },
+    loadAll: function(callback){
+        var res={
+            vehicles:[],
+            total: 0,
+            totalAssigned: 0,
+            error:false,
+            errorText:""
+        };
+
+        var query1 = "SELECT * FROM vehicles;";
+        var query2 = "SELECT count(vehicles.vin) as TOTAL FROM vehicles;";
+        var query3 = "select count(vehicles.vin) as fitment_vin_count from vehicles " +
+            "where vehicles.vin in (select distinct fitment_groups.VEH_VIN from fitment_groups);";
+
+        connection.db.query(query1, function(err,rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    for(var i = 0; i < rows.length; i++){
+                        res.vehicles.push(rows[i]);
+                    }
+                }
+                else{
+                    res.error = true;
+                    res.errorText = err;
+                    console.log(err);
+                    callback(JSON.stringify(res),null);
+                }
+            }
+        });
+
+        connection.db.query(query2, function(err,rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    res.total = rows[0].TOTAL;
+                }
+                else{
+                    res.error = true;
+                    res.errorText = err;
+                    console.log(err);
+                    callback(JSON.stringify(res),null);
+                }
+            }
+        });
+
+        connection.db.query(query3, function(err,rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    res.totalAssigned = rows[0].fitment_vin_count;
+                    callback(null, JSON.stringify(res));
+                }
+                else{
+                    res.error = true;
+                    res.errorText = err;
+                    console.log(err);
+                    callback(JSON.stringify(res),null);
+                }
+            }
+        });
+    },
     add: function(data, callback){
         var res = {
             username: data.username,
@@ -194,7 +253,7 @@ module.exports = {
             errorText: ""
         }
 
-        var query = "delete from vehicles where vin = "+data.vin+";";
+        var query = "delete from vehicles where vin = '"+data.vin+"';";
 
         connection.db.query(query, function(err,rows,fields){
             if(!err){
