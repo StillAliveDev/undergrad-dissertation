@@ -5,6 +5,7 @@ var vehFunc = require('./js/vehicle.js');
 var partsFunc = require('./js/part.js');
 var homeFunc = require('./js/home.js');
 var groupFunc = require('./js/group.js');
+var userFunc = require('./js/users.js');
 
 io.on('connection', function(socket){
     //Handles Login broadcasts
@@ -261,6 +262,21 @@ io.on('connection', function(socket){
                 console.log(content);
                 socket.emit('part:deleteSuccess', content);
                 io.sockets.emit('part:notif', content);
+            }
+        })
+    });
+
+    socket.on('users:loadFull',function(){
+        console.log('Request to load all user data');
+
+        userFunc.loadFull(function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('users:loadFullFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('users:loadFullSuccess', content);
             }
         })
     });
