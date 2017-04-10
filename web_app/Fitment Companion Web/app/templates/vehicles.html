@@ -36,6 +36,40 @@
         </div>
     </div>
 
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Total Vehicles : <strong>{{controllerData.total}}</strong><br />
+            Total Vehicles Assigned to a Fitment : <strong>{{controllerData.totalAssigned}}</strong><br /><br />
+            <button type="button" ng-click="loadAllVehicles()" class="btn btn-primary">Refresh</button>
+            <button type="button" class="btn btn-primary">Add Vehicle</button>
+        </div>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>VIN</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Colour</th>
+                <th>Date Added</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="vehicle in controllerData.vehicles">
+                <td>{{vehicle.VIN}}</td>
+                <td>{{vehicle.MAKE}}</td>
+                <td>{{vehicle.MODEL}}</td>
+                <td>{{vehicle.COLOUR}}</td>
+                <td>{{vehicle.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
+                <td>
+                    <i ng-click="deleteVehicle(vehicle.VIN)" class="glyphicon glyphicon-remove"></i>
+                    <i ng-click="" class="glyphicon glyphicon-barcode"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <p>This is the vehicles page</p>
 
 
