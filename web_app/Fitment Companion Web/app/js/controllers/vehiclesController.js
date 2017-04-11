@@ -32,7 +32,6 @@ angular.module('myApp.vehicles', ['ngRoute', 'ui.bootstrap'])
                 $scope.controllerData.vehicles = res.vehicles;
                 $scope.controllerData.total = res.total;
                 $scope.controllerData.totalAssigned = res.totalAssigned;
-                console.log($scope.controllerData);
                 SocketService.removeListener('vehicles:loadFullSuccess');
             })
         };

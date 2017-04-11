@@ -35,8 +35,47 @@
             </nav>
         </div>
     </div>
-
-    <p>This is the parts page</p>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Total Parts : <strong>{{controllerData.total}}</strong><br />
+            Total Parts assigned to a Fitment Group : <strong>{{controllerData.totalAssigned}}</strong><br />
+            Total Parts currently in inventory : <strong>{{controllerData.totalInInventory}}</strong><br /><br />
+            <button type="button" ng-click="loadAllParts()" class="btn btn-primary">Refresh</button>
+            <button type="button" class="btn btn-primary">Add Part</button>
+        </div>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Part Name</th>
+            <th>Manufacturer</th>
+            <th>Width (M)</th>
+            <th>Length (M)</th>
+            <th>Weight (KG)</th>
+            <th>In Inventory</th>
+            <th>Added</th>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="part in controllerData.parts">
+            <td>{{part.PART_ID}}</td>
+            <td>{{part.NAME}}</td>
+            <td>{{part.MANUFACTURER}}</td>
+            <td>{{part.WIDTH_M}}</td>
+            <td>{{part.LENGTH_M}}</td>
+            <td>{{part.WEIGHT}}</td>
+            <td>{{part.IN_INVENTORY}}</td>
+            <td>{{part.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
+            <td>
+                <i ng-click="deletePart(part.PART_ID)" class="glyphicon glyphicon-remove"></i>
+                <i ng-click="" class="glyphicon glyphicon-barcode"></i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
 
 </div>
