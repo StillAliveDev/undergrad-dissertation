@@ -19,8 +19,10 @@ angular.module('myApp.vehicles', ['ngRoute', 'ui.bootstrap'])
             total:0,
             totalAssigned: 0,
             error:false,
-            currentError:""
+            currentError:"",
+            addedSuccess:false
         };
+
         /*Page Functions*/
 
         $scope.loadAllVehicles = function(){
@@ -55,7 +57,19 @@ angular.module('myApp.vehicles', ['ngRoute', 'ui.bootstrap'])
                 $scope.controllerData.error = true;
                 $scope.controllerData.currentError = "Failed to delete Vehicle: Check it has no assigned groups";
             })
-        }
+        };
+
+        $scope.navAddVehicle = function(){
+            $location.path('/vehicles/add');
+        };
+
+        $scope.$on('$viewContentLoaded', function(){
+            $scope.loadAllVehicles();
+        });
+
+        SocketService.on('vehicles:notif', function(data){
+            $scope.loadAllVehicles();
+        });
 
         /*Navbar Functions*/
         $scope.logout = function(){

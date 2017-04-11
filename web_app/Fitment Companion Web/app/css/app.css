@@ -16,3 +16,7 @@
   background-color: #7a43b6;
   color: #ffffff;
 }
+.form-invalid-text{
+  font-size: 1em;
+  color: red;
+}

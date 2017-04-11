@@ -42,7 +42,7 @@
             Total users assigned to a Fitment Group : <strong>{{controllerData.totalAssigned}}</strong><br />
             Total users currently signed in : <strong>{{controllerData.totalSignedIn}}</strong><br /><br />
             <button type="button" ng-click="loadAllUsers()" class="btn btn-primary">Refresh</button>
-            <button type="button" class="btn btn-primary">Add User</button>
+            <button type="button" ng-click="navAddUser()" class="btn btn-primary">Add User</button>
         </div>
     </div>
     <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>

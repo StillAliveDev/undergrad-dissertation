@@ -63,7 +63,11 @@ angular.module('myApp.users', ['ngRoute', 'ui.bootstrap'])
                     $scope.controllerData.currentError = "Failed to delete User: check it has no assigned groups";
                 });
             }
-        }
+        };
+
+        $scope.navAddUser = function(){
+            $location.path('/users/add');
+        };
 
 
         /*Navbar Functions*/
