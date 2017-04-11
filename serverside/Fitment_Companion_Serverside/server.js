@@ -17,8 +17,8 @@ io.on('connection', function(socket){
            }
            else{
                console.log(content);
-               io.sockets.emit('login:notif');
                socket.emit('login:success', content);
+               io.sockets.emit('login:notif');
 
            }
         });
@@ -33,8 +33,8 @@ io.on('connection', function(socket){
         }
         else{
             console.log(content);
-            io.sockets.emit('logout:notif');
             socket.emit('logout:success');
+            io.sockets.emit('logout:notif');
         }
         });
     });
@@ -81,7 +81,7 @@ io.on('connection', function(socket){
                 socket.emit('vehicle:enquirySuccess',content);
             }
         });
-    })
+    });
 
     //Handles response when user refreshes the parts list
     socket.on('parts:loadList',function(){
@@ -142,7 +142,7 @@ io.on('connection', function(socket){
            else{
                console.log(content);
                socket.emit('part:removeSuccess');
-               io.sockets.emit('part:invNotif',content);
+               io.sockets.emit('part:notif',content);
            }
        });
     });
@@ -159,7 +159,7 @@ io.on('connection', function(socket){
             else{
                 console.log(content);
                 socket.emit('part:removeSuccess', content);
-                io.sockets.emit('part:invNotif', content);
+                io.sockets.emit('part:notif', content);
             }
         });
     });
@@ -210,7 +210,7 @@ io.on('connection', function(socket){
             else{
                 console.log(content);
                 socket.emit('vehicle:addSuccess', content);
-                io.sockets.emit('vehicle:notif', content);
+                io.sockets.emit('vehicles:notif', content);
             }
         })
     });
@@ -227,7 +227,7 @@ io.on('connection', function(socket){
             else{
                 console.log(content);
                 socket.emit('vehicle:deleteSuccess',content);
-                io.sockets.emit('vehicle:notif', content);
+                io.sockets.emit('vehicles:notif', content);
             }
         })
     });
@@ -275,7 +275,7 @@ io.on('connection', function(socket){
             else{
                 console.log(content);
                 socket.emit('user:deleteSuccess', content);
-                io.sockets.emit('partNotif',content);
+                io.sockets.emit('part:notif',content);
             }
         });
     });
@@ -306,12 +306,8 @@ io.on('connection', function(socket){
             else{
                 console.log(content);
                 socket.emit('part:deleteSuccess', content);
-                io.sockets.emit('partNotif', content);
+                io.sockets.emit('part:notif', content);
             }
         })
-    })
-
-    setInterval(function(){
-        io.sockets.emit('test:emit');
-    }, 2000);
+    });
 });

@@ -222,14 +222,14 @@ module.exports = {
         var res = {
             username: data.username,
             vin: data.vehicle.vin,
-            notifTyoe: "A",
+            notifType: "A",
             error: false,
             errorText: ""
         };
 
         var query = "insert into vehicles (VIN, MAKE, MODEL, COLOUR, ADDED_TIMESTAMP) " +
-            "VALUES (" + data.vehicle.vin + "," +  data.vehicle.make + "," + data.vehicle.model + "," +
-                    data.vehicle.colour + ", now())";
+            "VALUES ('" + data.vehicle.vin + "','" +  data.vehicle.make + "','" + data.vehicle.model + "','" +
+                    data.vehicle.colour + "', now())";
 
         connection.db.query(query, function(err,rows,fields){
             if(!err){
