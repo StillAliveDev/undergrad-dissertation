@@ -128,6 +128,78 @@ module.exports = {
             }
         });
     },
+    loadFull: function(data, callback){
+        var res = {
+            parts:[],
+            total:0,
+            totalAssigned:0,
+            totalInInventory:0,
+            error:false,
+            errorText:""
+        };
+
+        var query = "SELECT * FROM parts;";
+        var query2 = "SELECT count(part_id) as total from parts;";
+        var query3 = "SELECT DISTINCT count(parts.part_id) as totalAssigned FROM parts " +
+            "JOIN fitment_operations on parts.part_id = fitment_operations.part_id;";
+        var query4 = "SELECT count(parts.part_id) as totalInInventory FROM parts where IN_INVENTORY = 'TRUE';";
+
+        connection.db.query(query, function(err, rows,fields){
+            if(!err){
+                if(rows.length > 0){
+                    for(var i = 0; i < rows.length; i++){
+                        res.parts.push(rows[i]);
+                    }
+                }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        });
+        connection.db.query(query2, function(err, rows, fields){
+            if(!err){
+                if(rows.length > 0){
+                    res.total = rows[0].total
+                }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        });
+        connection.db.query(query3, function(err, rows, fields){
+            if(!err){
+                if(rows.length >0){
+                    res.totalAssigned = rows[0].totalAssigned;
+                }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        });
+        connection.db.query(query4, function(err, rows, fields){
+            if(!err){
+                if(rows.length > 0){
+                    res.totalInInventory = rows[0].totalInInventory;
+                    callback(null, JSON.stringify(res), null);
+                }
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        });
+    },
     addPart : function(data, callback){
         var res = {
             username: data.username,
@@ -149,7 +221,7 @@ module.exports = {
             else{
                 res.error = true;
                 res.errorText = err;
-                console.log(Err);
+                console.log(err);
                 callback(JSON.stringify(res),null);
             }
         })
@@ -174,7 +246,7 @@ module.exports = {
             else{
                 res.error = true;
                 res.errorText = err;
-                console.log(Err);
+                console.log(err);
                 callback(JSON.stringify(res), null);
             }
         })

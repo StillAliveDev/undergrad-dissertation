@@ -5,7 +5,7 @@ var vehFunc = require('./js/vehicle.js');
 var partsFunc = require('./js/part.js');
 var homeFunc = require('./js/home.js');
 var groupFunc = require('./js/group.js');
-var userFunc = require('./js/users.js');
+var userFunc = require('./js/user.js');
 
 io.on('connection', function(socket){
     //Handles Login broadcasts
@@ -249,23 +249,6 @@ io.on('connection', function(socket){
         })
     });
 
-    //Handles requests to delete a part
-    socket.on('part:delete', function(data){
-        console.log("Request to delete a part");
-
-        partsFunc.addPart(data, function(err, content){
-            if(err){
-                console.log(err);
-                socket.emit('part:deleteFail', err);
-            }
-            else{
-                console.log(content);
-                socket.emit('part:deleteSuccess', content);
-                io.sockets.emit('part:notif', content);
-            }
-        })
-    });
-
     socket.on('users:loadFull',function(){
         console.log('Request to load all user data');
 
@@ -280,7 +263,7 @@ io.on('connection', function(socket){
             }
         })
     });
-
+    //Handles the request to delete a user
     socket.on('user:delete', function(data){
         console.log("Request to delete a user");
 
@@ -293,6 +276,37 @@ io.on('connection', function(socket){
                 console.log(content);
                 socket.emit('user:deleteSuccess', content);
                 io.sockets.emit('partNotif',content);
+            }
+        });
+    });
+    //Handles requests to refresh the parts list (web app)
+    socket.on('parts:loadFull', function(data){
+        console.log("Request to load all part information");
+
+        partsFunc.loadFull(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('parts:loadFullFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('parts:loadFullSuccess', content);
+            }
+        });
+    });
+
+    socket.on('part:delete', function(data){
+        console.log("Request to delete a part");
+
+        partsFunc.deletePart(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('part:deleteFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('part:deleteSuccess', content);
+                io.sockets.emit('partNotif', content);
             }
         })
     })
