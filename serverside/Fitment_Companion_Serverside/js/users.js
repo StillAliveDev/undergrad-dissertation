@@ -68,5 +68,29 @@ module.exports = {
                 callback(JSON.stringify(res),null);
             }
         });
+    },
+    deleteUser : function(data, callback){
+        var res = {
+            username: data.username,
+            user_id: data.user_id,
+            notifType: "D",
+            error: false,
+            errorText:""
+        };
+
+        var query = "DELETE FROM users where user_id ="+data.user_id+";";
+
+        connection.db.query(query, function(err, rows, fields){
+            if(!err){
+                console.log("User: " + data.user_id + " Deleted")
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res),null);
+            }
+        })
     }
 };

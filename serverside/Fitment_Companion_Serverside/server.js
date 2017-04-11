@@ -281,6 +281,22 @@ io.on('connection', function(socket){
         })
     });
 
+    socket.on('user:delete', function(data){
+        console.log("Request to delete a user");
+
+        userFunc.deleteUser(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('user:deleteFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('user:deleteSuccess', content);
+                io.sockets.emit('partNotif',content);
+            }
+        })
+    })
+
     setInterval(function(){
         io.sockets.emit('test:emit');
     }, 2000);
