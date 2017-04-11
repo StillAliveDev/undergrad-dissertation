@@ -43,6 +43,28 @@ angular.module('myApp.users', ['ngRoute', 'ui.bootstrap'])
             })
         };
 
+        $scope.deleteUser = function(id){
+            var data = {
+                username : $window.sessionStorage.user_name,
+                user_id : id
+            };
+
+            if(window.confirm("Delete User: " + id + "?")){
+                SocketService.emit('user:delete', data);
+                SocketService.on('user:deleteSuccess', function(data){
+                    $scope.controllerData.error = false;
+                    console.log(angular.fromJson(data));
+                    $scope.loadAllUsers();
+                    SocketService.removeListener('part:deleteSuccess');
+                });
+                SocketService.on('user:deleteFail', function(data){
+                    console.log(angular.fromJson(data));
+                    $scope.controllerData.error = true;
+                    $scope.controllerData.currentError = "Failed to delete User: check it has no assigned groups";
+                });
+            }
+        }
+
 
         /*Navbar Functions*/
         $scope.logout = function(){
