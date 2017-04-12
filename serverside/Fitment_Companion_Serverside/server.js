@@ -311,6 +311,7 @@ io.on('connection', function(socket){
         });
     });
 
+    //Handles requests to delete a part
     socket.on('part:delete', function(data){
         console.log("Request to delete a part");
 
@@ -323,6 +324,22 @@ io.on('connection', function(socket){
                 console.log(content);
                 socket.emit('part:deleteSuccess', content);
                 io.sockets.emit('part:notif', content);
+            }
+        })
+    });
+
+    //Handles requests to show data for the fitment groups screen (web app)
+    socket.on('groups:loadFull', function(){
+        console.log("Request to load fitment group information");
+
+        groupFunc.loadFull(function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('groups:loadFullFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('groups:loadFullSuccess', content);
             }
         })
     });
