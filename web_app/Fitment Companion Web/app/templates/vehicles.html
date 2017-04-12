@@ -66,7 +66,7 @@
                 <td>{{vehicle.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
                 <td>
                     <i ng-click="deleteVehicle(vehicle.VIN)" class="glyphicon glyphicon-remove"></i>
-                    <i ng-click="" class="glyphicon glyphicon-barcode"></i>
+                    <a id="{{'downloadTag'+$index}}" download="{{'tag_veh_'+vehicle.VIN+'.txt'}}" ng-click="generateTagFile(vehicle.VIN,$index)" class="glyphicon glyphicon-barcode"></a>
                 </td>
             </tr>
         </tbody>

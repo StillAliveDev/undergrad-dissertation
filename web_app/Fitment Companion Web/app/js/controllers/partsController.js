@@ -18,6 +18,7 @@ angular.module('myApp.parts', ['ngRoute', 'ui.bootstrap'])
             total:0,
             totalAssigned: 0,
             totalInInventory:0,
+            textFile:null,
             error:false,
             currentError:""
         };
@@ -67,6 +68,24 @@ angular.module('myApp.parts', ['ngRoute', 'ui.bootstrap'])
         $scope.navAddPart = function(){
             $location.path('/parts/add');
         };
+
+        $scope.generateTagFile = function(partId,i){
+            var data = {
+                type:"part",
+                id:partId
+            };
+            var blob = new Blob([angular.toJson(data)], {type: 'text/plain'});
+            var link = document.getElementById('downloadTag'+i);
+            if($scope.controllerData.textFile!==null){
+                $window.URL.revokeObjectURL($scope.controllerData.textFile);
+            }
+
+            $scope.controllerData.textFile = $window.URL.createObjectURL(blob);
+            console.log($scope.controllerData.textFile);
+
+            link.href = $scope.controllerData.textFile;
+        };
+
 
         $scope.$on('$viewContentLoaded', function(){
             $scope.loadAllParts();

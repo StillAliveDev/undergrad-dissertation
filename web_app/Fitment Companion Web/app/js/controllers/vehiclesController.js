@@ -59,6 +59,23 @@ angular.module('myApp.vehicles', ['ngRoute', 'ui.bootstrap'])
             })
         };
 
+        $scope.generateTagFile = function(vin,i){
+            var data = {
+                type:"veh",
+                id:vin
+            };
+            var blob = new Blob([angular.toJson(data)], {type: 'text/plain'});
+            var link = document.getElementById('downloadTag'+i);
+            if($scope.controllerData.textFile!==null){
+                $window.URL.revokeObjectURL($scope.controllerData.textFile);
+            }
+
+            $scope.controllerData.textFile = $window.URL.createObjectURL(blob);
+            console.log($scope.controllerData.textFile);
+
+            link.href = $scope.controllerData.textFile;
+        };
+
         $scope.navAddVehicle = function(){
             $location.path('/vehicles/add');
         };

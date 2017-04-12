@@ -71,7 +71,7 @@
             <td>{{part.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
             <td>
                 <i ng-click="deletePart(part.PART_ID)" class="glyphicon glyphicon-remove"></i>
-                <i ng-click="" class="glyphicon glyphicon-barcode"></i>
+                <a id="{{'downloadTag'+$index}}" download="{{'tag_part_'+part.PART_ID+'_'+part.NAME+'.txt'}}" ng-click="generateTagFile(part.PART_ID,$index)" class="glyphicon glyphicon-barcode"></a>
             </td>
         </tr>
         </tbody>
