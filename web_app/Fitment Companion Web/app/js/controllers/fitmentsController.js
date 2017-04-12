@@ -16,7 +16,47 @@ angular.module('myApp.fitments', ['ngRoute', 'ui.bootstrap'])
             id: $window.sessionStorage.user_id,
             user_name:$window.sessionStorage.user_name
         };
+        $scope.controllerData = {
+            fitments:[],
+            totalGroups:0,
+            totalAssigned:0,
+            totalCompleted:0,
+            pending:0,
+            error:false,
+            currentError:""
+        };
         /*Page Functions*/
+
+        $scope.loadAllFitments = function(){
+            SocketService.emit('groups:loadFull');
+            SocketService.on('groups:loadFullSuccess', function(data){
+                var res = angular.fromJson(data);
+                $scope.controllerData = {
+                    fitments: res.fitments,
+                    totalGroups: res.totalGroups,
+                    totalAssigned: res.totalAssigned,
+                    totalCompleted: res.totalCompleted,
+                    pending: res.pending,
+                    error : false,
+                    currentError:""
+
+                };
+                SocketService.removeListener('groups:loadFullSuccess');
+            });
+            SocketService.on('groups:loadFullFail', function(data){
+                $scope.controllerData.error = true;
+                $scope.controllerData.error = "Error loading groups";
+                SocketService.removeListener('groups:loadFullFail');
+            })
+        };
+
+        $scope.$on('$viewContentLoaded', function(){
+            $scope.loadAllFitments();
+        });
+
+        SocketService.on('group:notif', function(data){
+            $scope.loadAllFitments();
+        });
 
 
         /*Navbar Functions*/

@@ -67,7 +67,10 @@
             <td>{{part.WIDTH_M}}</td>
             <td>{{part.LENGTH_M}}</td>
             <td>{{part.WEIGHT}}</td>
-            <td>{{part.IN_INVENTORY}}</td>
+            <td>
+                <i class ="check-green glyphicon glyphicon-certificate" ng-show="part.IN_INVENTORY == 'TRUE'"></i>
+                <i class ="check-red glyphicon glyphicon-certificate" ng-show="part.IN_INVENTORY == 'FALSE'"></i>
+            </td>
             <td>{{part.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
             <td>
                 <i ng-click="deletePart(part.PART_ID)" class="glyphicon glyphicon-remove"></i>

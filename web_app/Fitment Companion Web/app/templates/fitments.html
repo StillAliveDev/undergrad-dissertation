@@ -35,8 +35,66 @@
             </nav>
         </div>
     </div>
-
-    <p>This is the fitments page</p>
+    <div class="panel panel-default">
+        <div class="row">
+            <div class="col-md-9">
+        <div class="panel-body">
+            Total Groups : <strong>{{controllerData.totalGroups}}</strong><br />
+            Total Groups assigned and in progress : <strong>{{controllerData.totalAssigned}}</strong><br />
+            Total Groups completed : <strong>{{controllerData.totalCompleted}}</strong><br /><br />
+            Total Groups pending : <strong>{{controllerData.pending}}</strong><br /><br />
+            <button type="button" ng-click="loadAllFitments()" class="btn btn-primary">Refresh</button>
+            <button type="button" ng-click="navAddFitment()" class="btn btn-primary">Create Fitment Group</button>
+        </div>
+            </div>
+            <div class="col-md-3">
+        <div class="panel-body">
+            <i class ="check-red glyphicon glyphicon-certificate"></i> : Pending/Attempted<br/>
+            <i class ="check-orange glyphicon glyphicon-certificate"></i> : In Progress<br />
+            <i class ="check-green glyphicon glyphicon-certificate"></i> : Completed<br />
+        </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Group ID</th>
+            <th>Description</th>
+            <th>Vehicle</th>
+            <th>User</th>
+            <th>Created</th>
+            <th>Est. Completion</th>
+            <th>Act. Completion</th>
+            <th>Status</th>
+            <th>No. Parts</th>
+            <th>Notes if Attempted</th>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="group in controllerData.fitments">
+            <td>{{group.FIT_GROUP_ID}}</td>
+            <td>{{group.DESCRIPTION}}</td>
+            <td>{{group.VEH_VIN}}</td>
+            <td>{{group.assignedUser}}</td>
+            <td>{{group.CREATED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
+            <td>{{group.EST_COMP_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
+            <td>{{group.ACT_COMP_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
+            <td>
+                <i class ="check-red glyphicon glyphicon-certificate" ng-show="(group.IN_PROGRESS == 'FALSE')&&(group.INCOMPLETE == 'TRUE')"></i>
+                <i class ="check-orange glyphicon glyphicon-certificate" ng-show="(group.IN_PROGRESS == 'TRUE')&&(group.INCOMPLETE == 'TRUE')"></i>
+                <i class ="check-green glyphicon glyphicon-certificate" ng-show="(group.IN_PROGRESS == 'FALSE')&&(group.INCOMPLETE == 'FALSE')"></i>
+            </td>
+            <td>{{group.assignedParts}}</td>
+            <td>{{group.GROUP_INCOMPLETE_NOTES}}</td>
+            <td>
+                <i ng-click="deleteGroup(group.FIT_GROUP_ID)" class="glyphicon glyphicon-remove"></i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
 
 </div>

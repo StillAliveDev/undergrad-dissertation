@@ -53,8 +53,8 @@
             <th>Username</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Date Added</th>
             <th>Signed in</th>
+            <th>Date Added</th>
             <th>Options</th>
         </tr>
         </thead>
@@ -64,8 +64,11 @@
             <td>{{user.USER_NAME}}</td>
             <td>{{user.USER_FIRST_NAME}}</td>
             <td>{{user.USER_LAST_NAME}}</td>
+            <td>
+                <i class ="check-green glyphicon glyphicon-certificate" ng-show="user.USER_SIGNED_IN == 'TRUE'"></i>
+                <i class ="check-red glyphicon glyphicon-certificate" ng-show="user.USER_SIGNED_IN == 'FALSE'"></i>
+            </td>
             <td>{{user.USER_CREATED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
-            <td>{{user.USER_SIGNED_IN}}</td>
             <td>
                 <i ng-click="deleteUser(user.USER_ID)" class="glyphicon glyphicon-remove"></i>
             </td>

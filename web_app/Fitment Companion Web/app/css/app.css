@@ -20,3 +20,13 @@
   font-size: 1em;
   color: red;
 }
+
+.check-red{
+  color:red;
+}
+.check-green{
+  color:green;
+}
+.check-orange{
+  color:orange;
+}
