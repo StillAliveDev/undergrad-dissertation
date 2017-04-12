@@ -49,7 +49,6 @@ angular.module('myApp.vehicles', ['ngRoute', 'ui.bootstrap'])
             SocketService.on('vehicle:deleteSuccess', function(data){
                 $scope.controllerData.error = false;
                 console.log(data);
-                $scope.loadAllVehicles();
                 SocketService.removeListener('vehicle:deleteSuccess');
             });
             SocketService.on('vehicle:deleteFail', function(data){

@@ -59,7 +59,6 @@ angular.module('myApp.fitments', ['ngRoute', 'ui.bootstrap'])
             SocketService.on('group:deleteSuccess', function(data){
                 $scope.controllerData.error = false;
                 $scope.controllerData.currentError = "";
-                $scope.loadAllFitments();
                 SocketService.removeListener('group:deleteSuccess');
             });
             SocketService.on('group.deleteFail', function(data){
@@ -77,6 +76,9 @@ angular.module('myApp.fitments', ['ngRoute', 'ui.bootstrap'])
         SocketService.on('group:notif', function(data){
             $scope.loadAllFitments();
         });
+        $scope.navAddFitment = function(){
+            $location.path('/fitments/add');
+        }
 
 
         /*Navbar Functions*/

@@ -54,7 +54,6 @@ angular.module('myApp.users', ['ngRoute', 'ui.bootstrap'])
                 SocketService.on('user:deleteSuccess', function(data){
                     $scope.controllerData.error = false;
                     console.log(angular.fromJson(data));
-                    $scope.loadAllUsers();
                     SocketService.removeListener('part:deleteSuccess');
                 });
                 SocketService.on('user:deleteFail', function(data){

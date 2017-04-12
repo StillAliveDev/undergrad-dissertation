@@ -52,7 +52,6 @@ angular.module('myApp.parts', ['ngRoute', 'ui.bootstrap'])
                 $scope.controllerData.error = false;
                 $scope.controllerData.currentError = "";
                 console.log(data);
-                $scope.loadAllParts();
                 SocketService.removeListener('part:deleteSuccess');
 
             });

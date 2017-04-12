@@ -14,6 +14,7 @@ angular.module('myApp', [
   'myApp.addUser',
   'myApp.addVehicle',
   'myApp.addPart',
+  'myApp.addFitment',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
