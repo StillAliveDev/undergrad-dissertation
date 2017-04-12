@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-9">
+                    <span>
+                        <h1>Fitment Companion Web
+                            <small>: Add User</small>
+                        </h1>
+                    </span>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        Current User ID : {{currentUser.id}} <br/>
+                        Current User Name : {{currentUser.user_name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="" ng-click="navHome()">Home</a></li>
+                    <li><a href="" ng-click="navUsers()">Users</a></li>
+                    <li><a href="" ng-click="navVehicles()">Vehicles</a></li>
+                    <li><a href="" ng-click="navParts()">Parts</a></li>
+                    <li><a href="" ng-click="navFitments()">Fitments</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right logout-button">
+                    <li class=""><a href="" ng-click="logout()">Logout</a></li>
+                </ul>
+
+                <p class="navbar-text navbar-right">
+            </nav>
+        </div>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <form name="addUserForm">
+        <p class="form-invalid-text" ng-show="addUserForm.username.$invalid">Cannot be more than 25 characters Characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">Username * </span>
+            <input name="username" type="text" class="form-control" placeholder="Username" ng-model="controllerData.user.user_name" ng-required="true"  ng-maxlength="25">
+        </div>
+        <br /><br />
+        <p class="form-invalid-text" ng-show="addUserForm.password.$invalid">Must be at least 8 characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">User Password *</span>
+            <input name="password" type="password" class="form-control" placeholder="Passord" ng-model="controllerData.user.password" ng-required="true" ng-minlength="8">
+        </div>
+        <br /><br/>
+        <p class="form-invalid-text" ng-show="addUserForm.first_name.$invalid">Cannot be bore than 30 Characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">User First Name *</span>
+            <input name="first_name" type="text" class="form-control" placeholder="First Name" ng-model="controllerData.user.user_first_name"  ng-required="true" ng-maxlength="30">
+        </div>
+        <br /><br/>
+        <p class="form-invalid-text" ng-show="addUserForm.last_name.$invalid">Cannot be more than 30 Characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">User Last Name *</span>
+            <input name="last_name" type="text" class="form-control" placeholder="Last Name" ng-model="controllerData.user.user_last_name"  ng-required="true" ng-maxlength="30">
+        </div>
+
+        <br /><br/>
+        <p>All fields marked with '*' are required to create the user</p>
+        <button type="button" class="btn btn-primary" ng-click="addUser()" ng-disabled="addUserForm.$invalid">
+            Add User
+        </button>
+        <button type="button" class="btn btn-danger" ng-click="cancel()">
+            Cancel
+        </button>
+    </form>
+</div>

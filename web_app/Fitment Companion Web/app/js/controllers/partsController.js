@@ -72,6 +72,13 @@ angular.module('myApp.parts', ['ngRoute', 'ui.bootstrap'])
             $scope.loadAllParts();
         });
 
+        SocketService.on('group:notif', function(data){
+            $scope.loadAllParts();
+        });
+        SocketService.on('part:notif', function(data){
+            $scope.loadAllParts();
+        });
+
 
         /*Navbar Functions*/
         $scope.logout = function(){

@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-9">
+                    <span>
+                        <h1>Fitment Companion Web
+                            <small>: Add Part</small>
+                        </h1>
+                    </span>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        Current User ID : {{currentUser.id}} <br/>
+                        Current User Name : {{currentUser.user_name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="" ng-click="navHome()">Home</a></li>
+                    <li><a href="" ng-click="navUsers()">Users</a></li>
+                    <li><a href="" ng-click="navVehicles()">Vehicles</a></li>
+                    <li><a href="" ng-click="navParts()">Parts</a></li>
+                    <li><a href="" ng-click="navFitments()">Fitments</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right logout-button">
+                    <li class=""><a href="" ng-click="logout()">Logout</a></li>
+                </ul>
+
+                <p class="navbar-text navbar-right">
+            </nav>
+        </div>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <form name="addPartForm">
+        <p class="form-invalid-text" ng-show="addPartForm.name.$invalid">Cannot be more than 50 characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">Part Name * </span>
+            <input name="name" type="text" class="form-control" placeholder="Part Name" ng-model="controllerData.part.name" ng-required="true"  ng-maxlength="50">
+        </div>
+        <br /><br />
+        <p class="form-invalid-text" ng-show="addPartForm.manufacturer.$invalid">Cannot be more than 30 characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">Part Manufacturer *</span>
+            <input name="manufacturer" type="text" class="form-control" placeholder="Manufacturer" ng-model="controllerData.part.manufacturer" ng-required="true" ng-maxlength="30">
+        </div>
+        <br /><br/>
+        <p class="form-invalid-text" ng-show="addPartForm.width.$invalid">Must be a decimal (Three Decimal Places), eg: 1.000, 25.500 etc.</p>
+        <div class="input-group">
+            <span class="input-group-addon">Part Width (M) *</span>
+            <input name="width" type="text" class="form-control" placeholder="Width" ng-model="controllerData.part.width"  ng-required="true" ng-pattern="\d*\.\d*">
+        </div>
+        <br /><br/>
+        <p class="form-invalid-text" ng-show="addPartForm.length.$invalid">Must be a decimal (Three Decimal Places), eg : 1.000, 25.500 etc.</p>
+        <div class="input-group">
+            <span class="input-group-addon">Part Length (M) *</span>
+            <input name="length" type="text" class="form-control" placeholder="Length" ng-model="controllerData.part.length"  ng-required="true" ng-pattern="\d*\.\d*">
+        </div>
+        <br /><br />
+        <p class="form-invalid-text" ng-show="addPartForm.weight.$invalid">Must be a decimal (Three Decimal Places), eg : 1.000, 25.500 etc.</p>
+        <div class="input-group">
+            <span class="input-group-addon">Part Weight (Kg) *</span>
+            <input name="weight" type="text" class="form-control" placeholder="Weight" ng-model="controllerData.part.weight"  ng-required="true" ng-pattern="\d*\.\d*">
+        </div>
+        <br /><br/>
+        <p>All fields marked with '*' are required to create the part</p>
+        <p class="form-invalid-text" ng-show="!addPartForm.$invalid">Note that "Add Part" will mark the part as in inventory,<br /> so please be sure to assign a tag to this part and put into the warehouse when complete.</p>
+        <button type="button" class="btn btn-primary" ng-click="addPart()" ng-disabled="addPartForm.$invalid">
+            Add Part
+        </button>
+        <button type="button" class="btn btn-danger" ng-click="cancel()">
+            Cancel
+        </button>
+    </form>
+</div>

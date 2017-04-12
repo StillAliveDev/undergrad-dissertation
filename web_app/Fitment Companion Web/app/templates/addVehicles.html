@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-9">
+                    <span>
+                        <h1>Fitment Companion Web
+                            <small>: Add Vehicle</small>
+                        </h1>
+                    </span>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        Current User ID : {{currentUser.id}} <br/>
+                        Current User Name : {{currentUser.user_name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="" ng-click="navHome()">Home</a></li>
+                    <li><a href="" ng-click="navUsers()">Users</a></li>
+                    <li><a href="" ng-click="navVehicles()">Vehicles</a></li>
+                    <li><a href="" ng-click="navParts()">Parts</a></li>
+                    <li><a href="" ng-click="navFitments()">Fitments</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right logout-button">
+                    <li class=""><a href="" ng-click="logout()">Logout</a></li>
+                </ul>
+
+                <p class="navbar-text navbar-right">
+            </nav>
+        </div>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <form name="addVehicleForm">
+        <p class="form-invalid-text" ng-show="addVehicleForm.vin.$invalid">Must be 17 Characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">Vehicle VIN Number * </span>
+            <input name="vin" type="text" class="form-control" placeholder="VIN" ng-model="controllerData.vehicle.vin" ng-required="true" ng-minlength="17" ng-maxlength="17">
+        </div>
+        <br /><br />
+        <p class="form-invalid-text" ng-show="addVehicleForm.make.$invalid">Cannot be more than 25 Characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">Vehicle Make *</span>
+            <input name="make" type="text" class="form-control" placeholder="Make" ng-model="controllerData.vehicle.make" ng-required="true" ng-maxlength="25">
+        </div>
+        <br /><br/>
+        <p class="form-invalid-text" ng-show="addVehicleForm.model.$invalid">Cannot be bore than 25 Characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">Vehicle Model *</span>
+            <input name="model" type="text" class="form-control" placeholder="Model" ng-model="controllerData.vehicle.model"  ng-required="true" ng-maxlength="25">
+        </div>
+        <br /><br/>
+        <p class="form-invalid-text" ng-show="addVehicleForm.colour.$invalid">Cannot be more than 10 Characters</p>
+        <div class="input-group">
+            <span class="input-group-addon">Vehicle Colour *</span>
+            <input name="colour" type="text" class="form-control" placeholder="Colour" ng-model="controllerData.vehicle.colour"  ng-required="true" ng-maxlength="10">
+        </div>
+
+        <br /><br/>
+        <p>All fields marked with '*' are required to create the vehicle</p>
+        <button type="button" class="btn btn-primary" ng-click="addVehicle()" ng-disabled="addVehicleForm.$invalid">
+            Add Vehicle
+        </button>
+        <button type="button" class="btn btn-danger" ng-click="cancel()">
+            Cancel
+        </button>
+    </form>
+</div>
