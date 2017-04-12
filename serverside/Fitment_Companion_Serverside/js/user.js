@@ -1,4 +1,5 @@
 var connection = require('./db.js');
+var crypto = require('crypto');
 
 module.exports = {
     loadFull: function(callback){
@@ -92,5 +93,38 @@ module.exports = {
                 callback(JSON.stringify(res),null);
             }
         })
+    },
+    add : function(data, callback){
+        var res = {
+            username : data.username,
+            user:data.user,
+            notifType:"A",
+            error: false,
+            errorText:""
+        };
+
+        var sha256_pass = crypto.createHash('sha256').update(res.user.password).digest("hex");
+        sha256_pass = crypto.createHash('sha256').update(sha256_pass).digest("hex");
+        sha256_pass = crypto.createHash('sha256').update(sha256_pass).digest("hex");
+        sha256_pass = crypto.createHash('sha256').update(sha256_pass).digest("hex");
+
+        //Clear the original password from the transmitted data --  for when the user addition is broadcast to other clients
+        res.user.password = "";
+
+        var query = "INSERT INTO USERS ( USER_NAME, USER_PASSWORD, USER_FIRST_NAME, USER_LAST_NAME, USER_CREATED_TIMESTAMP, " +
+            "USER_SIGNED_IN) VALUES ('"+res.user.user_name+"', '"+sha256_pass+"', '"+res.user.user_first_name+"', '"+res.user.user_last_name+"', now(), 'FALSE');";
+
+        connection.db.query(query, function(err, rows, fields){
+            if(!err) {
+                console.log("User: " + res.user.user_id + "Added");
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res), null);
+            }
+        });
     }
 };

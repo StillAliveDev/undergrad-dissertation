@@ -69,6 +69,23 @@ angular.module('myApp.users', ['ngRoute', 'ui.bootstrap'])
             $location.path('/users/add');
         };
 
+        $scope.$on('$viewContentLoaded', function(){
+            $scope.loadAllUsers();
+        });
+
+        SocketService.on('users:notif', function(data){
+            $scope.loadAllUsers();
+        });
+        SocketService.on('login:notif', function(data){
+            $scope.loadAllUsers();
+        });
+        SocketService.on('logout:notif', function(data){
+            $scope.loadAllUsers();
+        });
+        SocketService.on('group:notif', function(data){
+            $scope.loadAllUsers();
+        });
+
 
         /*Navbar Functions*/
         $scope.logout = function(){
@@ -77,7 +94,7 @@ angular.module('myApp.users', ['ngRoute', 'ui.bootstrap'])
                 username: $scope.currentUser.user_name
             };
             SocketService.emit('user:logout', angular.toJson(data));
-        }
+        };
 
         SocketService.on('logout:success', function(){
             $window.sessionStorage.user_id = {};

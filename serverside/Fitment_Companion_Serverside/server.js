@@ -275,7 +275,23 @@ io.on('connection', function(socket){
             else{
                 console.log(content);
                 socket.emit('user:deleteSuccess', content);
-                io.sockets.emit('part:notif',content);
+                io.sockets.emit('users:notif',content);
+            }
+        });
+    });
+    //Handles Requests to add a user
+    socket.on('user:add', function(data){
+        console.log("Request to add a user");
+
+        userFunc.add(data, function(err,content){
+            if(err){
+                console.log(err);
+                socket.emit('user:addFail',err);
+            }
+            else{
+                console.log(content);
+                socket.emit('user:addSuccess', content);
+                io.sockets.emit('users:notif', content);
             }
         });
     });

@@ -64,6 +64,10 @@ angular.module('myApp.parts', ['ngRoute', 'ui.bootstrap'])
 
         };
 
+        $scope.$on('$viewContentLoaded', function(){
+            $scope.loadAllParts();
+        });
+
 
         /*Navbar Functions*/
         $scope.logout = function(){
