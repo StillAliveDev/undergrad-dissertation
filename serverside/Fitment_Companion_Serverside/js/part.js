@@ -203,14 +203,14 @@ module.exports = {
     addPart : function(data, callback){
         var res = {
             username: data.username,
-            part_id: data.part.part_id,
+            part_name: data.part.name,
             notifType: "A",
             error:false,
             errorText:""
         };
 
         var query = "insert into parts (NAME, MANUFACTURER, WIDTH_M, LENGTH_M, WEIGHT, IN_INVENTORY, ADDED_TIMESTAMP) " +
-            "VALUES ("+data.part.name+","+data.part.manufacturer+","+data.part.width+","+data.part.length+","+data.part.weight+", now());";
+            "VALUES ('"+data.part.name+"','"+data.part.manufacturer+"',"+data.part.width+","+data.part.length+","+data.part.weight+", 'TRUE', now());";
 
         connection.db.query(query, function(err,rows,fields){
             if(!err){

@@ -13,6 +13,7 @@ angular.module('myApp', [
   'myApp.fitments',
   'myApp.addUser',
   'myApp.addVehicle',
+  'myApp.addPart',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

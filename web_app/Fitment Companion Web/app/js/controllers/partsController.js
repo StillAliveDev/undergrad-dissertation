@@ -64,6 +64,10 @@ angular.module('myApp.parts', ['ngRoute', 'ui.bootstrap'])
 
         };
 
+        $scope.navAddPart = function(){
+            $location.path('/parts/add');
+        };
+
         $scope.$on('$viewContentLoaded', function(){
             $scope.loadAllParts();
         });

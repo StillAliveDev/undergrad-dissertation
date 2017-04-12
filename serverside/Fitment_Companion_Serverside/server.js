@@ -215,7 +215,7 @@ io.on('connection', function(socket){
         })
     });
 
-    //Handles requests to add a vehicle
+    //Handles requests to delete a vehicle
     socket.on('vehicle:delete', function(data){
         console.log('Request to delete a vehicle');
 
