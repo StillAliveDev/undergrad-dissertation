@@ -31,16 +31,13 @@ angular.module('myApp.fitments', ['ngRoute', 'ui.bootstrap'])
             SocketService.emit('groups:loadFull');
             SocketService.on('groups:loadFullSuccess', function(data){
                 var res = angular.fromJson(data);
-                $scope.controllerData = {
-                    fitments: res.fitments,
-                    totalGroups: res.totalGroups,
-                    totalAssigned: res.totalAssigned,
-                    totalCompleted: res.totalCompleted,
-                    pending: res.pending,
-                    error : false,
-                    currentError:""
 
-                };
+                $scope.controllerData.fitments = res.fitments;
+                $scope.controllerData.totalGroups = res.totalGroups;
+                $scope.controllerData.totalAssigned = res.totalAssigned;
+                $scope.controllerData.totalCompleted = res.totalCompleted;
+                $scope.controllerData.pending = res.pending;
+
                 SocketService.removeListener('groups:loadFullSuccess');
             });
             SocketService.on('groups:loadFullFail', function(data){
@@ -48,6 +45,29 @@ angular.module('myApp.fitments', ['ngRoute', 'ui.bootstrap'])
                 $scope.controllerData.error = "Error loading groups";
                 SocketService.removeListener('groups:loadFullFail');
             })
+        };
+
+        $scope.deleteGroup = function(groupid){
+            var data = {
+                username: $scope.currentUser.user_name,
+                fitment: groupid
+            };
+
+            if(window.confirm("Delete Group: " + groupid + "?")){
+                SocketService.emit('group:delete', data);
+            }
+            SocketService.on('group:deleteSuccess', function(data){
+                $scope.controllerData.error = false;
+                $scope.controllerData.currentError = "";
+                $scope.loadAllFitments();
+                SocketService.removeListener('group:deleteSuccess');
+            });
+            SocketService.on('group.deleteFail', function(data){
+                $scope.controllerData.error = true;
+                $scope.controllerData.currentError = "Error Deleting Group";
+                SocketService.removeListener('group:deleteFail');
+            })
+
         };
 
         $scope.$on('$viewContentLoaded', function(){
