@@ -128,5 +128,37 @@ module.exports = {
                 callback(JSON.stringify(res),null);
             }
         });
+    },
+    delete : function(data, callback){
+        var res = {
+            username: data.username,
+            fitment: data.fitment,
+            notifType: "D",
+            error:false,
+            errorText:""
+        };
+
+        var query1 = "DELETE FROM fitment_operations where fitment_operations.GROUP_ID = "+res.fitment+";";
+        var query2 = "DELETE FROM fitment_groups where fitment_groups.FIT_GROUP_ID = "+res.fitment+";";
+
+        connection.db.query(query1, function(err,rows,fields){
+            if(err){
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res), null);
+            }
+        });
+        connection.db.query(query2, function(err,rows,fields){
+            if(!err){
+                callback(null, JSON.stringify(res));
+            }
+            else{
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res), null);
+            }
+        });
     }
 };

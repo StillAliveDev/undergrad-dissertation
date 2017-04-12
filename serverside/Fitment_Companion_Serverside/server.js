@@ -343,4 +343,20 @@ io.on('connection', function(socket){
             }
         })
     });
+
+    //Handles Requests to delete a group
+    socket.on('group:delete', function(data){
+        console.log("Request to delete a group");
+
+        groupFunc.delete(data, function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('group:deleteFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('group:deleteSuccess');
+            }
+        })
+    })
 });
