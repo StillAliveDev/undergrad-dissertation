@@ -4,7 +4,7 @@ module.exports = {
     start: function(data, callback){
         var res = {
             group_id : data.group_id,
-            user : data.user_name,
+            eventUser : data.user_name,
             notifType: "S",
             success: false,
             error: false,
@@ -31,7 +31,7 @@ module.exports = {
     finish: function(data, callback){
         var res = {
             group_id : data.group_id,
-            user : data.user_name,
+            eventUser : data.user_name,
             notifType: "F",
             success: true,
             error: false,
@@ -133,7 +133,7 @@ module.exports = {
     },
     delete : function(data, callback){
         var res = {
-            user: data.username,
+            eventUser: data.username,
             fitment: data.fitment,
             notifType: "D",
             error:false,

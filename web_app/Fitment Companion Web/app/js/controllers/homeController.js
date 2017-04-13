@@ -49,7 +49,93 @@ angular.module('myApp.home', ['ngRoute', 'ui.bootstrap'])
             });
         };
 
-        $scope.proccessNotif = function(event, eventType, eventUser){
+        $scope.proccessNotif = function(eventType, event, eventUser){
+            var eventData = {
+                type:eventType,
+                user:eventUser,
+                text:""
+            };
+
+            switch(eventType){
+                case 'P':
+                    switch(event){
+                        case 'A':
+                            eventData.text = "added a new Part";
+                            break;
+                        case 'D':
+                            eventData.text = "deleted a Part";
+                            break;
+                        case 'Ret':
+                            eventData.text = "returned a Part to inventory";
+                            break;
+                        case 'R': eventData.text = "removed a Part from inventory";
+                    }
+                    $scope.updateTicker(eventData);
+                    break;
+                case 'V':
+                    switch(event){
+                        case 'A':
+                            eventData.text = "added a new Vehicle";
+                            break;
+                        case 'D':
+                            eventData.text = "deleted a Vehicle";
+                            break;
+                    }
+                    $scope.updateTicker(eventData);
+                    break;
+                case 'G':
+                    switch(event){
+                        case 'A':
+                            eventData.text = "created a new Group";
+                            break;
+                        case 'D':
+                            eventData.text = "deleted a Fitment Group";
+                            break;
+                        case 'F':
+                            eventData.text = "finished a Fitment Group";
+                            break;
+                        case 'S':
+                            eventData.text = "started a Fitment Group";
+                            break
+                    }
+                    $scope.updateTicker(eventData);
+                    break;
+                case 'L':
+                    switch(event){
+                        case 'I':
+                            eventData.text = "logged in";
+                            break;
+                        case 'O':
+                            eventData.text = "logged out";
+                            break;
+                    }
+                    $scope.updateTicker(eventData);
+                    break;
+                case 'U':
+                    switch(event){
+                        case 'A':
+                            eventData.text = "created a new User";
+                            break;
+                        case 'D':
+                            eventData.text = "deleted a User";
+                            break;
+                    }
+                    $scope.updateTicker(eventData);
+                    break;
+            }
+        };
+
+        $scope.updateTicker = function(eventData){
+            console.log("Updating Ticker " + eventData.user + " " + eventData.text + " " + eventData.type);
+
+            //Put on top of the array -- shuffle down, only allow 10 elements
+
+            $scope.controllerData.events.unshift({
+                timestamp: new Date().getTime(),
+                type: eventData.type,
+                text: eventData.text,
+                user: eventData.user
+            });
 
         };
 
@@ -59,22 +145,19 @@ angular.module('myApp.home', ['ngRoute', 'ui.bootstrap'])
 
         /*Realtime Notifications*/
         SocketService.on('part:notif', function(data){
-            var eventData = {
-                notifType: data.notifType,
-                eventUser: data.user
-            };
-
-            $scope.loadAllStats();
-        });
-        SocketService.on('vehicle:notif', function(data){
             var data = angular.fromJson(data);
             $scope.loadAllStats();
-            $scope.proccessNotif('V', data.notifType, data.user);
+            $scope.proccessNotif('P', data.notifType, data.eventUser);
+        });
+        SocketService.on('vehicles:notif', function(data){
+            var data = angular.fromJson(data);
+            $scope.loadAllStats();
+            $scope.proccessNotif('V', data.notifType, data.eventUser);
         });
         SocketService.on('group:notif', function(data){
             var data = angular.fromJson(data);
             $scope.loadAllStats();
-            $scope.proccessNotif('G', data.notifType, data.user);
+            $scope.proccessNotif('G', data.notifType, data.eventUser);
         });
         SocketService.on('login:notif', function(data){
             var data = angular.fromJson(data);
@@ -86,10 +169,10 @@ angular.module('myApp.home', ['ngRoute', 'ui.bootstrap'])
             $scope.loadAllStats();
             $scope.proccessNotif('L','O', data[0].user);
         });
-        SocketService.on('U','users:notif', function(data){
+        SocketService.on('users:notif', function(data){
             var data = angular.fromJson(data);
             $scope.loadAllStats();
-            $scope.proccessNotif(data.notifType, data.user);
+            $scope.proccessNotif('U',data.notifType, data.eventUser);
         });
 
 

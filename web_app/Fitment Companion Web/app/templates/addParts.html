@@ -52,19 +52,19 @@
         <p class="form-invalid-text" ng-show="addPartForm.width.$invalid">Must be a decimal (Three Decimal Places), eg: 1.000, 25.500 etc.</p>
         <div class="input-group">
             <span class="input-group-addon">Part Width (M) *</span>
-            <input name="width" type="text" class="form-control" placeholder="Width" ng-model="controllerData.part.width"  ng-required="true" ng-pattern="\d*\.\d*">
+            <input name="width" type="number" class="form-control" placeholder="Width" ng-model="controllerData.part.width"  ng-required="true" ng-pattern="\d*\.\d*">
         </div>
         <br /><br/>
         <p class="form-invalid-text" ng-show="addPartForm.length.$invalid">Must be a decimal (Three Decimal Places), eg : 1.000, 25.500 etc.</p>
         <div class="input-group">
             <span class="input-group-addon">Part Length (M) *</span>
-            <input name="length" type="text" class="form-control" placeholder="Length" ng-model="controllerData.part.length"  ng-required="true" ng-pattern="\d*\.\d*">
+            <input name="length" type="number" class="form-control" placeholder="Length" ng-model="controllerData.part.length"  ng-required="true" ng-pattern="\d*\.\d*">
         </div>
         <br /><br />
         <p class="form-invalid-text" ng-show="addPartForm.weight.$invalid">Must be a decimal (Three Decimal Places), eg : 1.000, 25.500 etc.</p>
         <div class="input-group">
             <span class="input-group-addon">Part Weight (Kg) *</span>
-            <input name="weight" type="text" class="form-control" placeholder="Weight" ng-model="controllerData.part.weight"  ng-required="true" ng-pattern="\d*\.\d*">
+            <input name="weight" type="number" class="form-control" placeholder="Weight" ng-model="controllerData.part.weight"  ng-required="true" ng-pattern="\d*\.\d*">
         </div>
         <br /><br/>
         <p>All fields marked with '*' are required to create the part</p>

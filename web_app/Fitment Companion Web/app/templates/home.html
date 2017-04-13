@@ -91,6 +91,19 @@
         </div>
     </div>
 
+    <table class="table">
+        <thead>
+            <th>Timestamp</th>
+            <th>Event</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="event in controllerData.events | limitTo: 10">
+            <td>{{event.timestamp | date : 'dd-MM-yyyy HH:MM:ss'}}</td>
+            <td>{{event.user}} {{event.text}}</td>
+        </tr>
+        </tbody>
+    </table>
+
 
 
 </div>
