@@ -371,7 +371,8 @@ io.on('connection', function(socket){
             }
             else{
                 console.log(content);
-                socket.emit('group:deleteSuccess');
+                socket.emit('group:deleteSuccess', content);
+                io.sockets.emit('group:notif', content)
             }
         })
     })

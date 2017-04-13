@@ -5,6 +5,7 @@ module.exports = {
         var res = {
             group_id : data.group_id,
             user : data.user_name,
+            notifType: "S",
             success: false,
             error: false,
             errorText: ""
@@ -31,6 +32,7 @@ module.exports = {
         var res = {
             group_id : data.group_id,
             user : data.user_name,
+            notifType: "F",
             success: true,
             error: false,
             errorText:""
@@ -131,7 +133,7 @@ module.exports = {
     },
     delete : function(data, callback){
         var res = {
-            username: data.username,
+            user: data.username,
             fitment: data.fitment,
             notifType: "D",
             error:false,

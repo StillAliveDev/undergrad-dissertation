@@ -76,9 +76,9 @@ module.exports = {
     },
     removePart: function(data,callback){
         var res = {
-            username:data.username,
+            user:data.username,
             part_id:data.part_id,
-            notifType:"remove",
+            notifType:"R",
             error:false,
             errorText: ""
         };
@@ -103,9 +103,9 @@ module.exports = {
     },
     returnPart : function(data, callback){
         var res = {
-            username: data.username,
+            user: data.username,
             part_id: data.part_id,
-            notifType: "return",
+            notifType: "Ret",
             error:false,
             errorText: ""
         };
@@ -202,7 +202,7 @@ module.exports = {
     },
     addPart : function(data, callback){
         var res = {
-            username: data.username,
+            user: data.username,
             part_name: data.part.name,
             notifType: "A",
             error:false,
@@ -228,7 +228,7 @@ module.exports = {
     },
     deletePart : function(data, callback){
         var res = {
-            username: data.username,
+            user: data.username,
             part_id: data.part_id,
             notifType: "D",
             error: false,

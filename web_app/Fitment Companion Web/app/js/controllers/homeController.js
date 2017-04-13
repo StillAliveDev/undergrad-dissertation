@@ -9,6 +9,7 @@ angular.module('myApp.home', ['ngRoute', 'ui.bootstrap'])
     }])
 
     .controller('HomeController', function($location, $window, $rootScope, $scope, SocketService){
+        SocketService.removeAllListeners();
         $scope.currentUser = {
             id: $window.sessionStorage.user_id,
             user_name:$window.sessionStorage.user_name

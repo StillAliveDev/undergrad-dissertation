@@ -220,7 +220,7 @@ module.exports = {
     },
     add: function(data, callback){
         var res = {
-            username: data.username,
+            user: data.username,
             vin: data.vehicle.vin,
             notifType: "A",
             error: false,
@@ -246,7 +246,7 @@ module.exports = {
     },
     delete: function(data, callback){
         var res = {
-            username: data.username,
+            user: data.username,
             vin: data.vin,
             notifType: "D",
             error: false,

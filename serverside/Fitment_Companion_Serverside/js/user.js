@@ -72,7 +72,7 @@ module.exports = {
     },
     deleteUser : function(data, callback){
         var res = {
-            username: data.username,
+            user: data.username,
             user_id: data.user_id,
             notifType: "D",
             error: false,
@@ -83,7 +83,7 @@ module.exports = {
 
         connection.db.query(query, function(err, rows, fields){
             if(!err){
-                console.log("User: " + data.user_id + " Deleted")
+                console.log("User: " + data.user_id + " Deleted");
                 callback(null, JSON.stringify(res));
             }
             else{
@@ -96,7 +96,7 @@ module.exports = {
     },
     add : function(data, callback){
         var res = {
-            username : data.username,
+            user : data.username,
             user:data.user,
             notifType:"A",
             error: false,

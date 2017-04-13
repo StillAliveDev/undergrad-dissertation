@@ -144,7 +144,7 @@ module.exports = {
                         },
                         parts: {
                             totalParts: rows[0].totalParts,
-                            totalPartsInInventory: rows[0].totalPartsInInventory,
+                            totalPartsInInventory: rows[0].totalPartsInInv,
                             totalAssignedParts: rows[0].totalAssignedParts
                         },
                         vehicles: {

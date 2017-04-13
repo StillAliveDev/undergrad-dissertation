@@ -10,6 +10,7 @@ angular.module('myApp.login', ['ngRoute', 'ui.bootstrap'])
 
 
     .controller('LoginController', function($window,$rootScope,$scope, SocketService, $location){
+        SocketService.removeAllListeners();
         $scope.loginData = {
             username:"",
             pass:""
