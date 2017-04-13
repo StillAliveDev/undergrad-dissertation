@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-9">
+                    <span>
+                        <h1>Fitment Companion Web
+                            <small>: Create Fitment Group</small>
+                        </h1>
+                    </span>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        Current User ID : {{currentUser.id}} <br/>
+                        Current User Name : {{currentUser.user_name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="" ng-click="navHome()">Home</a></li>
+                    <li><a href="" ng-click="navUsers()">Users</a></li>
+                    <li><a href="" ng-click="navVehicles()">Vehicles</a></li>
+                    <li><a href="" ng-click="navParts()">Parts</a></li>
+                    <li><a href="" ng-click="navFitments()">Fitments</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right logout-button">
+                    <li class=""><a href="" ng-click="logout()">Logout</a></li>
+                </ul>
+
+                <p class="navbar-text navbar-right">
+            </nav>
+        </div>
+    </div>
+</div>
