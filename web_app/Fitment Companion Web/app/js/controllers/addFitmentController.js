@@ -7,6 +7,7 @@ angular.module('myApp.addFitment', ['ngRoute', 'ui.bootstrap'])
         });
     }])
     .controller('AddFitmentsController', function($location, $window, $rootScope, $scope, SocketService) {
+        SocketService.removeAllListeners();
         $scope.currentUser = {
             id: $window.sessionStorage.user_id,
             user_name:$window.sessionStorage.user_name

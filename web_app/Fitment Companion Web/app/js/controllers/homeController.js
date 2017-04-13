@@ -21,7 +21,9 @@ angular.module('myApp.home', ['ngRoute', 'ui.bootstrap'])
             vehicles:{},
             fitments:{},
             error:false,
+            events:[],
             currentError:""
+
         };
 
         /*Page Functions*/
@@ -47,8 +49,47 @@ angular.module('myApp.home', ['ngRoute', 'ui.bootstrap'])
             });
         };
 
+        $scope.proccessNotif = function(event, eventType, eventUser){
+
+        };
+
         $scope.$on('$viewContentLoaded', function(){
             $scope.loadAllStats();
+        });
+
+        /*Realtime Notifications*/
+        SocketService.on('part:notif', function(data){
+            var eventData = {
+                notifType: data.notifType,
+                eventUser: data.user
+            };
+
+            $scope.loadAllStats();
+        });
+        SocketService.on('vehicle:notif', function(data){
+            var data = angular.fromJson(data);
+            $scope.loadAllStats();
+            $scope.proccessNotif('V', data.notifType, data.user);
+        });
+        SocketService.on('group:notif', function(data){
+            var data = angular.fromJson(data);
+            $scope.loadAllStats();
+            $scope.proccessNotif('G', data.notifType, data.user);
+        });
+        SocketService.on('login:notif', function(data){
+            var data = angular.fromJson(data);
+            $scope.loadAllStats();
+            $scope.proccessNotif('L','I', data[0].user_name);
+        });
+        SocketService.on('logout:notif', function(data){
+            var data = angular.fromJson(data);
+            $scope.loadAllStats();
+            $scope.proccessNotif('L','O', data[0].user);
+        });
+        SocketService.on('U','users:notif', function(data){
+            var data = angular.fromJson(data);
+            $scope.loadAllStats();
+            $scope.proccessNotif(data.notifType, data.user);
         });
 
 

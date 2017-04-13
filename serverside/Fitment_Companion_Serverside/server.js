@@ -18,7 +18,7 @@ io.on('connection', function(socket){
            else{
                console.log(content);
                socket.emit('login:success', content);
-               io.sockets.emit('login:notif');
+               io.sockets.emit('login:notif', content);
 
            }
         });
@@ -34,7 +34,7 @@ io.on('connection', function(socket){
         else{
             console.log(content);
             socket.emit('logout:success');
-            io.sockets.emit('logout:notif');
+            io.sockets.emit('logout:notif', content);
         }
         });
     });

@@ -7,6 +7,7 @@ angular.module('myApp.addPart', ['ngRoute', 'ui.bootstrap'])
         });
     }])
     .controller('AddPartsController', function($location, $window, $rootScope, $scope, SocketService) {
+        SocketService.removeAllListeners();
         $scope.currentUser = {
             id: $window.sessionStorage.user_id,
             user_name:$window.sessionStorage.user_name
