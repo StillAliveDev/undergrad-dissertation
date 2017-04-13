@@ -376,4 +376,21 @@ io.on('connection', function(socket){
             }
         })
     })
+
+    //Handles requests to load vehicles and parts for the fitment creation screen
+    socket.on('fitmentResources:load', function(){
+        console.log("Request to load vehicles and parts for the fitment creation screen");
+
+        groupFunc.partsVinsNotInFitment(function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('fitmentResources:loadFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('fitmentResources:loadSuccess', content);
+            }
+
+        })
+    })
 });

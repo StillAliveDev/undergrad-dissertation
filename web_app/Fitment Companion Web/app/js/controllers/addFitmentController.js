@@ -14,12 +14,45 @@ angular.module('myApp.addFitment', ['ngRoute', 'ui.bootstrap'])
         };
 
         $scope.controllerData = {
+            parts:[],
+            vehicles:[],
+
+            fitmentGroup:{
+                vin:"",
+                desc:"",
+                timestamp:null
+            },
+            fitmentOp:[], //Partid, Name + OperationDesc
+
+            error:false,
+            currentError:""
 
         };
 
         /*Controller Functions*/
 
+        $scope.loadResources = function(){
+            SocketService.emit('fitmentResources:load');
+            SocketService.on('fitmentResources:loadSuccess', function(data){
+                console.log(data);
+                data = angular.fromJson(data);
 
+                $scope.controllerData.parts = data.parts;
+                $scope.controllerData.vehicles = data.vehicles;
+                SocketService.removeAllListeners();
+            });
+            SocketService.on('fitmentResources:loadFail', function(data){
+                console.log(data);
+                data = angular.fromJson(data);
+                $scope.controllerData.error = true;
+                $scope.controllerData.error = "There was a problem loading the vehicle and part data";
+            });
+        };
+
+
+        $scope.$on('$viewContentLoaded', function(){
+            $scope.loadResources();
+        });
 
         /*Navbar Functions*/
         $scope.logout = function(){

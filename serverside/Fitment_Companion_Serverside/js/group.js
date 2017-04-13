@@ -162,5 +162,64 @@ module.exports = {
                 callback(JSON.stringify(res), null);
             }
         });
+    },
+    partsVinsNotInFitment:function(callback){
+        var res = {
+            parts: [],
+            vehicles: [],
+            error:false,
+            errorText:""
+        };
+
+        var partsQuery = "select parts.PART_ID, parts.name, parts.MANUFACTURER from parts "+
+        "where parts.part_id not in (select distinct fitment_operations.part_id from fitment_operations) "+
+        "and parts.IN_INVENTORY = 'TRUE';";
+
+        var vehiclesQuery = "select * from vehicles "+
+        "where vehicles.vin not in (select fitment_groups.VEH_VIN from fitment_groups);";
+
+        connection.db.query(partsQuery, function(err, rows, fields){
+            if(!err){
+                if(rows.length >0){
+                    for(var i = 0; i < rows.length;i++){
+                        res.parts.push(rows[i]);
+                    }
+                }
+                else{
+                    res.error = true;
+                    res.errorText = "No parts available";
+                    callback(JSON.stringify(res),null);
+                }
+            }
+            else{
+                console.log(err);
+                res.error = true;
+                res.errorText = err;
+                callback(JSON.stringify(res), null);
+            }
+
+        });
+        connection.db.query(vehiclesQuery, function(err, rows, fields){
+            if(!err){
+                if(rows.length >0){
+                    for(var i = 0; i< rows.length;i++){
+                        res.vehicles.push(rows[i]);
+                    }
+                    callback(null, JSON.stringify(res));
+                }
+                else{
+                    res.error = true;
+                    res.errorText = "No Vehicles Available";
+                    callback(JSON.stringify(res), null);
+                }
+            }
+            else{
+                console.log(err);
+                res.error = true;
+                res.errorText = true;
+                callback(JSON.stringify(res),null);
+            }
+        })
+
     }
 };

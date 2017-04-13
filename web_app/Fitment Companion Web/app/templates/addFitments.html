@@ -35,4 +35,39 @@
             </nav>
         </div>
     </div>
+    <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <form name="createFitmentForm">
+        <div class="input-group">
+            <span class="input-group-addon">Vehicle</span>
+            <select class="form-control" data-live-search="true" title="Vehicle" ng-model="controllerData.fitmentGroup.vin">
+                <option ng-repeat="vehicle in controllerData.vehicles">{{vehicle.VIN}}</option>
+            </select>
+        </div>
+        <br /><br />
+        <div class="input-group">
+            <span class="input-group-addon">Group Description</span>
+            <input name="groupDesc" type="text" class="form-control" placeholder="Group Desc" ng-model="controllerData.fitmentGroup.desc"  ng-required="true">
+        </div>
+        <br /><br />
+        <div class="input-group">
+            <span class="input-group-addon">Complete By</span>
+            <input name="estCompDate" type="text" class="form-control" placeholder="DD/MM/YYYY" ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="controllerData.fitmentGroup.timestamp">
+        </div>
+        <br/><br/>
+            <h4>Available Parts</h4>
+            <div class="option-elem">
+                <select id="parts" size="5" multiple>
+                    <option ng-repeat="part in controllerData.parts">{{part.name}} ({{part.MANUFACTURER}})</option>
+                </select>
+            </div>
+            <div class="option-elem">
+                <input type="button" id="btnLeft" value="<<"/>
+                <input type="button" id="btnRight" value=">>"/>
+            </div>
+            <div class="option-elem">
+                <select id="rightValues" size="5" multiple>
+                    <option ng-repeat="item in conrollerData.fitmentOp">{{item.name}}</option>
+                </select>
+            </div>
+    </form>
 </div>

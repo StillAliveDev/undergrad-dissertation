@@ -39,3 +39,16 @@
 .check-orange{
   color:orange;
 }
+
+.option-elem{
+  float:left;
+}
+
+.option-elem select{
+  width: 250px;
+}
+
+.option-elem input{
+  margin-left:5px;
+  margin-right:5px;
+}
