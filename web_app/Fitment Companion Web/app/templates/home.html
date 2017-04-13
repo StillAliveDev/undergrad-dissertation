@@ -35,7 +35,62 @@
             </nav>
         </div>
     </div>
+    <div class="row">
+        <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>User Statistics</strong>
+                </div>
+                <div class="panel-body">
+                    Total Users: <strong>{{controllerData.users.totalUsers}}</strong><br />
+                    Total Users signed in: <strong>{{controllerData.users.totalUsersSignedIn}}</strong><br />
+                    Total Users assigned to a Group: <strong>{{controllerData.users.totalAssignedUsers}}</strong>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Parts Statistics</strong>
+                </div>
+                <div class="panel-body">
+                    Total Parts: <strong>{{controllerData.parts.totalParts}}</strong><br />
+                    Total Parts currently in inventory: <strong>{{controllerData.parts.totalPartsInInventory}}</strong><br />
+                    Total Parts assigned to Groups: <strong>{{controllerData.parts.totalAssignedParts}}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Vehicle Statistics</strong>
+                </div>
+                <div class="panel-body">
+                    Total Vehicles: <strong>{{controllerData.vehicles.totalVehicles}}</strong><br />
+                    Total Vehicles assigned to a Group: <strong>{{controllerData.vehicles.totalAssignedVehicles}}</strong><br/><br/><br/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Fitment Statistics</strong>
+                </div>
+                <div class="panel-body">
+                    Total Groups: <strong>{{controllerData.fitments.totalGroups}}</strong><br />
+                    Total Groups pending: <strong>{{controllerData.fitments.totalGroupsPending}}</strong><br />
+                    Total Groups in progress: <strong>{{controllerData.fitments.totalGroupsInProgress}}</strong><br />
+                    Total Completed Groups: <strong>{{controllerData.fitments.totalGroupsCompleted}}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<p>This is the home page</p>
+
 
 </div>

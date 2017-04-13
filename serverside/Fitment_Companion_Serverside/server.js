@@ -129,6 +129,22 @@ io.on('connection', function(socket){
         });
     });
 
+    //Handles response for web application home screen
+    socket.on('home:loadFull', function(){
+        console.log('Request to load home screen data (WEB)');
+
+        homeFunc.homeLoadDataWeb(function(err, content){
+            if(err){
+                console.log(err);
+                socket.emit('home:loadFullFail', err);
+            }
+            else{
+                console.log(content);
+                socket.emit('home:loadFullSuccess', content);
+            }
+        });
+    });
+
     //Handles broadcasts when user removes part from inventory
 
     socket.on('part:remove', function(data){

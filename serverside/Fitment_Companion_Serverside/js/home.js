@@ -89,5 +89,88 @@ module.exports = {
                 callback(JSON.stringify(res), null);
             }
         });
+    },
+    homeLoadDataWeb : function(callback){
+        var res = {
+            users:{
+                totalUsers:0,
+                totalUsersSignedIn:0,
+                totalAssignedUsers:0
+            },
+            parts:{
+                totalParts:0,
+                totalPartsInInventory:0,
+                totalAssignedParts:0
+            },
+            vehicles:{
+                totalVehicles:0,
+                totalAssignedVehicles:0
+            },
+            fitments:{
+                totalGroups:0,
+                totalGroupsPending:0,
+                totalGroupsInProgress:0,
+                totalGroupsCompleted:0
+            },
+            error:false,
+            errorText:""
+        };
+
+        var query = "SELECT "+
+        "(select count(users.user_id) from users) as 'totalUsers', "+
+            "(select count(users.user_id) from users where users.USER_SIGNED_IN = 'TRUE') as 'totalUsersSignedIn', "+
+            "(select count(fitment_groups.FIT_GROUP_ID) from fitment_groups where fitment_groups.USER_ID IS NOT NULL) as 'totalAssignedUsers', "+
+
+            "(select count(parts.part_id) from parts) as 'totalParts', "+
+            "(select count(parts.part_id) from parts where parts.IN_INVENTORY = 'TRUE') as 'totalPartsInInv', "+
+            "(select count(fitment_operations.FIT_OP_ID) from fitment_operations where fitment_operations.PART_ID IS NOT NULL) as 'totalAssignedParts', "+
+
+            "(select count(vehicles.vin) from vehicles) as 'totalVehicles', "+
+            "(select count(vehicles.vin) from vehicles where vehicles.vin in (select fitment_groups.VEH_VIN from fitment_groups))as 'totalAssignedVehicles', "+
+
+            "(select count(fitment_groups.FIT_GROUP_ID) from fitment_groups) as 'totalGroups', "+
+            "(select count(fitment_groups.FIT_GROUP_ID) from fitment_groups where IN_PROGRESS = 'TRUE' and INCOMPLETE = 'TRUE') as 'totalGroupsInProgress', "+
+            "(select count(fitment_groups.FIT_GROUP_ID) from fitment_groups where IN_PROGRESS = 'FALSE' and INCOMPLETE = 'TRUE') as 'totalGroupsPending', "+
+            "(select count(fitment_groups.FIT_GROUP_ID) from fitment_groups where IN_PROGRESS = 'FALSE' and INCOMPLETE = 'FALSE') as 'totalGroupsCompleted';";
+
+        connection.db.query(query, function(err, rows, fields) {
+            if (!err) {
+                if (rows.length > 0) {
+                    res = {
+                        users: {
+                            totalUsers: rows[0].totalUsers,
+                            totalUsersSignedIn: rows[0].totalUsersSignedIn,
+                            totalAssignedUsers: rows[0].totalAssignedUsers
+                        },
+                        parts: {
+                            totalParts: rows[0].totalParts,
+                            totalPartsInInventory: rows[0].totalPartsInInventory,
+                            totalAssignedParts: rows[0].totalAssignedParts
+                        },
+                        vehicles: {
+                            totalVehicles: rows[0].totalVehicles,
+                            totalAssignedVehicles: rows[0].totalAssignedVehicles
+                        },
+                        fitments: {
+                            totalGroups: rows[0].totalGroups,
+                            totalGroupsPending: rows[0].totalGroupsPending,
+                            totalGroupsInProgress: rows[0].totalGroupsInProgress,
+                            totalGroupsCompleted: rows[0].totalGroupsCompleted
+                        },
+                        error: false,
+                        errorText: ""
+                    };
+
+                    callback(null, JSON.stringify(res));
+                }
+            }
+            else {
+                res.error = true;
+                res.errorText = err;
+                console.log(err);
+                callback(JSON.stringify(res), null);
+            }
+        });
+
     }
-}
+};
