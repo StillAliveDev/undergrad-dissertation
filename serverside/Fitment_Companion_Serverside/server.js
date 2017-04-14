@@ -25,11 +25,15 @@ var userFunc = require('./js/user.js');
  * Each listener, identified by 'socket.on' have the possibility to be used by both the Web and Mobile App,
  * However, most are specialised to either one or another.
  *
+ * This script's functions are separated into: LOGIN/LOGOUT, HOME SCREEN, VEHICLES, PARTS, GROUPS and USERS
+ *
  * @param socket: connected client information, references to client making each broadcast.
  *              Data is sent back to this client for specific responses required for only them.
  *              io.sockets.emit is used to send data to all connected clients.
  */
 io.on('connection', function(socket){
+
+    /************************************* LOGIN/LOGOUT ***********************************/
 
     /**
      *  Responds to user login attempts with socket broadcast 'user:login' (BOTH)
@@ -78,6 +82,8 @@ io.on('connection', function(socket){
         });
     });
 
+    /************************************************ HOME SCREEN **********************************/
+
     /**
      * Responds to client broadcast 'home:load' (MOBILE APP)
      */
@@ -118,6 +124,8 @@ io.on('connection', function(socket){
             }
         });
     });
+
+    /************************************************ VEHICLES *********************************************/
 
     /**
      * Responds to the client broadcast 'vehicles:loadList'
@@ -235,6 +243,8 @@ io.on('connection', function(socket){
             }
         });
     });
+
+    /******************************************** PARTS *********************************************/
 
     /**
      * Responds to client broadcast 'parts:loadList'.
@@ -403,6 +413,8 @@ io.on('connection', function(socket){
         });
     });
 
+    /******************************************************* GROUPS *******************************************/
+
     /**
      * Responds to 'group:start' noifications (MOBILE APP)
      *
@@ -496,6 +508,31 @@ io.on('connection', function(socket){
     });
 
     /**
+     * Responds to 'fitmentResources:load' client broadcasts (WEB APP)
+     * Intended to return parts and vehicle to not assigned to display on
+     * the add fitments screen.
+     */
+    socket.on('fitmentResources:load', function(){
+        console.log("Request to load vehicles and parts for the fitment creation screen");
+        //Call partsVinsNotInFitment in group.js wth callback
+        groupFunc.partsVinsNotInFitment(function(err, content){
+            if(err){
+                console.log(err);
+                //Emit fail to calling client
+                socket.emit('fitmentResources:loadFail', err);
+            }
+            else{
+                console.log(content);
+                //Emit success to calling client with data
+                socket.emit('fitmentResources:loadSuccess', content);
+            }
+
+        });
+    });
+
+    /******************************************************** USERS *******************************************/
+
+    /**
      * Responds to client broadcast 'users:loadFull' (WEB APP)
      */
     socket.on('users:loadFull',function(){
@@ -560,30 +597,6 @@ io.on('connection', function(socket){
                 //Emit to all connected clients as a notification
                 io.sockets.emit('users:notif', content);
             }
-        });
-    });
-
-
-    /**
-     * Responds to 'fitmentResources:load' client broadcasts (WEB APP)
-     * Intended to return parts and vehicle to not assigned to display on
-     * the add fitments screen.
-     */
-    socket.on('fitmentResources:load', function(){
-        console.log("Request to load vehicles and parts for the fitment creation screen");
-        //Call partsVinsNotInFitment in group.js wth callback
-        groupFunc.partsVinsNotInFitment(function(err, content){
-            if(err){
-                console.log(err);
-                //Emit fail to calling client
-                socket.emit('fitmentResources:loadFail', err);
-            }
-            else{
-                console.log(content);
-                //Emit success to calling client with data
-                socket.emit('fitmentResources:loadSuccess', content);
-            }
-
         });
     });
 });
