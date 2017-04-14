@@ -178,6 +178,7 @@ module.exports = {
         var vehiclesQuery = "select * from vehicles "+
         "where vehicles.vin not in (select fitment_groups.VEH_VIN from fitment_groups);";
 
+
         connection.db.query(partsQuery, function(err, rows, fields){
             if(!err){
                 if(rows.length >0){
