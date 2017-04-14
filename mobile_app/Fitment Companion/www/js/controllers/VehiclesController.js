@@ -347,6 +347,15 @@
                 $scope.processPart(json.id);
             }
         }
+
+        //Realtime calls to update list
+        SocketService.on('vehicles:notif', function(){
+        	$scope.loadList();
+		});
+
+		SocketService.on('group:notif', function(){
+			$scope.loadList();
+		});
 	}
 	
 })();

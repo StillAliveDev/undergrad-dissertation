@@ -158,6 +158,11 @@
                 }
             );
         };
+
+        //Updates screen when data changes.
+        SocketService.on('part:notif', function(){
+            $scope.loadList();
+        });
 	}
 	
 })();

@@ -23,7 +23,7 @@
 		<!--Parts List -->
 		<div class="list-bottom">
 			<ion-item ng-click="openPart(part.PART_ID)" ng-repeat="part in controllerData.partsList.parts">
-				{{part.NAME}}
+				{{part.NAME}} ({{part.MANUFACTURER}})
 			</ion-item>
             <ion-item class="card padding item-text-wrap text-center">
                 <i class="icon ion-refresh"></i>
