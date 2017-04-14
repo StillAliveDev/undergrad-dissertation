@@ -1,55 +1,51 @@
 (function(){
 	angular.module('starter')
-	.controller('MenuController',['$scope','$rootScope','$state','$ionicPopup','localStorageService','SocketService', MenuController]);
-	
-	function MenuController($scope,$rootScope, $state, $ionicPopup,localStorageService,SocketService){
-		
+	.controller('MenuController',['$scope','$rootScope','$state','$ionicPopup','SocketService', MenuController]);
+    /**
+     * Constructor for the MenuController Module.
+     * @param $scope: Contoller Scope
+     * @param $rootScope: Application scope -- sharable between controllers
+     * @param $state: Application state functions
+     * @param $ionicPopup: Ionic UI Popup functions
+     * @param SocketService: SocketSevice functions for realtime communication
+     * @constructor MenuController for menu HTML template logic
+     */
+	function MenuController($scope,$rootScope, $state, $ionicPopup,SocketService){
+
+        /**
+         * Navigate the app to the Home state, load its HTML Template
+         */
 		$scope.goToHomeState = function(){
 			$state.go('app.home');
 		};
+
+        /**
+         * Navigate the app to the vehicles state, load its HTML template
+         */
 		$scope.goToVehiclesState = function(){
 			$state.go('app.vehicles');
 		};
+
+        /**
+         * Navigate to the arts state, load its HTML template
+         */
 		$scope.goToPartsState = function(){
 			$state.go('app.parts');
 		};
+
+        /**
+         * Log the current user out
+         */
 		$scope.doLogout = function(){
-            data = {
+            var data = { //Payload
                 userid : $rootScope.user_id,
                 username : $rootScope.user_name
             };
 
+            //Send the logout broadcast, with the JSON payload
             SocketService.emit('user:logout', angular.toJson(data));
-			$state.go('login');
-		}
-		$scope.showFitmentModal = function(){
-            console.log('Opening Group Detail Popup');
-            var groupPopup = $ionicPopup.confirm({
-                title: 'Fitment Detail',
-                templateUrl: 'templates/fitmentGroupDetailModal.html',
-				scope: $scope,
-                okText: 'Start'
-            });
-		}
-
-		//This is repeated code from VehiclesController... Do something about this
-        $scope.openPart = function(part){
-            console.log('Opening Part Popup');
-            var partPopup = $ionicPopup.confirm({
-                title: 'Part Detail',
-                templateUrl: 'templates/partDetailModal.html',
-                scope: $scope
-            });
-        };
-
-        $scope.openPartScan = function(){
-            console.log('Opening Part Scan Popup');
-            var partScanPopup = $ionicPopup.confirm({
-                title: 'Scan Tag',
-                templateUrl: 'templates/partScanModal.html',
-                scope: $scope
-            });
-        };
+			$state.go('login'); //Change state to Login, load its HTML template
+		};
 	}
 	
 })();
