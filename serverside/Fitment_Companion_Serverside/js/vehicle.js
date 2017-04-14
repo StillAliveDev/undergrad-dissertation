@@ -1,6 +1,11 @@
 var connection = require('./db.js');
 
+//Make all functions available to other scripts.
 module.exports = {
+    /**
+     * Function to load all VIN numbers for all vehicles in the Database (MOBILE APP)
+     * @param callback : data to return
+     */
     loadAllVins : function(callback){
         var res = {
             vehicles: [],
@@ -11,10 +16,15 @@ module.exports = {
         };
         var vins = [];
         var vin_count = [];
+        //All vehicle vin numbers
         var query = "SELECT vehicles.vin FROM vehicles;";
+        // NUmber of vehicles in the database
         var query2 = "select count(vehicles.vin) as vin_count FROM vehicles;";
+        //Number of vehicles currently assigned
         var query3 = "select count(vehicles.vin) as fitment_vin_count from vehicles " +
                     "where vehicles.vin in (select distinct fitment_groups.VEH_VIN from fitment_groups);";
+
+        //Query1
         connection.db.query(query, function(err,rows,fields) {
             if(!err){
                 if(rows.length > 0){
@@ -36,6 +46,7 @@ module.exports = {
             }
 
         });
+        //Query 2
         connection.db.query(query2, function(err,rows,fields){
            if(!err){
                if(rows.length > 0){
@@ -48,6 +59,7 @@ module.exports = {
                callback(JSON.stringify(res),null);
            }
         });
+        //Query 3
         connection.db.query(query3, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
@@ -57,7 +69,7 @@ module.exports = {
                 else{
                     res.error = true;
                     res.errorText = "No fitments found";
-                    callback(JSON.stringify(res),null);
+                    callback(JSON.stringify(res),null); //Return data JSON
                 }
             }
             else{
@@ -68,6 +80,12 @@ module.exports = {
         });
 
     },
+    /**
+     * Function to reurn a vehicle's full information, including fitment_groups, operations and parts given a VIN Number
+     * (MOBILE APP)
+     * @param vin : vehicle to enquire
+     * @param callback : data to return
+     */
     enquire : function(vin,callback){
         var res = {
             vehicle:{},
@@ -77,12 +95,16 @@ module.exports = {
             error: false,
             errorText: ""
         };
+        //All Vehicle information
         var vehQuery = "SELECT * FROM vehicles WHERE vehicles.vin = '"+vin+"';";
+        //All assigned fitment groups
         var fitmentGroupQuery = "SELECT * from fitment_groups WHERE fitment_groups.veh_vin = '"+vin+"';";
+        //All fitment_group operations
         var fitmentOpQuery = "SELECT * from fitment_operations " +
                             "WHERE fitment_operations.group_id = (SELECT fitment_groups.fit_group_id " +
                                 "FROM fitment_groups " +
                                 "WHERE fitment_groups.veh_vin = '"+vin+"');";
+        //All operation's parts
         var assignPartsQuery = "SELECT parts.PART_ID, parts.NAME, parts.IN_INVENTORY FROM parts " +
         "join fitment_operations on fitment_operations.PART_ID = parts.part_id " +
         "where fitment_operations.GROUP_ID = (" +
@@ -90,6 +112,7 @@ module.exports = {
         "from fitment_groups " +
         "where fitment_groups.veh_vin = '" + vin + "');";
 
+        //Query 1
         connection.db.query(vehQuery, function(err,rows,fields){
             if(!err) {
                 if(rows.length > 0) {
@@ -109,6 +132,7 @@ module.exports = {
             }
         });
 
+        //Query 2
         connection.db.query(fitmentGroupQuery, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0) {
@@ -125,6 +149,7 @@ module.exports = {
             }
         });
 
+        //Query 3
         connection.db.query(fitmentOpQuery, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
@@ -141,6 +166,7 @@ module.exports = {
             }
         });
 
+        //Query 4
         connection.db.query(assignPartsQuery, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
@@ -148,7 +174,7 @@ module.exports = {
                         res.assignedParts.push(rows[i])
                     }
                 }
-                callback(null, JSON.stringify(res));
+                callback(null, JSON.stringify(res)); //Return data JSON
             }
             else{
                 res.error = true;
@@ -159,6 +185,10 @@ module.exports = {
         });
 
     },
+    /**
+     * Function to load all vehicles information for every vehicle (Web App)
+     * @param callback : data to return
+     */
     loadAll: function(callback){
         var res={
             vehicles:[],
@@ -168,11 +198,15 @@ module.exports = {
             errorText:""
         };
 
+        //All vehicles' information
         var query1 = "SELECT * FROM vehicles;";
+        //Number of vehicles in the database
         var query2 = "SELECT count(vehicles.vin) as TOTAL FROM vehicles;";
+        //Number of assigned Vehicles
         var query3 = "select count(vehicles.vin) as fitment_vin_count from vehicles " +
             "where vehicles.vin in (select distinct fitment_groups.VEH_VIN from fitment_groups);";
 
+        //Query 1
         connection.db.query(query1, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
@@ -188,7 +222,7 @@ module.exports = {
                 }
             }
         });
-
+        //Query2
         connection.db.query(query2, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
@@ -202,12 +236,12 @@ module.exports = {
                 }
             }
         });
-
+        //Query 3
         connection.db.query(query3, function(err,rows,fields){
             if(!err){
                 if(rows.length > 0){
                     res.totalAssigned = rows[0].fitment_vin_count;
-                    callback(null, JSON.stringify(res));
+                    callback(null, JSON.stringify(res)); //Send Data JSON
                 }
                 else{
                     res.error = true;
@@ -218,23 +252,30 @@ module.exports = {
             }
         });
     },
+    /**
+     * Function to add a vehicle to the database given the vehicle information (WEB APP)
+     * @param data: the vehicle data and the calling client username (form notifications)
+     * @param callback : data to return
+     */
     add: function(data, callback){
         var res = {
             eventUser: data.username,
             vin: data.vehicle.vin,
-            notifType: "A",
+            notifType: "A", //ADD
             error: false,
             errorText: ""
         };
 
+        //Insert the vehicle into the db
         var query = "insert into vehicles (VIN, MAKE, MODEL, COLOUR, ADDED_TIMESTAMP) " +
             "VALUES ('" + data.vehicle.vin + "','" +  data.vehicle.make + "','" + data.vehicle.model + "','" +
                     data.vehicle.colour + "', now())";
 
+        //Run query
         connection.db.query(query, function(err,rows,fields){
             if(!err){
-                console.log("Vehicle: " + data.vehicle.vin + " Added")
-                callback(null, JSON.stringify(res));
+                console.log("Vehicle: " + data.vehicle.vin + " Added");
+                callback(null, JSON.stringify(res)); //Return data JSON
             }
             else{
                 res.error = true;
@@ -244,20 +285,27 @@ module.exports = {
             }
         });
     },
+    /**
+     * Function to delete a vehicle from the database given a vin number (WEB APP)
+     * @param data : vin to delete and the calling client username (form notifications)
+     * @param callback
+     */
     delete: function(data, callback){
         var res = {
             eventUser: data.username,
             vin: data.vin,
-            notifType: "D",
+            notifType: "D", //DELETE
             error: false,
             errorText: ""
-        }
+        };
 
+        //Delete Query
         var query = "delete from vehicles where vin = '"+data.vin+"';";
 
+        //Run Query
         connection.db.query(query, function(err,rows,fields){
             if(!err){
-                console.log("Vehicle: " + data.vin + " Deleted")
+                console.log("Vehicle: " + data.vin + " Deleted");
                 callback(null, JSON.stringify(res));
             }
             else{
@@ -266,7 +314,7 @@ module.exports = {
                 console.log(err);
                 callback(JSON.stringify(res), null);
             }
-        })
+        });
     }
 
 };
