@@ -128,7 +128,7 @@ module.exports = {
             }
         });
     },
-    loadFull: function(data, callback){
+    loadFull: function(callback){
         var res = {
             parts:[],
             total:0,
