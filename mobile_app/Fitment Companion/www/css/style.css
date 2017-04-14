@@ -29,3 +29,15 @@
 .text-center{
     text-align: center !important;
 }
+
+ion-view header, .button-positive, .bar, .item-divider{
+	background-color:#7a43b6 !important;
+}
+
+.bar-subheader{
+	background-color: white !important;
+}
+
+ion-view header h1, .title, .ion-navicon, .ion-wrench, .item-divider{
+	color:white !important;
+}
