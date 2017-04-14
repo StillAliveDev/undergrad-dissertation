@@ -1,5 +1,6 @@
 <ion-side-menus enable-menu-with-back-views="true">
   <ion-side-menu-content>
+      <!-- Left and right menu icons -->
     <ion-nav-bar class="bar-stable">
 
       <ion-nav-buttons side="left">
@@ -16,10 +17,12 @@
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
+    <!--Left Side menu -->
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
       <h1 class="title">Menu</h1>
     </ion-header-bar>
+      <!-- Nav Links -->
     <ion-content>
       <ion-list>
 		<ion-item menu-close ng-click="goToHomeState()">
@@ -37,15 +40,20 @@
       </ion-list>
     </ion-content>
   </ion-side-menu>
-  
+
+    <!--Right Side menu: logic not implemented -- dummy template -->
   <ion-side-menu side="right">
 	<ion-header-bar class="bar-stable">
 		<h1 class="title">Active Fitments</h1>
 	</ion-header-bar>
+      <!--Menu content-->
 	<ion-content>
 		<ion-list>
+            <!--Each menu item (card) -->
 			<ion-item menu-close>
+                <!--Function does not exist -- not implemented -->
 				<div class="card" ng-click="showFitmentModal()">
+                    <!--Dummy Template -->
 					<div class="item item-divider">
 						Fitment: 00000001
 					</div>

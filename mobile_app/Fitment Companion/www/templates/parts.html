@@ -10,6 +10,7 @@
 						<h4>Total Parts: {{controllerData.partsList.total}}</h4>
 					</div>
 				</div>
+				<!--NFC Logo -- Opens the scan modal -->
 				<div class="col col-25">
 					<img class="nfc-icon" src="img/nfc-icon.png" ng-click="openPartScan()">
 				</div>
@@ -17,14 +18,13 @@
 		</div>
 	</ion-header-bar>
 	<ion-content class="has-subheader">
-			<ion-refresher
-		pulling-text="Pull To Refresh"
-		on-refresh="loadList()">
-		</ion-refresher>
+		<!--Pull to Refresh UI Element -->
+		<ion-refresher pulling-text="Pull To Refresh" on-refresh="loadList()"></ion-refresher>
+		<!--Parts List -->
 		<div class="list-bottom">
-					<ion-item ng-click="openPart(part.PART_ID)" ng-repeat="part in controllerData.partsList.parts">
-						{{part.NAME}}
-					</ion-item>
+			<ion-item ng-click="openPart(part.PART_ID)" ng-repeat="part in controllerData.partsList.parts">
+				{{part.NAME}}
+			</ion-item>
             <ion-item class="card padding item-text-wrap text-center">
                 <i class="icon ion-refresh"></i>
                 <h2>Pull down to refresh Parts</h2>

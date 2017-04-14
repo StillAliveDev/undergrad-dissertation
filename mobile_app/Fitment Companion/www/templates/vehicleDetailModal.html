@@ -1,6 +1,7 @@
 <ion-item class="item-divider small-heading-font">
 	<strong>Vehicle: </strong>{{controllerData.vehicleDetails.vehicle.VIN}}
 </ion-item>
+<!--Vehicle Information -->
 <ion-list>
 	<ion-item class="small-detail-font">
 		<strong>Make: </strong>{{controllerData.vehicleDetails.vehicle.MAKE}}
@@ -15,6 +16,7 @@
 		<strong>Added: </strong>{{controllerData.vehicleDetails.vehicle.ADDED_TIMESTAMP  | date: 'dd-MM-yyyy HH:MM:ss'}}
 	</ion-item>
 </ion-list>
+<!--If there is not a fitment group -->
 <ion-item ng-if="!controllerData.vehicleDetails.fitmentGroups[0]">
 	<div  class="item item-text-wrap item-royal">
 		Vehicle does not have any fitment groups
@@ -24,6 +26,7 @@
 	<ion-item class="item-divider">
 		Fitment Groups
 	</ion-item>
+	<!--Group List -->
 	<ion-list>
 		<ion-item ng-click="openGroup(group)" ng-repeat="group in controllerData.vehicleDetails.fitmentGroups">
 			<i class="ion-load-a" ng-if="group.IN_PROGRESS == 'TRUE'"></i>

@@ -11,6 +11,7 @@
 	<ion-item class="item-divider">
 		Parts for fitment
 	</ion-item>
+	<!-- List of parts-->
 	<ion-list>
 		<ion-item ng-click="openPart(part.PART_ID)" ng-repeat="part in controllerData.vehicleDetails.assignedParts">
 			<i class="ion-archive" ng-if="part.IN_INVENTORY == 'TRUE'"></i>
