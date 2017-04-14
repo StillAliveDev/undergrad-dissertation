@@ -35,6 +35,7 @@
             </nav>
         </div>
     </div>
+    <!--Page Content -->
     <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
     <form name="addVehicleForm">
         <p class="form-invalid-text" ng-show="addVehicleForm.vin.$invalid">Must be 17 Characters</p>
@@ -62,6 +63,7 @@
         </div>
 
         <br /><br/>
+        <!--Button is not active until page is validated -->
         <p>All fields marked with '*' are required to create the vehicle</p>
         <button type="button" class="btn btn-primary" ng-click="addVehicle()" ng-disabled="addVehicleForm.$invalid">
             Add Vehicle

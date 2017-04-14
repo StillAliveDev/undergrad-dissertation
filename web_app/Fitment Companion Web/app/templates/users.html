@@ -35,7 +35,7 @@
             </nav>
         </div>
     </div>
-
+    <!--Page content-->
     <div class="panel panel-default">
         <div class="panel-body">
             Total users : <strong>{{controllerData.total}}</strong><br />
@@ -46,6 +46,7 @@
         </div>
     </div>
     <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <!--Parts Table -->
     <table class="table">
         <thead>
         <tr>
@@ -64,7 +65,7 @@
             <td>{{user.USER_NAME}}</td>
             <td>{{user.USER_FIRST_NAME}}</td>
             <td>{{user.USER_LAST_NAME}}</td>
-            <td>
+            <td> <!--Status indicator, in or our of inventory -->
                 <i class ="check-green glyphicon glyphicon-certificate" ng-show="user.USER_SIGNED_IN == 'TRUE'"></i>
                 <i class ="check-red glyphicon glyphicon-certificate" ng-show="user.USER_SIGNED_IN == 'FALSE'"></i>
             </td>

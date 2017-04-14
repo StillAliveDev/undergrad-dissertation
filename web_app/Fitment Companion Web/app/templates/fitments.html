@@ -35,7 +35,9 @@
             </nav>
         </div>
     </div>
+    <!--Page Content -->
     <div class="panel panel-default">
+        <!--Statitics -->
         <div class="row">
             <div class="col-md-9">
         <div class="panel-body">
@@ -56,6 +58,7 @@
             </div>
         </div>
     </div>
+    <!--Vehicles Table -->
     <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
     <table class="table">
         <thead>
@@ -82,7 +85,7 @@
             <td>{{group.CREATED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
             <td>{{group.EST_COMP_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
             <td>{{group.ACT_COMP_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}</td>
-            <td>
+            <td> <!--Status indicator -->
                 <i class ="check-red glyphicon glyphicon-certificate" ng-show="(group.IN_PROGRESS == 'FALSE')&&(group.INCOMPLETE == 'TRUE')"></i>
                 <i class ="check-orange glyphicon glyphicon-certificate" ng-show="(group.IN_PROGRESS == 'TRUE')&&(group.INCOMPLETE == 'TRUE')"></i>
                 <i class ="check-green glyphicon glyphicon-certificate" ng-show="(group.IN_PROGRESS == 'FALSE')&&(group.INCOMPLETE == 'FALSE')"></i>

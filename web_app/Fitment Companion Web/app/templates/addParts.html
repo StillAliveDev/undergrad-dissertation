@@ -35,6 +35,7 @@
             </nav>
         </div>
     </div>
+    <!--Page Content -->
     <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
     <form name="addPartForm">
         <p class="form-invalid-text" ng-show="addPartForm.name.$invalid">Cannot be more than 50 characters</p>
@@ -67,6 +68,7 @@
             <input name="weight" type="number" class="form-control" placeholder="Weight" ng-model="controllerData.part.weight"  ng-required="true" ng-pattern="\d*\.\d*">
         </div>
         <br /><br/>
+        <!--Button is not active unless the page is validated -->
         <p>All fields marked with '*' are required to create the part</p>
         <p class="form-invalid-text" ng-show="!addPartForm.$invalid">Note that "Add Part" will mark the part as in inventory,<br /> so please be sure to assign a tag to this part and put into the warehouse when complete.</p>
         <button type="button" class="btn btn-primary" ng-click="addPart()" ng-disabled="addPartForm.$invalid">

@@ -35,6 +35,7 @@
             </nav>
         </div>
     </div>
+    <!--Page Content -->
     <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
     <form name="addUserForm">
         <p class="form-invalid-text" ng-show="addUserForm.username.$invalid">Cannot be more than 25 characters Characters</p>
@@ -62,6 +63,7 @@
         </div>
 
         <br /><br/>
+        <!--Button is not active until for is validated -->
         <p>All fields marked with '*' are required to create the user</p>
         <button type="button" class="btn btn-primary" ng-click="addUser()" ng-disabled="addUserForm.$invalid">
             Add User

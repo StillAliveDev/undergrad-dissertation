@@ -35,7 +35,9 @@
             </nav>
         </div>
     </div>
+    <!--Page Content -->
     <div class="panel panel-default">
+        <!--Statistics-->
         <div class="panel-body">
             Total Parts : <strong>{{controllerData.total}}</strong><br />
             Total Parts assigned to a Fitment Group : <strong>{{controllerData.totalAssigned}}</strong><br />
@@ -45,6 +47,7 @@
         </div>
     </div>
     <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
+    <!--Parts Table-->
     <table class="table">
         <thead>
         <tr>
