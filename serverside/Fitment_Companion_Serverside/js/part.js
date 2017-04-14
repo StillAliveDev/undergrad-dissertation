@@ -14,7 +14,7 @@ module.exports = {
             errorText:""
         };
         //List of parts
-        var query = "SELECT parts.PART_ID, parts.NAME " +
+        var query = "SELECT parts.PART_ID, parts.NAME, parts.MANUFACTURER " +
             "FROM parts;";
         //Number of parts
         var query2 = "select count(parts.part_id) as PARTS_COUNT from parts;";
