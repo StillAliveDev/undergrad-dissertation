@@ -1,28 +1,46 @@
-<ion-view title="Home" ng-controller="HomeController as home_ctrl">
+<ion-view title="Home">
 	<header class="bar bar-header bar-positive">
 		<h1 class="title">Home</h1>
 	</header>
 	<ion-content class="has-header padding">
+		<!--Vehicle Statistics Card -->
 		<div class="card">
 			<div class="item item-divider">
 				Vehicle Stats
 			</div>
 			<div class="item item-text-wrap">
 				Total In Database:
-				<strong>000</strong><br />
-				Total Awaiting Fitment:
-				<strong>000</strong><br />
+				<strong>{{controllerData.stats.totalVehicles}}</strong><br />
+				Total Assigned to Fitment Groups:
+				<strong>{{controllerData.stats.totalAssignedVeh}}</strong><br />
 			</div>
 		</div>
+		<!-- Part Statistics Card -->
 		<div class="card">
 			<div class="item item-divider">
 				Part Stats
 			</div>
 			<div class="item item-text-wrap">
 				Total In Database:
-				<strong>000</strong><br />
+				<strong>{{controllerData.stats.totalParts}}</strong><br />
 				Total Assigned to Fitment Groups:
-				<strong>000</strong><br />
+				<strong>{{controllerData.stats.totalAssignedParts}}</strong><br />
+				Total parts currently in inventory:
+				<strong>{{controllerData.stats.totalPartsInInventory}}</strong><br />
+			</div>
+		</div>
+		<!-- Fitments Statistics Card -->
+		<div class="card">
+			<div class="item item-divider">
+				Fitments Stats
+			</div>
+			<div class="item item-text-wrap">
+				Total Pending:
+				<strong>{{controllerData.stats.totalGroupsPending}}</strong><br />
+				Total In Progress:
+				<strong>{{controllerData.stats.totalGroupsInProgress}}</strong><br />
+				Total Completed
+				<strong>{{controllerData.stats.totalGroupsComplete}}</strong><br />
 			</div>
 		</div>
 	</ion-content>

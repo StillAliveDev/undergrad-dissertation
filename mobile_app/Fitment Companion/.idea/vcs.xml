@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="svn" />
+    <mapping directory="" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../../web_app/Fitment Companion Web" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../../web_app/Fitment Compasnion Web" vcs="svn" />
   </component>
 </project>

@@ -1,8 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addFitmentController.js" line="41" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="ab422190-2113-4e77-89a0-3e9c230cd888" name="Default" comment="">
+    <list default="true" readonly="true" id="4840cc66-e875-4585-92ff-3b8d3d3aaf95" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/vendor/win32-x64-48/binding.node" afterPath="$PROJECT_DIR$/node_modules/node-sass/vendor/win32-x64-48/binding.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_CordovaLib_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_CordovaLib_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_CordovaLib_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_CordovaLib_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-land-hdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-land-hdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-land-ldpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-land-ldpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-land-mdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-land-mdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-land-xhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-land-xhdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-port-hdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-port-hdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-port-ldpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-port-ldpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-port-mdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-port-mdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-port-xhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/drawable-port-xhdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/mipmap-hdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/mipmap-hdpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/mipmap-ldpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/mipmap-ldpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/mipmap-mdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/mipmap-mdpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/mipmap-xhdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/mipmap-xhdpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/outputs/apk/android-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/build/outputs/apk/android-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-hdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-hdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-ldpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-ldpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-mdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-mdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-land-xhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-land-xhdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-hdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-hdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-ldpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-ldpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-mdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-mdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-xhdpi/screen.png" afterPath="$PROJECT_DIR$/platforms/android/res/drawable-port-xhdpi/screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/mipmap-hdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/res/mipmap-hdpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/mipmap-ldpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/res/mipmap-ldpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/mipmap-mdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/res/mipmap-mdpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/mipmap-xhdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/res/mipmap-xhdpi/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Fitment Companion.iml" afterPath="$PROJECT_DIR$/.idea/Fitment Companion.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ajv/README.md" afterPath="$PROJECT_DIR$/node_modules/ajv/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ajv/dist/ajv.min.js" afterPath="$PROJECT_DIR$/node_modules/ajv/dist/ajv.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ajv/dist/ajv.min.js.map" afterPath="$PROJECT_DIR$/node_modules/ajv/dist/ajv.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ajv/package.json" afterPath="$PROJECT_DIR$/node_modules/ajv/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ajv/scripts/compile-dots.js" afterPath="$PROJECT_DIR$/node_modules/ajv/scripts/compile-dots.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bufferstreams/README.md" afterPath="$PROJECT_DIR$/node_modules/bufferstreams/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bufferstreams/package.json" afterPath="$PROJECT_DIR$/node_modules/bufferstreams/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bufferstreams/src/index.js" afterPath="$PROJECT_DIR$/node_modules/bufferstreams/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bufferstreams/tests/index.mocha.js" afterPath="$PROJECT_DIR$/node_modules/bufferstreams/tests/index.mocha.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/History.md" afterPath="$PROJECT_DIR$/node_modules/clean-css/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/LICENSE" afterPath="$PROJECT_DIR$/node_modules/clean-css/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/README.md" afterPath="$PROJECT_DIR$/node_modules/clean-css/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/bin/cleancss" afterPath="$PROJECT_DIR$/node_modules/clean-css/bin/cleancss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/clean.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/clean.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/imports/inliner.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/imports/inliner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/properties/optimizer.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/properties/optimizer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/properties/override-compactor.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/properties/override-compactor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/properties/shorthand-compactor.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/properties/shorthand-compactor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/properties/validator.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/properties/validator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/text/comments-processor.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/text/comments-processor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/text/free-text-processor.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/text/free-text-processor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/text/urls-processor.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/text/urls-processor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/compatibility.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/compatibility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/input-source-map-tracker.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/input-source-map-tracker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/quote-scanner.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/quote-scanner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/source-reader.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/lib/utils/source-reader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/README.md" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/build/prefix-source-map.jsm" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/build/prefix-source-map.jsm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/array-set.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/array-set.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/base64-vlq.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/base64-vlq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/base64.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/base64.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/binary-search.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/binary-search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/mapping-list.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/mapping-list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/source-map-consumer.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/source-map-consumer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/source-map-generator.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/source-map-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/util.js" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/lib/source-map/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/package.json" afterPath="$PROJECT_DIR$/node_modules/clean-css/node_modules/source-map/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clean-css/package.json" afterPath="$PROJECT_DIR$/node_modules/clean-css/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/commander/Readme.md" afterPath="$PROJECT_DIR$/node_modules/commander/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/commander/index.js" afterPath="$PROJECT_DIR$/node_modules/commander/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/commander/package.json" afterPath="$PROJECT_DIR$/node_modules/commander/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/fstream/lib/reader.js" afterPath="$PROJECT_DIR$/node_modules/fstream/lib/reader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/fstream/lib/writer.js" afterPath="$PROJECT_DIR$/node_modules/fstream/lib/writer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/fstream/package.json" afterPath="$PROJECT_DIR$/node_modules/fstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/.npmignore" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/LICENSE" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/README.md" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_passthrough.js" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_passthrough.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_readable.js" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_readable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_transform.js" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_writable.js" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/lib/_stream_writable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/readable.js" afterPath="$PROJECT_DIR$/node_modules/gulp-minify-css/node_modules/readable-stream/readable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jsprim/CHANGES.md" afterPath="$PROJECT_DIR$/node_modules/jsprim/CHANGES.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jsprim/README.md" afterPath="$PROJECT_DIR$/node_modules/jsprim/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jsprim/lib/jsprim.js" afterPath="$PROJECT_DIR$/node_modules/jsprim/lib/jsprim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/jsprim/package.json" afterPath="$PROJECT_DIR$/node_modules/jsprim/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-gyp/README.md" afterPath="$PROJECT_DIR$/node_modules/node-gyp/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-gyp/addon.gypi" afterPath="$PROJECT_DIR$/node_modules/node-gyp/addon.gypi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py" afterPath="$PROJECT_DIR$/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-gyp/lib/build.js" afterPath="$PROJECT_DIR$/node_modules/node-gyp/lib/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-gyp/lib/configure.js" afterPath="$PROJECT_DIR$/node_modules/node-gyp/lib/configure.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-gyp/package.json" afterPath="$PROJECT_DIR$/node_modules/node-gyp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/README.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/bin/node-sass" afterPath="$PROJECT_DIR$/node_modules/node-sass/bin/node-sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/errors.js" afterPath="$PROJECT_DIR$/node_modules/node-sass/lib/errors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/extensions.js" afterPath="$PROJECT_DIR$/node_modules/node-sass/lib/extensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/node-sass/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/package.json" afterPath="$PROJECT_DIR$/node_modules/node-sass/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/build.js" afterPath="$PROJECT_DIR$/node_modules/node-sass/scripts/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/scripts/coverage.js" afterPath="$PROJECT_DIR$/node_modules/node-sass/scripts/coverage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass.gyp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass.gyp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/GNUmakefile.am" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/GNUmakefile.am" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Makefile" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Makefile.conf" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Makefile.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Readme.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/appveyor.yml" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/appveyor.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/configure.ac" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/configure.ac" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-context-internal.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-context-internal.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-context.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-context.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-doc.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-doc.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-function-example.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-function-example.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-function.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-function.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-importer.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-importer.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-value-example.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-value-example.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-value.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/api-value.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-on-windows.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/build-on-windows.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/custom-functions-internal.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/custom-functions-internal.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/implementations.md" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/docs/implementations.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/base.h" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/base.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/context.h" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/context.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/functions.h" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/functions.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/values.h" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/values.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/version.h" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/version.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/version.h.in" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass/version.h.in" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass2scss.h" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/include/sass2scss.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/bootstrap" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/bootstrap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-build-libsass" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-build-libsass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-install-compiler" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-install-compiler" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-install-deps" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-install-deps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-report-coverage" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/script/ci-report-coverage" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/GNUmakefile.am" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/GNUmakefile.am" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast_def_macros.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast_def_macros.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast_fwd_decl.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/ast_fwd_decl.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/backtrace.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/backtrace.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/bind.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/bind.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/bind.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/bind.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/color_maps.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/color_maps.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/color_maps.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/color_maps.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/constants.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/constants.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/constants.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/constants.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/context.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/context.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/context.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/context.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/cssize.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/cssize.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/cssize.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/cssize.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/debugger.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/debugger.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/emitter.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/emitter.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/emitter.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/emitter.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/environment.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/environment.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/environment.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/environment.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/error_handling.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/error_handling.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/error_handling.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/error_handling.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/eval.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/eval.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/eval.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/eval.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/expand.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/expand.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/expand.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/expand.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/extend.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/extend.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/extend.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/extend.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/file.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/file.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/file.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/file.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/functions.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/functions.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/functions.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/functions.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/inspect.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/inspect.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/inspect.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/inspect.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/json.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/json.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/lexer.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/lexer.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/listize.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/listize.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/listize.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/listize.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/node.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/node.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/node.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/node.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/operation.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/operation.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/output.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/output.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/output.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/output.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/parser.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/parser.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/parser.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/parser.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/plugins.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/plugins.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/position.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/position.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/prelexer.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/prelexer.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/prelexer.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/prelexer.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/remove_placeholders.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/remove_placeholders.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/remove_placeholders.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/remove_placeholders.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass2scss.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass2scss.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_context.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_context.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_context.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_context.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_functions.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_functions.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_functions.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_functions.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_util.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_util.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_values.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_values.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_values.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/sass_values.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/source_map.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/source_map.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/source_map.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/source_map.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/subset_map.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/subset_map.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_c.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_c.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_c.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_c.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_value.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_value.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_value.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/to_value.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/units.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/units.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/units.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/units.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/util.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/util.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/util.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/util.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/values.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/values.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/values.hpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/src/values.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_subset_map.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/test/test_subset_map.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/win/libsass.targets" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/win/libsass.targets" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/win/libsass.vcxproj.filters" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/libsass/win/libsass.vcxproj.filters" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/list.cpp" afterPath="$PROJECT_DIR$/node_modules/node-sass/src/sass_types/list.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/api.js" afterPath="$PROJECT_DIR$/node_modules/node-sass/test/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/binding.js" afterPath="$PROJECT_DIR$/node_modules/node-sass/test/binding.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map-embed/expected.css" afterPath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map-embed/expected.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map/expected.map" afterPath="$PROJECT_DIR$/node_modules/node-sass/test/fixtures/source-map/expected.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/node-sass/test/spec.js" afterPath="$PROJECT_DIR$/node_modules/node-sass/test/spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/.eslintrc" afterPath="$PROJECT_DIR$/node_modules/qs/.eslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/qs/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/README.md" afterPath="$PROJECT_DIR$/node_modules/qs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/dist/qs.js" afterPath="$PROJECT_DIR$/node_modules/qs/dist/qs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node_modules/qs/lib/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/node_modules/qs/lib/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/qs/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/test/.eslintrc" afterPath="$PROJECT_DIR$/node_modules/qs/test/.eslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/qs/test/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node_modules/qs/test/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/request/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/README.md" afterPath="$PROJECT_DIR$/node_modules/request/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/helpers.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/multipart.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/multipart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/oauth.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/oauth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/package.json" afterPath="$PROJECT_DIR$/node_modules/request/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/request.js" afterPath="$PROJECT_DIR$/node_modules/request/request.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/tunnel-agent/index.js" afterPath="$PROJECT_DIR$/node_modules/tunnel-agent/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/tunnel-agent/package.json" afterPath="$PROJECT_DIR$/node_modules/tunnel-agent/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-sourcemaps-apply/index.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-sourcemaps-apply/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-sourcemaps-apply/package.json" afterPath="$PROJECT_DIR$/node_modules/vinyl-sourcemaps-apply/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/yallist/package.json" afterPath="$PROJECT_DIR$/node_modules/yallist/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/yallist/yallist.js" afterPath="$PROJECT_DIR$/node_modules/yallist/yallist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/HomeController.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/HomeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/LoginController.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/LoginController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/MenuController.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/MenuController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/PartsController.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/PartsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/VehiclesController.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers/VehiclesController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/services/SocketService.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/services/SocketService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/home.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/login.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/menu.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/parts.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/parts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/vehicles.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/vehicles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/HomeController.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/HomeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/LoginController.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/LoginController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/MenuController.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/MenuController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/PartsController.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/PartsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/VehiclesController.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/controllers/VehiclesController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/services/SocketService.js" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/js/services/SocketService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/home.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/login.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/menu.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/parts.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/parts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/vehicles.html" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/assets/debug/www/templates/vehicles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-hdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-hdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-ldpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-ldpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-mdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-mdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-xhdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-land-xhdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-hdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-hdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-ldpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-ldpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-mdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-mdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-xhdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/drawable-port-xhdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/mipmap-hdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/mipmap-hdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/mipmap-ldpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/mipmap-ldpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/mipmap-mdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/mipmap-mdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/mipmap-xhdpi.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/mipmap-xhdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/blame/res/debug/single/xml.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/build/intermediates/res/merged/debug/xml/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/platforms/android/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/vehicleDetailModal.html" afterPath="$PROJECT_DIR$/www/templates/vehicleDetailModal.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,6 +333,7 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
@@ -33,13 +352,396 @@
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Fitment Companion">
+      <favorite_root url="file://$PROJECT_DIR$/www" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/www/js" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/www/js/app.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/js/services" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/js/services/LoaderService.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/js/services/SocketService.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/js/controllers" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/js/controllers/HomeController.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/js/controllers/MenuController.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/js/controllers/LoginController.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/js/controllers/PartsController.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/js/controllers/VehiclesController.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/www/css" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/www/css/style.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/www/img" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/www/img/ionic.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/img/nfc-icon.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/www/lib" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular/angular.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular/angular.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular/angular-animate.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular/angular-resource.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular/angular-sanitize.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular/angular-animate.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular/angular-resource.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular/angular-sanitize.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/ionic.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular-ui" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular-ui/angular-ui-router.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/angular-ui/angular-ui-router.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/ionic.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/css" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/css/ionic.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/css/ionic.min.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/ionicons" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/ionicons/ionicons.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-font.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_bar.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_form.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_grid.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_list.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_menu.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_tabs.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_type.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_util.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/ionic.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_badge.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_items.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_modal.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_popup.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_radio.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_range.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_reset.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_button.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_mixins.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_select.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_slides.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_toggle.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_loading.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_popover.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_spinner.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_backdrop.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_checkbox.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_platform.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_progress.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_refresher.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_slide-box.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_variables.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_animations.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_button-bar.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_scaffolding.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_transitions.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/scss/_action-sheet.scss" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/fonts" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/fonts/ionicons.eot" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/fonts/ionicons.svg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/fonts/ionicons.ttf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/fonts/ionicons.woff" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/ionic/version.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/moment" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/min" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/min/locales.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/min/moment.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/min/locales.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/min/moment-with-locales.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/min/moment-with-locales.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/af.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ar.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/az.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/be.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/bg.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/bn.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/bo.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/br.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/bs.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ca.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/cs.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/cv.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/cy.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/da.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/de.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/el.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/eo.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/es.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/et.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/eu.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/fa.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/fi.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/fo.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/fr.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/fy.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/gl.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/he.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/hi.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/hr.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/hu.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/id.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/is.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/it.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ja.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ka.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/km.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ko.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/lb.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/lt.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/lv.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/mk.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ml.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/mr.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/my.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/nb.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ne.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/nl.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/nn.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/pl.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/pt.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ro.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ru.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/sk.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/sl.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/sq.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/sr.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/sv.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ta.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/th.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/tr.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/uk.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/uz.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/vi.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/tzm.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ar-ma.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ar-sa.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ar-tn.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/de-at.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/en-au.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/en-ca.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/en-gb.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/fr-ca.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/hy-am.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/ms-my.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/pt-br.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/tl-ph.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/zh-cn.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/zh-tw.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/sr-cyrl.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/locale/tzm-latn.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/meteor" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/meteor/test.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/meteor/export.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/meteor/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/LICENSE" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/scripts" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/scripts/npm_prepublish.sh" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/moment.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/benchmarks" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/benchmarks/clone.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/CHANGELOG.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/moment/Moment.js.nuspec" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/angular" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/index.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/angular.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/LICENSE.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/package.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/angular.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/angular-csp.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/angular.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular/angular.min.js.gzip" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/sio-client" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/sio-client/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/sio-client/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/sio-client/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/sio-client/socket.io.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/sio-client/copy_latest.sh" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/sio-client/socket.io-client" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/tests.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/.jshintrc" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/.gitignore" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/.npmignore" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/.travis.yml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/CHANGELOG.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/Gruntfile.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/package.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/.editorconfig" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/karma.conf.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/CONTRIBUTING.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/angular-moment.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/angular-moment.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/angular-moment.nuspec" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-moment/angular-moment.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate/index.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate/package.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate/angular-animate.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate/angular-animate.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-animate/angular-animate.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize/index.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize/package.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-sanitize/angular-sanitize.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/mock" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/mock/socket-io.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/socket.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/.gitignore" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/.travis.yml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/gulpfile.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/package.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/karma.conf.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/socket.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/npm-install.sh" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/socket.spec.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-socket-io/socket.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/api" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/api/angular-ui-router.d.ts" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/view.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/state.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/common.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/resolve.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/urlRouter.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/viewScroll.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/stateFilters.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/viewDirective.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/stateDirectives.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/templateFactory.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/src/urlMatcherFactory.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/LICENSE" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/release" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/release/angular-ui-router.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/release/angular-ui-router.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/CHANGELOG.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-ui-router/CONTRIBUTING.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/demo" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/demo/demo.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/demo/demo-app.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/demo/demo-style.css" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/dist" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/dist/angular-local-storage.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/dist/angular-local-storage.min.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/dist/angular-local-storage.min.js.map" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/LICENSE" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/.bowerrc" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/index.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/.gitignore" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/.bower.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/.travis.yml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/CHANGELOG.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/package.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/.editorconfig" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/www/lib/angular-local-storage/.gitattributes" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/www/templates" module="Fitment Companion" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/home.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/menu.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/login.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/parts.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/vehicles.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/partScanModal.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/partDetailModal.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/vehicleScanModal.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/vehicleDetailModal.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/www/templates/fitmentGroupDetailModal.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/www/index.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/www/manifest.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/www/service-worker.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d02c7990-80b5-4aaf-a923-be42708e914b/console.sql">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="400">
+              <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -47,53 +749,127 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/css/app.css" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ef9c5ed0-a545-45da-9a77-86a8e984b538/console.sql" />
+        <option value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/server.js" />
+        <option value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/db.js" />
+        <option value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/group.js" />
+        <option value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/home.js" />
+        <option value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/login.js" />
+        <option value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/user.js" />
+        <option value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/vehicle.js" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/js/controllers/HomeController.js" />
+        <option value="$PROJECT_DIR$/www/js/controllers/LoginController.js" />
+        <option value="$PROJECT_DIR$/www/js/controllers/MenuController.js" />
+        <option value="$PROJECT_DIR$/www/templates/fitmentGroupDetailModal.html" />
+        <option value="$PROJECT_DIR$/www/templates/home.html" />
+        <option value="$PROJECT_DIR$/www/templates/login.html" />
+        <option value="$PROJECT_DIR$/www/templates/menu.html" />
+        <option value="$PROJECT_DIR$/www/templates/partScanModal.html" />
+        <option value="$PROJECT_DIR$/www/templates/vehicles.html" />
+        <option value="$PROJECT_DIR$/www/templates/vehicleScanModal.html" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/services/SocketService.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/app.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addPartController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addFitmentController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addUserController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addVehicleController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/fitmentsController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/homeController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/loginController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/partsController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/usersController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/vehiclesController.js" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/addFitments.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/addParts.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/addUsers.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/addVehicles.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/fitments.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/home.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/parts.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/users.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/vehicles.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/index.html" />
+        <option value="$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/services/SocketService.js" />
+        <option value="$PROJECT_DIR$/www/templates/partDetailModal.html" />
         <option value="$PROJECT_DIR$/www/js/controllers/VehiclesController.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/PartsController.js" />
-        <option value="$PROJECT_DIR$/www/templates/menu.html" />
-        <option value="$PROJECT_DIR$/www/js/controllers/MenuController.js" />
+        <option value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/part.js" />
+        <option value="$PROJECT_DIR$/www/templates/parts.html" />
+        <option value="$PROJECT_DIR$/www/css/style.css" />
+        <option value="$PROJECT_DIR$/www/templates/vehicleDetailModal.html" />
       </list>
     </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <exe-path>$USER_HOME$/AppData/Roaming/npm/bower.cmd</exe-path>
+    <config-path>$PROJECT_DIR$/bower.json</config-path>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <gulpfiles>
-      <GulpfileState>
-        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
-      </GulpfileState>
-    </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
+    <handled-path value="$PROJECT_DIR$/platforms/android/cordova/node_modules" />
+    <handled-path value="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/node_modules" />
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="2182" />
+    <option name="height" value="1402" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>File Watchers</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="true" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource />
+      <autoscrollToSource ProjectPane="false" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -102,7 +878,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Fitment Companion" />
+              <option name="myItemId" value="Fitment Companion Web" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -112,11 +888,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Fitment Companion" />
+              <option name="myItemId" value="Fitment Companion Web" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -126,11 +902,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Fitment Companion" />
+              <option name="myItemId" value="Fitment Companion Web" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -144,55 +920,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Fitment Companion" />
+              <option name="myItemId" value="Fitment Companion Web" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fitment Companion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fitment Companion" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../a" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/TortoiseSVN/bin/svn.exe" />
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="javascript.nodejs.core.library.configured.version" value="6.9.5" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
-  <component name="RunManager" selected="PhoneGap/Cordova.Ionic Serve">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.Run App Serverside">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Fitment Companion/app/index.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -220,6 +1000,9 @@
       <option name="target" />
       <method />
     </configuration>
+    <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server">
+      <method />
+    </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
@@ -227,7 +1010,16 @@
       <PhpTestRunnerSettings />
       <method />
     </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -266,16 +1058,26 @@
       <option name="myWorkDir" value="$PROJECT_DIR$" />
       <option name="myCommand" value="serve" />
       <option name="myPassParent" value="true" />
-      <option name="myPlatform" value="android" />
+      <option name="myPlatform" value="browser" />
       <option name="myExtraArgs" value="" />
       <option name="hasTarget" value="false" />
       <option name="target" value="" />
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="false" name="Run App Serverside" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside">
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="PhoneGap/Cordova.Cordova Run" />
       <item index="1" class="java.lang.String" itemvalue="PhoneGap/Cordova.Ionic Serve" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.Run App Serverside" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -288,59 +1090,198 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="F:\Development\projects\Final Year Project\trunk\mobile_app\Fitment Companion" />
-          <option name="myCopyRoot" value="F:\Development\projects\Final Year Project\trunk\mobile_app\Fitment Companion" />
+          <option name="myVcsRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\mobile_app\Fitment Companion" />
+          <option name="myCopyRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\mobile_app\Fitment Companion" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\mobile_app\Fitment Companion\.idea" />
+          <option name="myCopyRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\mobile_app\Fitment Companion\.idea" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\serverside\Fitment_Companion_Serverside" />
+          <option name="myCopyRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\serverside\Fitment_Companion_Serverside" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\web_app\Fitment Companion Web" />
+          <option name="myCopyRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\web_app\Fitment Companion Web" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="F:\Development\projects\Final Year Project\trunk\mobile_app\Fitment Companion" />
-          <option name="myCopyRoot" value="F:\Development\projects\Final Year Project\trunk\mobile_app\Fitment Companion" />
+          <option name="myVcsRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\mobile_app\Fitment Companion" />
+          <option name="myCopyRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\mobile_app\Fitment Companion" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\serverside\Fitment_Companion_Serverside" />
+          <option name="myCopyRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\serverside\Fitment_Companion_Serverside" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\web_app\Fitment Companion Web" />
+          <option name="myCopyRoot" value="C:\Users\Luke\Development\Projects\Final Year Project\trunk\web_app\Fitment Companion Web" />
         </SvnCopyRootSimple>
       </list>
     </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ab422190-2113-4e77-89a0-3e9c230cd888" name="Default" comment="" />
-      <created>1489525923746</created>
+      <changelist id="4840cc66-e875-4585-92ff-3b8d3d3aaf95" name="Default" comment="" />
+      <created>1489490319193</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1489525923746</updated>
-      <workItem from="1489525926749" duration="177000" />
-      <workItem from="1489526119842" duration="83000" />
-      <workItem from="1489526219028" duration="1318000" />
+      <updated>1489490319193</updated>
+      <workItem from="1489490323428" duration="5000" />
+      <workItem from="1489490364586" duration="249000" />
+      <workItem from="1489490643947" duration="974000" />
+      <workItem from="1489491853311" duration="206000" />
+      <workItem from="1489492347133" duration="299000" />
+      <workItem from="1489493157659" duration="79000" />
+      <workItem from="1489501418916" duration="83000" />
+      <workItem from="1489501571531" duration="123000" />
+      <workItem from="1489582625688" duration="74000" />
+      <workItem from="1489665247702" duration="506000" />
+      <workItem from="1489679198183" duration="325000" />
+      <workItem from="1489679557270" duration="27000" />
+      <workItem from="1489679634029" duration="21000" />
+      <workItem from="1489679695572" duration="509000" />
+      <workItem from="1489803185572" duration="71000" />
+      <workItem from="1489804092951" duration="204000" />
+      <workItem from="1489961292330" duration="7000" />
+      <workItem from="1489961348385" duration="2062000" />
+      <workItem from="1489963947471" duration="732000" />
+      <workItem from="1489967068274" duration="371000" />
+      <workItem from="1489973426947" duration="180000" />
+      <workItem from="1490024813169" duration="374000" />
+      <workItem from="1490025247856" duration="1015000" />
+      <workItem from="1490097307368" duration="403000" />
+      <workItem from="1490103994210" duration="8363000" />
+      <workItem from="1490555540054" duration="5660000" />
+      <workItem from="1490616736401" duration="36436000" />
+      <workItem from="1490690831699" duration="625000" />
+      <workItem from="1490698208152" duration="346000" />
+      <workItem from="1490700901939" duration="352000" />
+      <workItem from="1490705336078" duration="289000" />
+      <workItem from="1490705722002" duration="78000" />
+      <workItem from="1490705827979" duration="41000" />
+      <workItem from="1490705902919" duration="4283000" />
+      <workItem from="1490711914718" duration="12158000" />
+      <workItem from="1490727031138" duration="27000" />
+      <workItem from="1490728380471" duration="2152000" />
+      <workItem from="1490731489094" duration="649000" />
+      <workItem from="1490736400356" duration="4583000" />
+      <workItem from="1490778446042" duration="583000" />
+      <workItem from="1490780054758" duration="323000" />
+      <workItem from="1490780692957" duration="2991000" />
+      <workItem from="1490784660606" duration="441000" />
+      <workItem from="1490786121119" duration="2975000" />
+      <workItem from="1490789382869" duration="175000" />
+      <workItem from="1490789601122" duration="2470000" />
+      <workItem from="1490879709599" duration="8518000" />
+      <workItem from="1490889293376" duration="11463000" />
+      <workItem from="1490944903039" duration="10927000" />
+      <workItem from="1490993758993" duration="1831000" />
+      <workItem from="1491063101681" duration="25000" />
+      <workItem from="1491063390409" duration="2013000" />
+      <workItem from="1491066234616" duration="226000" />
+      <workItem from="1491066501746" duration="655000" />
+      <workItem from="1491067221391" duration="117000" />
+      <workItem from="1491157285884" duration="22000" />
+      <workItem from="1491157366280" duration="2162000" />
+      <workItem from="1491160704000" duration="1186000" />
+      <workItem from="1491232499525" duration="2011000" />
+      <workItem from="1491235607558" duration="2005000" />
+      <workItem from="1491237684217" duration="208000" />
+      <workItem from="1491237969768" duration="5526000" />
+      <workItem from="1491251301470" duration="441000" />
+      <workItem from="1491301844379" duration="1969000" />
+      <workItem from="1491420546241" duration="6548000" />
+      <workItem from="1491427879530" duration="420000" />
+      <workItem from="1491507201766" duration="6137000" />
+      <workItem from="1491513427637" duration="31000" />
+      <workItem from="1491513526927" duration="327000" />
+      <workItem from="1491514671906" duration="617000" />
+      <workItem from="1491749051493" duration="3304000" />
+      <workItem from="1491756498797" duration="2279000" />
+      <workItem from="1491790942959" duration="7246000" />
+      <workItem from="1491816906508" duration="2672000" />
+      <workItem from="1491851208572" duration="2611000" />
+      <workItem from="1491922000460" duration="281000" />
+      <workItem from="1491932232614" duration="6899000" />
+      <workItem from="1491940575491" duration="6854000" />
+      <workItem from="1491982753459" duration="8285000" />
+      <workItem from="1491991169470" duration="6792000" />
+      <workItem from="1491999819435" duration="118000" />
+      <workItem from="1492000015838" duration="110000" />
+      <workItem from="1492011225816" duration="14074000" />
+      <workItem from="1492078362915" duration="20280000" />
+      <workItem from="1492109246331" duration="6438000" />
+      <workItem from="1492163831930" duration="20137000" />
+      <workItem from="1492198580343" duration="6043000" />
+      <workItem from="1492204762773" duration="1437000" />
+      <workItem from="1492273763899" duration="663000" />
+      <workItem from="1492275156452" duration="3394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1578000" />
+    <option name="totallyTimeSpent" value="280201000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="false" />
+    <frame x="-11" y="-11" width="2182" height="1402" extended-state="6" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2339713" sideWeight="0.49514562" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297342" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14545454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297342" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1910299" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24976076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12873754" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14880383" sideWeight="0.5048544" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39950165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31312293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297342" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297342" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1910299" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297342" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12873754" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31312293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2200957" sideWeight="0.49514562" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297342" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14545454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24976076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39950165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14880383" sideWeight="0.5048544" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -353,56 +1294,384 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/group.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="6500">
+          <caret line="260" column="21" lean-forward="true" selection-start-line="260" selection-start-column="21" selection-end-line="260" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/PartsController.js">
+    <entry file="file://$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <marker date="1489526533607" expanded="true" signature="250:725" ph="{...}" />
-            <marker date="1489526533607" expanded="true" signature="531:721" ph="{...}" />
-          </folding>
+        <state relative-caret-position="3575">
+          <caret line="143" column="33" lean-forward="true" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
+    <entry file="file://$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="1200">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/VehiclesController.js">
+    <entry file="file://$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="20" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="41" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="419">
+          <caret line="143" column="19" lean-forward="false" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/LoginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/HomeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers/MenuController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="40">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d02c7990-80b5-4aaf-a923-be42708e914b/console.sql">
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/fitmentGroupDetailModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="57" column="39" lean-forward="false" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/partScanModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/vehicles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/fitmentCompleteConfirm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/vehicleScanModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/services/SocketService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addUserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="83" column="47" lean-forward="true" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addPartController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addFitmentController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="88" column="35" lean-forward="true" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/addVehicleController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/fitmentsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="123" column="47" lean-forward="true" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/homeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="249" column="51" lean-forward="true" selection-start-line="249" selection-start-column="51" selection-end-line="249" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/loginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="895">
+          <caret line="56" column="27" lean-forward="false" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/partsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="158" column="45" lean-forward="false" selection-start-line="158" selection-start-column="45" selection-end-line="158" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/usersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="129" column="49" lean-forward="false" selection-start-line="129" selection-start-column="49" selection-end-line="129" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/controllers/vehiclesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="145" column="50" lean-forward="false" selection-start-line="145" selection-start-column="50" selection-end-line="145" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/addFitments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/addParts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/addVehicles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="65" column="60" lean-forward="false" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/addUsers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="65" column="59" lean-forward="false" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/fitments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="92" column="29" lean-forward="true" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/parts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="51" column="15" lean-forward="true" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="67" column="65" lean-forward="true" selection-start-line="67" selection-start-column="65" selection-end-line="67" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/vehicles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="48" column="25" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="94" column="47" lean-forward="true" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/js/services/SocketService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/partDetailModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/vehicle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="235" column="17" lean-forward="true" selection-start-line="235" selection-start-column="17" selection-end-line="235" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/VehiclesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8850">
+          <caret line="354" column="0" lean-forward="false" selection-start-line="354" selection-start-column="0" selection-end-line="354" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1825">
+          <caret line="73" column="9" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/PartsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="39" column="59" lean-forward="false" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/js/part.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="73" lean-forward="false" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/parts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/vehicleDetailModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/app/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

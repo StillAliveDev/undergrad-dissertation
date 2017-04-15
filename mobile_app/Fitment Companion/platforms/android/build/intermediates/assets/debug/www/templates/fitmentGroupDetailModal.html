@@ -1,0 +1,22 @@
+<ion-item class="item-divider small-heading-font">
+	Vehicle: {{controllerData.vehicleDetails.vehicle.VIN}}
+</ion-item>
+<ion-list>
+	<ion-item class="wrap small-detail-font">
+		<strong>Fitment Description: </strong>
+		<div class="wrap" ng-repeat="ops in controllerData.vehicleDetails.fitmentOperations">{{ops.DESCRIPTION}}<br /><br /></div>
+	</ion-item>
+</ion-list>
+<ion-item>
+	<ion-item class="item-divider">
+		Parts for fitment
+	</ion-item>
+	<!-- List of parts-->
+	<ion-list>
+		<ion-item ng-click="openPart(part.PART_ID)" ng-repeat="part in controllerData.vehicleDetails.assignedParts">
+			<i class="ion-archive" ng-if="part.IN_INVENTORY == 'TRUE'"></i>
+			<i class="ion-alert" ng-if="part.IN_INVENTORY == 'FALSE'"></i>
+			{{part.NAME}}
+		</ion-item>
+	</ion-list>
+</ion-item>

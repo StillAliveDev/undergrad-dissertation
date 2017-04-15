@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Fitment Companion.iml" filepath="$PROJECT_DIR$/.idea/Fitment Companion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../web_app/Fitment Companion Web/.idea/Fitment Companion Web.iml" filepath="$PROJECT_DIR$/../../web_app/Fitment Companion Web/.idea/Fitment Companion Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/.idea/Fitment_Companion_Serverside.iml" filepath="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside/.idea/Fitment_Companion_Serverside.iml" />
     </modules>
   </component>
 </project>

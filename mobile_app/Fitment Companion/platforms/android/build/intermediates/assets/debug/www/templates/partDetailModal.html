@@ -1,0 +1,33 @@
+<ion-item class="item-divider small-heading-font">
+	<!--Modal Title, two icons each representing if the part is in inventory or not
+	-- Controlled by logic, determined using ng-if -->
+	<i class="ion-archive" ng-if="controllerData.partDetails.part.IN_INVENTORY == 'TRUE'"></i>
+	<i class="ion-alert" ng-if="controllerData.partDetails.part.IN_INVENTORY == 'FALSE'"></i>
+	<strong>Part: </strong>{{controllerData.partDetails.part.NAME}}
+</ion-item>
+<ion-list>
+	<!--Part Details -->
+	<ion-item class="small-detail-font">
+		<strong>Part ID: </strong> {{controllerData.partDetails.part.PART_ID}}
+	</ion-item>
+	<ion-item class="small-detail-font">
+		<strong>Manufacturer: </strong> {{controllerData.partDetails.part.MANUFACTURER}}
+	</ion-item>
+	<ion-item class="small-detail-font">
+		<strong>Width: </strong> {{controllerData.partDetails.part.WIDTH_M}} M
+	</ion-item>	<ion-item class="small-detail-font">
+		<strong>Length: </strong>{{controllerData.partDetails.part.LENGTH_M}} M
+	</ion-item>	<ion-item class="small-detail-font">
+		<strong>Weight: </strong> {{controllerData.partDetails.part.WEIGHT}} Kg
+	</ion-item>
+	</ion-item>
+	<ion-item class="small-detail-font">
+		<strong>Added: </strong> {{controllerData.partDetails.part.ADDED_TIMESTAMP | date: 'dd-MM-yyyy HH:MM:ss'}}
+	</ion-item>
+</ion-list>
+
+<!--Conditional element, only shown if the part can be removed, if the modal is opened from the parts screen the part
+cannot be removed -->
+<ion-item ng-if="controllerData.partsScan.toRemove">
+	<img class="nfc-icon-modal" src="img/nfc-icon.png" ng-click="openPartScan()">
+</ion-item>

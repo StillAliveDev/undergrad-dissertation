@@ -1,75 +1,39 @@
-<ion-view title="Vehicles" ng-controller="VehiclesController as veh_ctrl">
+<ion-view title="Vehicles">
 	<header class="bar bar-header bar-positive">
 		<h1 class="title">Vehicles</h1>
 	</header>
+
 	<ion-header-bar class="bar bar-subheader">
+	
 	<div class="list-top">
 			<div class="row">
 				<div class="col col-75">
 					<div class="row">
-						<h4>Total Vehicles: 000</h4>
+						<h4>Total Vehicles: {{controllerData.list.total}}</h4>
 					</div>
 					<div class="row">
-						<h4>In Progress: 000</h4>
+						<h4>Assigned to Groups: {{controllerData.list.in_fitments}}</h4>
 					</div>
 				</div>
+				<!--NFC Icon, opens the scan popup -->
 				<div class="col col-25">
-					<img class="nfc-icon" src="img/nfc-icon.png">
+					<img class="nfc-icon" src="img/nfc-icon.png" ng-click="openVehicleScan(false)">
 				</div>
 			</div>
 		</div>
 	</ion-header-bar>
 	<ion-content class="has-subheader">
-		
+		<!--Pull to refesh element -->
+		<ion-refresher pulling-text="Pull To Refresh" on-refresh="loadList()"></ion-refresher>
+		<!--Vin List-->
 		<div class="list-bottom">
-			<ion-scroll direction="y">
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					<ion-item>
-						SJN12345678912345
-					</ion-item>
-					
-			</ion-scroll>
+			<ion-item ng-click="openVIN(vin)" ng-repeat="vin in controllerData.list.vehicles">
+				{{vin}}
+			</ion-item>
+            <ion-item class="card padding item-text-wrap text-center">
+                <i class="icon ion-refresh"></i>
+                <h2>Pull down to refresh Vehicles</h2>
+            </ion-item>
 		</div>
 	</ion-content>
 	

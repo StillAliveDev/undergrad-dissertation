@@ -1,6 +1,11 @@
-/* Empty. Add your own CSS if you like */
 .nfc-icon{
 	width: 100%;
+}
+.nfc-icon-modal{
+	width:50%;
+	display:block;
+	margin-left:auto !important;
+	margin-right:auto !important;
 }
 
 .bar-subheader{
@@ -10,4 +15,29 @@
 .has-subheader{
 	top:160px !important;
 	
+}
+.small-detail-font{
+	font-size:0.97em;
+}
+.small-heading-font{
+	font-size: 0.99em;
+}
+.item.wrap, .item.content-wrap{
+	white-space:normal !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+ion-view header, .button-positive, .bar, .item-divider{
+	background-color:#7a43b6 !important;
+}
+
+.bar-subheader{
+	background-color: white !important;
+}
+
+ion-view header h1, .title, .ion-navicon, .ion-wrench, .item-divider{
+	color:white !important;
 }

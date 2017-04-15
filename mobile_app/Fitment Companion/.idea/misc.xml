@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://nimbusdev.xp-dev.com/svn/dissertation/branches" />
+                  <option value="https://nimbusdev.xp-dev.com/svn/dissertation/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://nimbusdev.xp-dev.com/svn/dissertation/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../serverside/Fitment_Companion_Serverside">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://nimbusdev.xp-dev.com/svn/dissertation/branches" />
+                  <option value="https://nimbusdev.xp-dev.com/svn/dissertation/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://nimbusdev.xp-dev.com/svn/dissertation/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../web_app/Fitment Companion Web">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://nimbusdev.xp-dev.com/svn/dissertation/branches" />
+                  <option value="https://nimbusdev.xp-dev.com/svn/dissertation/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://nimbusdev.xp-dev.com/svn/dissertation/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
 </project>
