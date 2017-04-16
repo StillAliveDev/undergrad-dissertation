@@ -139,7 +139,8 @@ module.exports = {
 
         //Add Query
         var query = "INSERT INTO USERS ( USER_NAME, USER_PASSWORD, USER_FIRST_NAME, USER_LAST_NAME, USER_CREATED_TIMESTAMP, " +
-            "USER_SIGNED_IN) VALUES ('"+res.user.user_name+"', '"+sha256_pass+"', '"+res.user.user_first_name+"', '"+res.user.user_last_name+"', now(), 'FALSE');";
+            "USER_SIGNED_IN) VALUES ("+connection.db.escape(res.user.user_name)+", '"+sha256_pass+"', "+connection.db.escape(res.user.user_first_name)+", "+
+            connection.db.escape(res.user.user_last_name)+", now(), 'FALSE');";
 
         //Run query
         connection.db.query(query, function(err, rows, fields){

@@ -259,7 +259,8 @@ module.exports = {
 
         //Adds he part to the database with the given infotmation
         var query = "insert into parts (NAME, MANUFACTURER, WIDTH_M, LENGTH_M, WEIGHT, IN_INVENTORY, ADDED_TIMESTAMP) " +
-            "VALUES ('"+data.part.name+"','"+data.part.manufacturer+"',"+data.part.width+","+data.part.length+","+data.part.weight+", 'TRUE', now());";
+            "VALUES ("+connection.db.escape(data.part.name)+","+connection.db.escape(data.part.manufacturer)+","+connection.db.escape(data.part.width)+"," +
+            ""+connection.db.escape(data.part.length)+","+connection.db.escape(data.part.weight)+", 'TRUE', now());";
 
         //Run query
         connection.db.query(query, function(err,rows,fields){

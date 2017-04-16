@@ -67,7 +67,7 @@ module.exports = {
         //Adds notes to the record.
         var query= "update fitment_groups " +
             "SET USER_ID = NULL, IN_PROGRESS = 'FALSE', INCOMPLETE = '" + incomplete + "', ACT_COMP_TIMESTAMP = now()," +
-            "GROUP_INCOMPLETE_NOTES = '" + data.incomplete_notes +"' WHERE FIT_GROUP_ID =" + data.group_id +";";
+            "GROUP_INCOMPLETE_NOTES = " + connection.db.escape(data.incomplete_notes) +" WHERE FIT_GROUP_ID =" + data.group_id +";";
 
         //Ren the query
         connection.db.query(query, function(err,rows,fields){

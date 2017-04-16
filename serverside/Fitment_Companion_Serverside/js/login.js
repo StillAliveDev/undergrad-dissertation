@@ -21,7 +21,7 @@ module.exports = {
 
       //Query to find a user with the same credentials
       var query = "SELECT USER_ID, USER_NAME, USER_PASSWORD FROM users WHERE " +
-          "USER_NAME = '" + username + "' " +
+          "USER_NAME = " + connection.db.escape(username) + " " +
           "AND " +
           "USER_PASSWORD = '" + sha256_pass + "';";
 
@@ -32,7 +32,7 @@ module.exports = {
                   if ((username == rows[0].USER_NAME) && (sha256_pass == rows[0].USER_PASSWORD)) {
                       var query_2 = "UPDATE USERS" +
                           " SET USER_SIGNED_IN = 'TRUE' " +
-                          "WHERE USER_NAME = '" + username + "' AND " +
+                          "WHERE USER_NAME = " + connection.db.escape(username) + " AND " +
                           "USER_PASSWORD = '" + sha256_pass + "';";
 
                       connection.db.query(query_2, function(q2_err, q2_rows, q2_fields){

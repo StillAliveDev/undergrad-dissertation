@@ -96,21 +96,21 @@ module.exports = {
             errorText: ""
         };
         //All Vehicle information
-        var vehQuery = "SELECT * FROM vehicles WHERE vehicles.vin = '"+vin+"';";
+        var vehQuery = "SELECT * FROM vehicles WHERE vehicles.vin = "+connection.db.escape(vin)+";";
         //All assigned fitment groups
-        var fitmentGroupQuery = "SELECT * from fitment_groups WHERE fitment_groups.veh_vin = '"+vin+"';";
+        var fitmentGroupQuery = "SELECT * from fitment_groups WHERE fitment_groups.veh_vin = "+connection.db.escape(vin)+";";
         //All fitment_group operations
         var fitmentOpQuery = "SELECT * from fitment_operations " +
                             "WHERE fitment_operations.group_id = (SELECT fitment_groups.fit_group_id " +
                                 "FROM fitment_groups " +
-                                "WHERE fitment_groups.veh_vin = '"+vin+"');";
+                                "WHERE fitment_groups.veh_vin = "+connection.db.escape(vin)+");";
         //All operation's parts
         var assignPartsQuery = "SELECT parts.PART_ID, parts.NAME, parts.IN_INVENTORY FROM parts " +
         "join fitment_operations on fitment_operations.PART_ID = parts.part_id " +
         "where fitment_operations.GROUP_ID = (" +
         "select fitment_groups.FIT_GROUP_ID " +
         "from fitment_groups " +
-        "where fitment_groups.veh_vin = '" + vin + "');";
+        "where fitment_groups.veh_vin = " + connection.db.escape(vin) + ");";
 
         //Query 1
         connection.db.query(vehQuery, function(err,rows,fields){
@@ -268,8 +268,8 @@ module.exports = {
 
         //Insert the vehicle into the db
         var query = "insert into vehicles (VIN, MAKE, MODEL, COLOUR, ADDED_TIMESTAMP) " +
-            "VALUES ('" + data.vehicle.vin + "','" +  data.vehicle.make + "','" + data.vehicle.model + "','" +
-                    data.vehicle.colour + "', now())";
+            "VALUES (" + connection.db.escape(data.vehicle.vin) + "," +  connection.db.escape(data.vehicle.make) + "," + connection.db.escape(data.vehicle.model) + "," +
+                    connection.db.escape(data.vehicle.colour) + ", now())";
 
         //Run query
         connection.db.query(query, function(err,rows,fields){
@@ -300,7 +300,7 @@ module.exports = {
         };
 
         //Delete Query
-        var query = "delete from vehicles where vin = '"+data.vin+"';";
+        var query = "delete from vehicles where vin = "+connection.db.escape(data.vin)+";";
 
         //Run Query
         connection.db.query(query, function(err,rows,fields){
