@@ -38,7 +38,7 @@
     <!--Page Content -->
     <div class="alert alert-danger" role="alert" ng-show="controllerData.error">{{controllerData.currentError}}</div>
     <form name="addUserForm">
-        <p class="form-invalid-text" ng-show="addUserForm.username.$invalid">Cannot be more than 25 characters Characters</p>
+        <p class="form-invalid-text" ng-show="addUserForm.username.$invalid">Cannot be more than 25 Characters</p>
         <div class="input-group">
             <span class="input-group-addon">Username * </span>
             <input name="username" type="text" class="form-control" placeholder="Username" ng-model="controllerData.user.user_name" ng-required="true"  ng-maxlength="25">
@@ -50,7 +50,7 @@
             <input name="password" type="password" class="form-control" placeholder="Passord" ng-model="controllerData.user.password" ng-required="true" ng-minlength="8">
         </div>
         <br /><br/>
-        <p class="form-invalid-text" ng-show="addUserForm.first_name.$invalid">Cannot be bore than 30 Characters</p>
+        <p class="form-invalid-text" ng-show="addUserForm.first_name.$invalid">Cannot be more than 30 Characters</p>
         <div class="input-group">
             <span class="input-group-addon">User First Name *</span>
             <input name="first_name" type="text" class="form-control" placeholder="First Name" ng-model="controllerData.user.user_first_name"  ng-required="true" ng-maxlength="30">

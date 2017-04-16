@@ -74,7 +74,7 @@ module.exports = {
       var query = "UPDATE USERS" +
               " SET USER_SIGNED_IN = 'FALSE' " +
               "WHERE USER_ID = '" + userid + "' AND " +
-              "USER_NAME = '" + username + "';";
+              "USER_NAME = " + connection.db.escape(username) + ";";
 
       //Run the query
       connection.db.query(query, function(err,rows,fields){
