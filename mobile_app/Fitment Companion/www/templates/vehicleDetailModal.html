@@ -3,6 +3,9 @@
 </ion-item>
 <!--Vehicle Information -->
 <ion-list>
+	<ion-item class="item-assertive" ng-if="!controllerData.vehicleDetails.vehicle.VIN">
+		Vehicle Does not exist
+	</ion-item>
 	<ion-item class="small-detail-font">
 		<strong>Make: </strong>{{controllerData.vehicleDetails.vehicle.MAKE}}
 	</ion-item>

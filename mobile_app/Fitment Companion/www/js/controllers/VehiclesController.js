@@ -198,7 +198,16 @@
 			$scope.partScanPopup = $ionicPopup.confirm({
 				title: "Remove/Replace Part",
 				templateUrl: 'templates/partScanModal.html',
-				scope: $scope
+				scope: $scope,
+				buttons:[{
+					text: 'Close',
+					type: 'button-positive',
+					onTap: function(e){ //Fix for test 1.8.2
+						e.preventDefault();
+						$scope.stopListeningForNFC();
+						$scope.partScanPopup.close();
+					}
+				}]
 			});
 			$scope.controllerData.expectedTag = "part"; //Setup the tag expected
             $scope.listenForNFC(); //Start listening for NFC
@@ -212,7 +221,16 @@
 			$scope.vehicleScanPopup = $ionicPopup.confirm({
 				title: 'Vehicle Enquire',
 				templateUrl: 'templates/vehicleScanModal.html',
-				scope: $scope
+				scope: $scope,
+				buttons:[{
+					text:'Close',
+					type:'button-positive',
+					onTap: function(e){// Fix for test 1.8.2
+						e.preventDefault();
+						$scope.stopListeningForNFC();
+						$scope.vehicleScanPopup.close();
+					}
+				}]
 			});
 			$scope.controllerData.expectedTag = "veh"; //Sets the expected tag to Vehicle
             $scope.listenForNFC();//Start listening for NFC
@@ -325,27 +343,33 @@
          * @param nfcEvent: the NFC event
          */
         function nfcHandler(nfcEvent){
+        	try { //Try-Catch added to fix TypeError -- Solution for Test 1.8.1
+                var tag = nfcEvent.tag;//Gets the tag
+                var ndefMessage = tag.ndefMessage;//Tag contents
 
-            var tag = nfcEvent.tag;//Gets the tag
-            var ndefMessage = tag.ndefMessage;//Tag contents
-            var payload = nfc.bytesToString(ndefMessage[0].payload);//Contents data (binary to string)
+                var payload = nfc.bytesToString(ndefMessage[0].payload);//Contents data (binary to string)
+                console.log(payload);
+                //Slice to remove first 3 chars.. Encoded language and data start special character.
+                json = angular.fromJson(payload.slice(3));
+                console.log(payload.slice(3));
 
-			//Slice to remove first 3 chars.. Encoded language and data start special character.
-            json = angular.fromJson(payload.slice(3));
-            console.log(payload.slice(3));
+                //Stop listening now
+                $scope.stopListeningForNFC();
 
-            //Stop listening now
-            $scope.stopListeningForNFC();
-
-            //Check the type of tag scanned against what is expected.
-            if((json.type == 'veh') && ($scope.controllerData.expectedTag == 'veh')){
-                $scope.vehicleScanPopup.close();
-                $scope.openVIN(json.id);
+                //Check the type of tag scanned against what is expected.
+                if ((json.type == 'veh') && ($scope.controllerData.expectedTag == 'veh')) {
+                    $scope.vehicleScanPopup.close();
+                    $scope.openVIN(json.id);
+                }
+                if ((json.type == 'part') && ($scope.controllerData.expectedTag == 'part')) {
+                    //This needs to remove it from inventory after checking if its the part we expect
+                    $scope.processPart(json.id);
+                }
             }
-            if((json.type == 'part') && ($scope.controllerData.expectedTag == 'part')){
-                //This needs to remove it from inventory after checking if its the part we expect
-                $scope.processPart(json.id);
-            }
+            catch(e){
+        		//Stop safely
+        		$scope.stopListeningForNFC();
+			}
         }
 
         //Realtime calls to update list

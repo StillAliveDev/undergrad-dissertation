@@ -85,7 +85,16 @@
 			$scope.partScanPopup = $ionicPopup.confirm({ //Open the popup
 				title: 'Part Enquire',
 				templateUrl: 'templates/partScanModal.html',
-				scope: $scope
+				scope: $scope,
+                buttons:[{
+				    text: 'Close',
+                    type: 'button-positive',
+                    onTap: function(e){ //Fix for test 1.8.2
+				        e.preventDefault();
+				        $scope.stopListeningForNFC(); //Removes the listener
+				        $scope.partScanPopup.close();
+                    }
+                }]
 			});
 			//Add the NFC listener --Waiting for a ag to be present
 			$scope.listenForNFC();
@@ -104,26 +113,32 @@
          * @param nfcEvent
          */
         function nfcHandler(nfcEvent){
+            try { // Catches TypeError if tag is blank -- fix for test 1.8.1
+                var tag = nfcEvent.tag; //Tag data
+                var ndefMessage = tag.ndefMessage; //Data contents (binary)
+                //Converts binary data to string
+                var payload = nfc.bytesToString(ndefMessage[0].payload);
 
-            var tag = nfcEvent.tag; //Tag data
-            var ndefMessage = tag.ndefMessage; //Data contents (binary)
-            //Converts binary data to string
-            var payload = nfc.bytesToString(ndefMessage[0].payload);
+                //Converts payload into JSON objects to that individual variables can be directly referenced
+                //Payload needs to be trilled to ignore the first 3 chars (Special characters and encoding language)
+                json = angular.fromJson(payload.slice(3));
+                console.log(payload.slice(3));
 
-            //Converts payload into JSON objects to that individual variables can be directly referenced
-            //Payload needs to be trilled to ignore the first 3 chars (Special characters and encoding language)
-            json = angular.fromJson(payload.slice(3));
-            console.log(payload.slice(3));
+                //Remove the NFC listener now
+                $scope.stopListeningForNFC();
 
-            //Remove the NFC listener now
-            $scope.stopListeningForNFC();
-
-            //Check the tag is the correct type.
-            if((json.type == 'part') && ($scope.controllerData.expectedTag == 'part')){
-                $scope.partScanPopup.close();
-                //This needs to remove it from inventory after checking if its the part we expect
-                $scope.openPart(json.id); //Open the part modal
+                //Check the tag is the correct type.
+                if ((json.type == 'part') && ($scope.controllerData.expectedTag == 'part')) {
+                    $scope.partScanPopup.close();
+                    //This needs to remove it from inventory after checking if its the part we expect
+                    $scope.openPart(json.id); //Open the part modal
+                }
             }
+            catch(e){
+                //Stop Safely
+                $scope.stopListeningForNFC();
+            }
+
         }
 
         /**

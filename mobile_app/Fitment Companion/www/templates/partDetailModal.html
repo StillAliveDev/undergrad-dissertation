@@ -6,6 +6,9 @@
 	<strong>Part: </strong>{{controllerData.partDetails.part.NAME}}
 </ion-item>
 <ion-list>
+	<ion-item class="item-assertive" ng-if="!controllerData.partDetails.part.PART_ID">
+		Part Does Not Exist!
+	</ion-item>
 	<!--Part Details -->
 	<ion-item class="small-detail-font">
 		<strong>Part ID: </strong> {{controllerData.partDetails.part.PART_ID}}

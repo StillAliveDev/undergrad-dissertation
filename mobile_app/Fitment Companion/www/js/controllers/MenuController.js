@@ -12,6 +12,8 @@
      */
 	function MenuController($scope,$rootScope, $state, $ionicPopup,SocketService){
 
+		$scope.errorWarningShown = false;
+
         /**
          * Navigate the app to the Home state, load its HTML Template
          */
@@ -46,6 +48,29 @@
             SocketService.emit('user:logout', angular.toJson(data));
 			$state.go('login'); //Change state to Login, load its HTML template
 		};
+
+        SocketService.on('connect_error', function(err){
+            console.log('Failed Connection');
+            if(!$scope.errorWarningShown){
+            	$scope.errorWarningShown = true;
+            	$scope.ep = $ionicPopup.alert({
+					title: 'Error',
+					template: '<p style="text-align: center;">Connection to the server was lost <strong>Please wait...</strong></p>',
+					buttons:[]
+				});
+			}
+        });
+        SocketService.on('reconnect', function(){
+            console.log('Reconnected');
+            if($scope.errorWarningShown){
+            	$scope.errorWarningShown = false;
+                $scope.ep.close();
+            	var cp = $ionicPopup.alert({
+					title: 'Connection Re-established',
+					template:'<p style="text-align:center;">Connection to the server was restablished</p>'
+				});
+			}
+        })
 	}
 	
 })();
