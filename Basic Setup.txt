@@ -1,3 +1,5 @@
+General Notes for setting up the project before development had started:
+
 Requires NodeJs
 Requires Git
 Requires JDK+JRE
