@@ -4,6 +4,6 @@ This was created as the practical side of my Computer Science Dissertation.
 
 The main folders used in the final project are:
   - mobile_app
-  - serversode
+  - serverside
   - web_app
   
