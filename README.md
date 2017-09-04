@@ -18,3 +18,6 @@ The mobile application is a hybrid application, written with AngularJS, Ionic, H
 Copuled with the mobile app is a web application, also written with AngularJS that tracks in realtime users, parts or fitments statuses and alows for creation of new user, part, and fitment records which are reflected instantly in the mobile application.
 
 The serverside is intended to communicate with a MySQL based database to store all infomration used by the application. The serverside communicates with the mobile and web applictions using Socket.IO so that realtime transmissions are possible.
+
+# Setup and Run
+To Be completed
